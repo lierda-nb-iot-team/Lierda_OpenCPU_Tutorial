@@ -1,2 +1,12 @@
-language: C
-script: true
+language: cpp
+
+compiler:
+  - gcc
+  - clang
+
+before_script:
+  - mkdir build
+  - cd build
+  - cmake ..
+
+script: make && make test

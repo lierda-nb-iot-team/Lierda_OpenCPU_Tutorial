@@ -10,7 +10,7 @@
 
 ## 适用
 
-1.Lierda NB-IoT EVK
+1.Lierda NB-IoT EVK  
 2.Lierda NB86-G 模组
 
 ​

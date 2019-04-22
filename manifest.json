@@ -1,0 +1,19 @@
+{
+	"@platforms": ["android", "iPhone", "iPad"],
+	"id": "H50B05E95",/*应用的标识，创建应用时自动生成，勿手动修改*/
+	"name": "vue-mui",/*应用名称，程序桌面图标名称*/
+	"version": {
+		"name": "1.0.0",/*应用版本名称*/
+		"code": "83"
+	},
+	"description": "",/*应用描述信息*/
+	"icons": {
+		"72": "icon.png"
+	},
+	"launch_path": "index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"developer": {
+		"name": "DefLin",/*开发者名称*/
+		"email": "",/*开发者邮箱地址*/
+		"url": "http://www.dcloud.io"
+	}
+}

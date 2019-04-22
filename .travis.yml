@@ -1,15 +1,9 @@
 language: c
+sudo: false # only for faster builds
+script:
+  - clang -coverage -O0 hello.c -o hello
+  - ./hello
+  - gcov hello.c
 
-install: make get-deps
-
-compiler:
-  - gcc
-  - clang
-
-before_script:
-  - mkdir build
-  - cd build
-  - cmake ..
-
-# script: make && make test
-script: true
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

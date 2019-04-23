@@ -1,0 +1,36 @@
+- entry: kv_configurations
+  version: 0.1
+  core: application
+  key_values:
+
+  - key_name: BASE_KEYID_MANUFACTURER_IDENTIFIER
+    value: |
+      value = "Neul"
+    permanence: false
+
+  - key_name: BASE_KEYID_MANUFACTURER_MODEL_IDENTIFIER
+    value: |
+      value = "Hi2115-SDK"
+    permanence: false
+
+  - key_name: BASE_KEYID_VDD_IO_BANK_R2
+    value: |
+      value = PMU_VDD_IO_LEVEL_3V0
+    permanence: false
+
+  - key_name: BASE_KEYID_UART_0_CONFIG
+    value: |
+      tx_pin = PIN_18
+      rx_pin = PIN_13
+      cts_pin = PIN_NONE
+      rts_pin = PIN_NONE
+    permanence: false
+
+  - key_name: BASE_KEYID_UART_1_CONFIG
+    value: |
+      tx_pin = PIN_16
+      rx_pin = PIN_NONE
+      cts_pin = PIN_NONE
+      rts_pin = PIN_NONE
+    permanence: false
+

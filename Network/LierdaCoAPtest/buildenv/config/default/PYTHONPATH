@@ -1,0 +1,4 @@
+thirdparty\scons-2.3.6\pkg\engine
+thirdparty\PyYAML-3.12-cp27-cp27m-win32\pkg
+thirdparty\pypiwin32-219-cp27-none-win32\pkg\win32
+thirdparty\pypiwin32-219-cp27-none-win32\pkg\win32\lib

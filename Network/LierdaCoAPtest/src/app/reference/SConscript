@@ -1,0 +1,21 @@
+#===============================================================================
+# @brief    Scons make file
+# Copyright (c) 2016 NEUL LIMITED
+#===============================================================================
+
+Import('env')
+import os
+from ModuleUtils import *
+from EnvironmentUtils import NeulTargetConfig, BuildType
+
+components = [ NeulTargetConfig.get_build_core(env) ]
+
+if NeulTargetConfig.get_build_type(env) == BuildType.DOXYGEN:
+    mod = Module('reference', env, components)
+    products = mod.build(env)
+
+else:
+    # Application specific source code. 
+    products = [ SConscript(os.path.join( NeulTargetConfig.get_build_core(env), 'SConscript'), {'env': env }) ]
+
+Return ('products')

@@ -1,0 +1,5 @@
+appsa: application.bin
+appsa_signature_sha: sha256\application.sha256
+appskeydsl: ..\..\..\..\merged\customer_neul_rdk\external\etypes\application_core.etypes
+appskeyyaml: ..\..\..\..\merged\customer_neul_rdk\config\application_core.yml
+memconfigfile: config\merged_memory_config.json

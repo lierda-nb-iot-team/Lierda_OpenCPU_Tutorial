@@ -14,7 +14,9 @@ uint32 * test_task_handle = NULL;
 static void Lierda_DAC_Init(void)
 {
 	lierdaDACInit(); //DAC初始化
+
 	lierdaDACSetRange(3);//设置DAC输出电压范围
+
 	lierdaDACConnect(LIERDA_AIO1);//用于建立DAC连接AIO引脚
 }
 

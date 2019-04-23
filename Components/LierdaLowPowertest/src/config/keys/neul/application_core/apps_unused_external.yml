@@ -1,0 +1,24 @@
+#===============================================================================
+# @brief    Application Core UNUSED Software Module KV Pair Definitions
+# Copyright (c) 2018 Huawei Technologies Co. Ltd
+#===============================================================================
+
+- entry: kv_definitions
+  version: 0.1
+  core: application
+  module: UNUSED
+  module_id: 24
+  key_definitions:
+
+  - key_id: 6144
+    key_status: reserved
+    key_name: UNUSED_KEYID_RESERVED_1
+    description: Key UNUSED_KEYID_RESERVED_1 description
+    structure_type: UNDETERMINED_SIZE_BUFFER
+
+  - key_id: 6145
+    key_status: reserved
+    key_name: UNUSED_KEYID_RESERVED_2
+    description: Key UNUSED_KEYID_RESERVED_2 description
+    structure_type: UNDETERMINED_SIZE_BUFFER
+

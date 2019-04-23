@@ -4,24 +4,24 @@
   Section             Start Addr        Size      Used
   ------------------  ----------  ----------  --------
   
-  Aliased 0 (Flash)   0x00000000   0x1000000   0x49BB0 = 302000
+  Aliased 0 (Flash)   0x00000000   0x1000000   0x4A500 = 304384
     startup           0x00000000                  0xA0                  
     .version_str      0x000000C0                   0x0                  
-    .text             0x00000120               0x45E9C                  
-    .init             0x00045FBC                   0x4                  
-    .fini             0x00045FC0                   0x4                  
-    .ARM.exidx        0x00045FC4                0x35E0                  
-    .ARM.extab        0x000495A4                 0x2AC                  
-    .ramtext          0x00049850                  0xD0                  
-    .data             0x00049920                 0x290                  
+    .text             0x00000120               0x46788                  
+    .init             0x000468A8                   0x4                  
+    .fini             0x000468AC                   0x4                  
+    .ARM.exidx        0x000468B0                0x3618                  
+    .ARM.extab        0x00049EC8                 0x2AC                  
+    .ramtext          0x0004A174                  0xD0                  
+    .data             0x0004A244                 0x2BC                  
   
   Aliased 1 (RAM)     0x01000000   0x1000000    0xFFA0 = 65440
     .stacks           0x01000000                 0x400                  
-    .ramtext          0x01000400                  0xD0 load address 0x49850
-    .data             0x010004D0                 0x290 load address 0x49920
-    .bss              0x01000780                0x3BCC                  
-    .preserve         0x01004350                  0x72                  
-    .heap             0x010043C2                   0x2                  
+    .ramtext          0x01000400                  0xD0 load address 0x4A174
+    .data             0x010004D0                 0x2BC load address 0x4A244
+    .bss              0x01000800                0x3BCC                  
+    .preserve         0x010043D0                  0x72                  
+    .heap             0x01004442                   0x2                  
     .sys_status       0x0100FEE0                  0x20                  
     .ipc_mailbox      0x0100FF00                  0xA0                  
   
@@ -36,12 +36,12 @@
   Section                              Total      Size 
   --------------------------------  --------  -------- 
 
-  .text                               225702
+  .text                               227806
 
-    DefStudio                         201996
+    DefStudio                         202776
       Project                               
-        BoudicaV150R100C20B500         68225
-          Hi2115_B500_SDK              59989
+        BoudicaV150R100C20B500         68445
+          Hi2115_B500_SDK              60209
             src_release                     
               src                           
                 app                    20977
@@ -49,7 +49,7 @@
                     application_core        
                       ref_lib                    20977
 
-                lib                    36162
+                lib                    36382
                   activity_indication              316
                   aio_functions                     34
                   backtrace                         56
@@ -58,7 +58,7 @@
                   log_reader                      1586
                   logical_channel                  260
                   lwip_support                    1668
-                  neul                            6562
+                  neul                            6782
                   neul_kv_storage                 1286
                   neul_network                    3522
                   neul_utils                       238
@@ -90,8 +90,8 @@
                   lib                   2596
                     app_at_module_production      2596
 
-        OpenCPUStudio                 133467
-          B500SP1_OpenCPU              79056
+        OpenCPUStudio                 133913
+          B500SP1_OpenCPU              79248
             BoudicaV150R100C20B500SP1_OpenCPU_src
               src                           
                 app                    59858
@@ -99,10 +99,10 @@
                     application_core        
                       ref_lib                    59858
 
-                lib                    19198
-                  rpc_interface                  19198
+                lib                    19390
+                  rpc_interface                  19390
 
-          B500SP1_OpenCPU_src          46053
+          B500SP1_OpenCPU_src          46307
             BoudicaV150R100C20B500SP1_OpenCPU_src
               src                           
                 app                       16
@@ -110,23 +110,24 @@
                     application_core        
                       ref_lib                       16
 
-                lib                    46037
+                lib                    46291
                   app_at                         46017
-                  lierdalib                         20
+                  lierdalib                        274
 
           BoudicaV150R100C20B500_OpenCPU_src      8358
             src                             
               os                            
                 LiteOS                            8358
 
-        OpenCPUdemo                      304
+        OpenCPUdemo                      418
           Components                        
             LierdaDACtest                   
               src                           
-                app                      276
+                app                      390
                   reference                 
                     application_core        
-                      main                         120
+                      LierdaDACtest                108
+                      main                         126
                       startup                      156
 
                 config                    28
@@ -135,19 +136,21 @@
                       application_core      
                         vectors                     28
 
-    RemoteStudio                       23706
+    RemoteStudio                       25030
       BoudicaV150R100C20B500_OpenCPU_src    
         src                                 
           drivers                           
-            cmsis                       9514
-              aio                                   16
+            cmsis                      10256
+              aio                                  626
+              aio_pin                               64
+              dac                                   68
               dma                                 1734
               spi                                 1712
               temp_mon                              36
               uart                                6016
 
-            hal                         7053
-              Hi2115                    1429
+            hal                         7605
+              Hi2115                    1817
                 application_core         404
                   hal_lpuart_specific              404
 
@@ -156,23 +159,29 @@
                   hal_pio                          530
                   hal_uart_specific                399
 
-              Hi21XX                    5624
+                shared_ap                388
+                  hal_aio_manager                  388
+
+              Hi21XX                    5788
                 application_core        1756
                   hal_ipc_irq                      112
                   hal_lpuart                       688
                   hal_ssp                          956
 
-                shared                  3868
+                shared                  3880
                   hal                              216
-                  hal_clocks                        96
+                  hal_clocks                       108
                   hal_dma                         2052
                   hal_lpc                           68
                   hal_reboot                        36
                   hal_rtc                          248
                   hal_uart                        1152
 
-            non-os                      6301
-              clocks                                 8
+                shared_ap                152
+                  hal_dac                          152
+
+            non-os                      6331
+              clocks                                38
               gpio                                 891
               ipc                                  492
               log                                 1640
@@ -193,9 +202,9 @@
   Section                              Total      Size 
   --------------------------------  --------  -------- 
 
-  .bss                                 13008
+  .bss                                 13012
 
-    DefStudio                          11410
+    DefStudio                          11414
       Project                               
         BoudicaV150R100C20B500          1631
           Hi2115_B500_SDK               1557
@@ -264,13 +273,14 @@
               os                            
                 LiteOS                             136
 
-        OpenCPUdemo                       21
+        OpenCPUdemo                       25
           Components                        
             LierdaDACtest                   
               src                           
                 app                         
                   reference                 
                     application_core        
+                      LierdaDACtest                  4
                       main                          21
 
     RemoteStudio                        1598
@@ -338,9 +348,9 @@
   Section                              Total      Size 
   --------------------------------  --------  -------- 
 
-  .data                                  554
+  .data                                  590
 
-    DefStudio                            533
+    DefStudio                            569
       Project                               
         BoudicaV150R100C20B500            53
           Hi2115_B500_SDK                 49
@@ -377,6 +387,15 @@
               src                           
                 lib                         
                   app_at                           393
+
+        OpenCPUdemo                       36
+          Components                        
+            LierdaDACtest                   
+              src                           
+                app                         
+                  reference                 
+                    application_core        
+                      LierdaDACtest                 36
 
     RemoteStudio                          21
       BoudicaV150R100C20B500_OpenCPU_src    
@@ -483,14 +502,14 @@
 
   Mismatched section sizes...
 
-         .text  .lst file = 286364 (0x45E9C)
-                 .du file = 225702 (0x371A6)
+         .text  .lst file = 288648 (0x46788)
+                 .du file = 227806 (0x379DE)
 
-         .data  .lst file = 656 (0x290)
-                 .du file = 554 (0x22A)
+         .data  .lst file = 700 (0x2BC)
+                 .du file = 590 (0x24E)
 
           .bss  .lst file = 15308 (0x3BCC)
-                 .du file = 13008 (0x32D0)
+                 .du file = 13012 (0x32D4)
 
      .preserve  .lst file = 114 (0x72)
                  .du file = 110 (0x6E)

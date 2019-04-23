@@ -26,8 +26,7 @@
 #include "preserve.h"
 #include "dma.h"
 #include "lierda_app_main.h"
-
-
+#include "LierdaDACtest.h"
 
 /**
  * protocol watchdog timeout RTOS_WDT_TIMEOUT_S is 20s
@@ -44,7 +43,8 @@ void lierda_app_main(void);
 
 void lierda_app_main(void)
 {
-//	lierda_App_main();
+	lierda_test_main();
+
 }
 
 

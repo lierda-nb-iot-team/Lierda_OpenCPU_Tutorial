@@ -224,7 +224,11 @@
 100     ./.text/DefStudio/Project/BoudicaV150R100C20B500/Hi2115_B500_SDK/src_release/src/lib/lwip_support/private/lwip_support_udp.c/udp_remove
 24      ./.text/DefStudio/Project/BoudicaV150R100C20B500/Hi2115_B500_SDK/src_release/src/lib/neul/private/application_core/adc.c/remote_command_driver_adc_action_response
 32      ./.text/DefStudio/Project/BoudicaV150R100C20B500/Hi2115_B500_SDK/src_release/src/lib/neul/private/application_core/adc.c/remote_command_driver_adc_read_response
+82      ./.text/DefStudio/Project/BoudicaV150R100C20B500/Hi2115_B500_SDK/src_release/src/lib/neul/private/application_core/aio_manager.c/aio_manager_claim_resource
+78      ./.text/DefStudio/Project/BoudicaV150R100C20B500/Hi2115_B500_SDK/src_release/src/lib/neul/private/application_core/aio_manager.c/aio_manager_free_resource
+28      ./.text/DefStudio/Project/BoudicaV150R100C20B500/Hi2115_B500_SDK/src_release/src/lib/neul/private/application_core/aio_manager.c/aio_manager_give_mutex
 72      ./.text/DefStudio/Project/BoudicaV150R100C20B500/Hi2115_B500_SDK/src_release/src/lib/neul/private/application_core/aio_manager.c/aio_manager_init
+32      ./.text/DefStudio/Project/BoudicaV150R100C20B500/Hi2115_B500_SDK/src_release/src/lib/neul/private/application_core/aio_manager.c/aio_manager_take_mutex
 26      ./.text/DefStudio/Project/BoudicaV150R100C20B500/Hi2115_B500_SDK/src_release/src/lib/neul/private/application_core/flash_log.c/flash_log_read
 24      ./.text/DefStudio/Project/BoudicaV150R100C20B500/Hi2115_B500_SDK/src_release/src/lib/neul/private/application_core/flash_log.c/flash_log_register
 24      ./.text/DefStudio/Project/BoudicaV150R100C20B500/Hi2115_B500_SDK/src_release/src/lib/neul/private/application_core/flash_log.c/flash_log_write
@@ -1196,6 +1200,8 @@
 24      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/rpc_interface/private/rpc_interface.c/rpc_thread_main
 20      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/rpc_interface/private/rpc_interface.c/set_receive_info
 76      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/rpc_interface/private/application/rpc_auto_generated_application.c/command_abort_processing_command
+96      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/rpc_interface/private/application/rpc_auto_generated_application.c/command_aio_manager_claim_resource
+96      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/rpc_interface/private/application/rpc_auto_generated_application.c/command_aio_manager_free_resource
 122     ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/rpc_interface/private/application/rpc_auto_generated_application.c/command_allocate_socket
 84      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/rpc_interface/private/application/rpc_auto_generated_application.c/command_calibrate_temperature
 76      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/rpc_interface/private/application/rpc_auto_generated_application.c/command_clear_stored_earfcn
@@ -1775,6 +1781,10 @@
 24      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/iccid.c/set_iccid_result
 160     ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/public/app_at.h/g_cmee_errno_table
 16      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/public/app_at.h/g_cms_errno_table
+184     ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdalib/private/lierdaDAC.c/lierdaDACConnect
+14      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdalib/private/lierdaDAC.c/lierdaDACInit
+24      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdalib/private/lierdaDAC.c/lierdaDACSetRange
+32      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdalib/private/lierdaDAC.c/lierdaDACWriteRaw
 20      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdalib/private/lierdaNNMIData.c/lierda_nnmi_trigger_received_data_notify_callback
 20      ./.text/DefStudio/Project/OpenCPUStudio/BoudicaV150R100C20B500_OpenCPU_src/src/os/LiteOS/kernel/base/core/los_priqueue.c/osPriqueueDequeue
 28      ./.text/DefStudio/Project/OpenCPUStudio/BoudicaV150R100C20B500_OpenCPU_src/src/os/LiteOS/kernel/base/core/los_priqueue.c/osPriqueueEnqueue
@@ -1880,8 +1890,10 @@
 48      ./.text/DefStudio/Project/OpenCPUStudio/BoudicaV150R100C20B500_OpenCPU_src/src/os/LiteOS/platform/cpu/los_sleep.c/TaskStepTick
 40      ./.text/DefStudio/Project/OpenCPUStudio/BoudicaV150R100C20B500_OpenCPU_src/src/os/LiteOS/platform/cpu/los_sleep.c/tickless_add_stop_clocks_veto
 48      ./.text/DefStudio/Project/OpenCPUStudio/BoudicaV150R100C20B500_OpenCPU_src/src/os/LiteOS/platform/cpu/los_sleep.c/tickless_remove_stop_clocks_veto
+44      ./.text/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/app/reference/application_core/LierdaDACtest.c/lierda_test_main
+64      ./.text/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/app/reference/application_core/LierdaDACtest.c/lierda_test_task
 52      ./.text/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/app/reference/application_core/main.c/hw_init
-2       ./.text/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/app/reference/application_core/main.c/lierda_app_main
+8       ./.text/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/app/reference/application_core/main.c/lierda_app_main
 66      ./.text/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/app/reference/application_core/main.c/main
 0       ./.text/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/app/reference/application_core/startup.s/.clear_bss_loop
 0       ./.text/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/app/reference/application_core/startup.s/.end_clear_bss_loop
@@ -1912,8 +1924,23 @@
 2       ./.text/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/config/vectors/Hi2115/application_core/vectors.c/IRQ_TMR0_Handler
 2       ./.text/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/config/vectors/Hi2115/application_core/vectors.c/isr_not_implemented
 2       ./.text/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/config/vectors/Hi2115/application_core/vectors.c/SVC_Handler
+24      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio/shared_ap/aio_manager_control.c/aio_manager_aio_pin0_enable
+24      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio/shared_ap/aio_manager_control.c/aio_manager_aio_pin1_enable
+24      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio/shared_ap/aio_manager_control.c/aio_manager_buf_ref_disable
+64      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio/shared_ap/aio_manager_control.c/aio_manager_connect_analog_resource_to_muxbus
+8       ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio/shared_ap/aio_manager_control.c/aio_manager_dac_enable
+64      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio/shared_ap/aio_manager_control.c/aio_manager_disconnect_analog_resource_from_muxbus
 8       ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio/shared_ap/aio_manager_control.c/aio_manager_get_deferred_mux_select_config
 8       ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio/shared_ap/aio_manager_control.c/aio_manager_get_status_table
+260     ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio/shared_ap/aio_manager_control.c/aio_manager_muxbus_cross_connect
+74      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio/shared_ap/aio_manager_control.c/aio_manager_muxbus_disconnect
+24      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio/shared_ap/aio_manager_control.c/aio_manager_vbat_div_disable
+20      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio/shared_ap/aio_manager_control.c/aio_manager_vdd_core_disable
+24      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio/shared_ap/aio_manager_control.c/analog_resource_to_muxbus_cross_connect_definitions
+32      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio_pin/shared_ap/aio_pin.c/aio_pin_deinit
+32      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio_pin/shared_ap/aio_pin.c/aio_pin_init
+40      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/dac/shared_ap/dac.c/dac_init
+28      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/dac/shared_ap/dac.c/dac_raw_write
 4       ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/dma/shared/dma.c/dma_addr_inc_shift
 56      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/dma/shared/dma.c/dma_ch_config_peripheral_preprocess
 328     ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/dma/shared/dma.c/dma_ch_open
@@ -2048,6 +2075,23 @@
 60      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi2115/shared/hal_uart_specific.c/hal_uart_specific_reset_uart
 28      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi2115/shared/hal_uart_specific.c/hal_uart_specific_set_pending_irq
 3       ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi2115/shared/hal_uart_specific.c/uart_interrupt_lines
+24      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi2115/shared_ap/hal_aio_manager.c/hal_aio_manager_adc_muxbus_connect
+12      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi2115/shared_ap/hal_aio_manager.c/hal_aio_manager_aio_pin0_disable
+12      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi2115/shared_ap/hal_aio_manager.c/hal_aio_manager_aio_pin0_enable
+12      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi2115/shared_ap/hal_aio_manager.c/hal_aio_manager_aio_pin1_disable
+12      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi2115/shared_ap/hal_aio_manager.c/hal_aio_manager_aio_pin1_enable
+16      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi2115/shared_ap/hal_aio_manager.c/hal_aio_manager_buf_ref_disable
+44      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi2115/shared_ap/hal_aio_manager.c/hal_aio_manager_buf_ref_muxbus_disconnect
+32      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi2115/shared_ap/hal_aio_manager.c/hal_aio_manager_cap_sw_muxbus_connect
+32      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi2115/shared_ap/hal_aio_manager.c/hal_aio_manager_comp0_muxbus_connect
+32      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi2115/shared_ap/hal_aio_manager.c/hal_aio_manager_comp1_muxbus_connect
+16      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi2115/shared_ap/hal_aio_manager.c/hal_aio_manager_dac_enable
+32      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi2115/shared_ap/hal_aio_manager.c/hal_aio_manager_dac_muxbus_connect
+16      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi2115/shared_ap/hal_aio_manager.c/hal_aio_manager_idac_disable
+32      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi2115/shared_ap/hal_aio_manager.c/hal_aio_manager_temp_mon_muxbus_connect
+16      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi2115/shared_ap/hal_aio_manager.c/hal_aio_manager_vbat_div_disable
+24      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi2115/shared_ap/hal_aio_manager.c/hal_aio_manager_vbat_div_muxbus_disconnect
+24      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi2115/shared_ap/hal_aio_manager.c/hal_aio_manager_vdd_core_muxbus_disconnect
 20      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi21XX/application_core/hal_ipc_irq.c/hal_ipc_deinit_interrupts
 60      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi21XX/application_core/hal_ipc_irq.c/hal_ipc_init_interrupts
 12      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi21XX/application_core/hal_ipc_irq.c/IRQ_APPS0_Handler
@@ -2104,6 +2148,7 @@
 80      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi21XX/shared/hal.c/NMI_Handler
 0       ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi21XX/shared/hal.c/NMI_MSP
 96      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi21XX/shared/hal_clocks.c/hal_clocks_get_core_clock_mid_value
+12      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi21XX/shared/hal_clocks.c/hal_clocks_ring_oscillator_get_clock_cycles_in_last_period
 4       ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi21XX/shared/hal_dma.c/hal_dma_addr_inc_shift
 60      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi21XX/shared/hal_dma.c/hal_dma_ch_config_buffer_add_config
 68      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi21XX/shared/hal_dma.c/hal_dma_ch_config_buffer_get_first_used
@@ -2166,6 +2211,12 @@
 10      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi21XX/shared/hal_uart.c/IRQ_UART0_Handler
 10      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi21XX/shared/hal_uart.c/IRQ_UART1_Handler
 10      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi21XX/shared/hal_uart.c/IRQ_UART2_Handler
+28      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi21XX/shared_ap/hal_dac.c/hal_dac_set_data
+32      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi21XX/shared_ap/hal_dac.c/hal_dac_set_latch_data
+32      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi21XX/shared_ap/hal_dac.c/hal_dac_set_range
+28      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi21XX/shared_ap/hal_dac.c/hal_dac_set_sel_ext_fb
+32      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/hal/Hi21XX/shared_ap/hal_dac.c/hal_dac_set_sel_static
+30      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/non-os/clocks/shared/clocks.c/clocks_clock_is_stable
 8       ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/non-os/clocks/shared/clocks.c/clocks_get_core_clock
 24      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/non-os/gpio/shared/gpio.c/gpio_any_interrupts_registered
 24      ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/non-os/gpio/shared/gpio.c/gpio_any_pins_claimed
@@ -2601,7 +2652,8 @@
 8       ./.bss/DefStudio/Project/OpenCPUStudio/BoudicaV150R100C20B500_OpenCPU_src/src/os/LiteOS/platform/cpu/los_sleep.c/MyEntryTime
 8       ./.bss/DefStudio/Project/OpenCPUStudio/BoudicaV150R100C20B500_OpenCPU_src/src/os/LiteOS/platform/cpu/los_sleep.c/rtc_delay
 4       ./.bss/DefStudio/Project/OpenCPUStudio/BoudicaV150R100C20B500_OpenCPU_src/src/os/LiteOS/platform/cpu/los_sleep.c/ulStopClockVetoes
-0       ./.bss/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/app/reference/application_core/main.c/__bss_begin__
+0       ./.bss/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/app/reference/application_core/LierdaDACtest.c/__bss_begin__
+4       ./.bss/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/app/reference/application_core/LierdaDACtest.c/test_task_handle
 21      ./.bss/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/app/reference/application_core/main.c/projcfg_userdata
 23      ./.bss/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio/shared_ap/aio_manager_control.c/aio_resources_status_table
 6       ./.bss/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio/shared_ap/aio_manager_control.c/deferred_mux_select_config
@@ -2713,6 +2765,7 @@
 384     ./.data/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/app_os_init.c/app_tasks
 4       ./.data/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/cJSON.c/cJSON_free
 4       ./.data/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/cJSON.c/cJSON_malloc
+36      ./.data/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/app/reference/application_core/LierdaDACtest.c/test_task_attr
 10      ./.data/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/spi/application_core/spi.c/spi_pins
 2       ./.data/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/temp_mon/shared_ap/temp_mon.c/temperature_coeff
 3       ./.data/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/uart/shared/uart.c/uart_rx_dma_ch
@@ -2727,4 +2780,4 @@
 160     ./.ipc_mailbox/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/non-os/ipc/shared/ipc.c/ipc_mailboxes
 160     ./startup/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/config/vectors/Hi2115/application_core/vectors.c/isr_vector_table
 32      ./.sys_status/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/non-os/system_status/shared/system_status.c/system_status
-done. Lines: 3226, Matches: 2729
+done. Lines: 3286, Matches: 2782

@@ -147,4 +147,4 @@ env["CODELOADER_VERSION"] = str(codeloader_version)
 manifest = env.CreatePackageManifest("pkg_manifest", [
     env["FWPKG_KEYDEFS"], bin, memconfig, sha256,
 ])
-env.CreatePackage("application.fwpkg", manifest)
+#env.CreatePackage("application.fwpkg", manifest)

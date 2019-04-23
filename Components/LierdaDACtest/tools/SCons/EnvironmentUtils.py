@@ -43,8 +43,8 @@ build_name[BuildType.ARM_COVERAGE] = 'arm_coverage'
 
 # Minimal set of local tools required to build ARM standalone
 minimal_tools = [
-                  os.path.join('tools', 'FirmwarePackager', '*'),
-                  os.path.join('tools', 'FirmwarePackager', '*', '*'),
+                  #os.path.join('tools', 'FirmwarePackager', '*'),
+                  #os.path.join('tools', 'FirmwarePackager', '*', '*'),
                   os.path.join('tools','SCons','arm_tools.py'),
                   os.path.join('tools','SCons','common_tools.py'),
                   os.path.join('tools','SCons','EnvironmentUtils.py'),

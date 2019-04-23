@@ -120,27 +120,28 @@
                 LiteOS                            8358
 
         OpenCPUdemo                      370
-          Components                        
-            LierdaDACtest                184
+          Components                     156
+            LierdaDACtest                   
               src                           
-                app                      156
+                app                         
                   reference                 
                     application_core        
                       startup                      156
+
+          Network                        214
+            LierdaUDPtest                   
+              src                           
+                app                      186
+                  reference                 
+                    application_core        
+                      LierdaUDPtest                 60
+                      main                         126
 
                 config                    28
                   vectors                   
                     Hi2115                  
                       application_core      
                         vectors                     28
-
-            LierdaLowPowertest           186
-              src                           
-                app                         
-                  reference                 
-                    application_core        
-                      LierdaLowPowertest            60
-                      main                         126
 
     RemoteStudio                       23706
       BoudicaV150R100C20B500_OpenCPU_src    
@@ -272,13 +273,13 @@
                 LiteOS                             136
 
         OpenCPUdemo                       25
-          Components                        
-            LierdaLowPowertest              
+          Network                           
+            LierdaUDPtest                   
               src                           
                 app                         
                   reference                 
                     application_core        
-                      LierdaLowPowertest             4
+                      LierdaUDPtest                  4
                       main                          21
 
     RemoteStudio                        1598
@@ -387,13 +388,13 @@
                   app_at                           393
 
         OpenCPUdemo                       36
-          Components                        
-            LierdaLowPowertest              
+          Network                           
+            LierdaUDPtest                   
               src                           
                 app                         
                   reference                 
                     application_core        
-                      LierdaLowPowertest            36
+                      LierdaUDPtest                 36
 
     RemoteStudio                          21
       BoudicaV150R100C20B500_OpenCPU_src    
@@ -474,8 +475,8 @@
     DefStudio                               
       Project                               
         OpenCPUdemo                         
-          Components                        
-            LierdaDACtest                   
+          Network                           
+            LierdaUDPtest                   
               src                           
                 config                      
                   vectors                   

@@ -2,7 +2,7 @@
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c"
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\application_core\\activity_indication_etypes.h" 1
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\application_core\\activity_indication_etypes.h" 1
 
 
 
@@ -26,7 +26,7 @@ typedef U32 uint32;
 
 typedef BOOL8 bool;
 # 26 "src\\lib\\common_headers/neulfw.h" 2
-# 9 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\application_core\\activity_indication_etypes.h" 2
+# 9 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\application_core\\activity_indication_etypes.h" 2
 
 
 
@@ -37,8 +37,8 @@ typedef BOOL8 bool;
 typedef uint8 activity_indication_delay_milliseconds_t[5];
 # 2 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
 
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\application_core\\app_at_uart_etypes.h" 1
-# 15 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\application_core\\app_at_uart_etypes.h"
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\application_core\\app_at_uart_etypes.h" 1
+# 15 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\application_core\\app_at_uart_etypes.h"
 typedef struct
 {
     uint32 baudrate;
@@ -58,18 +58,18 @@ typedef struct
 }at_uart_config;
 # 4 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
 
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\application_core\\application_config_etypes.h" 1
-# 16 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\application_core\\application_config_etypes.h"
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\application_core\\application_config_etypes.h" 1
+# 16 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\application_core\\application_config_etypes.h"
 ;
 
 typedef uint8 pin_map_buffer_t[10];
 # 6 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
 
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\application_core\\manufacturer_identity_etypes.h" 1
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\application_core\\manufacturer_identity_etypes.h" 1
 # 8 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
 
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\base_etypes.h" 1
-# 10 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\base_etypes.h"
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\base_etypes.h" 1
+# 10 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\base_etypes.h"
 typedef struct {
     uint8 value;
 } uint8_es;
@@ -97,8 +97,8 @@ typedef uint8 UNDETERMINED_SIZE_BUFFER[0];
 typedef ASCII UNDETERMINED_SIZE_STRING[0];
 # 10 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
 
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\neul_identity_etypes.h" 1
-# 13 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\neul_identity_etypes.h"
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\neul_identity_etypes.h" 1
+# 13 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\neul_identity_etypes.h"
 typedef struct {
     uint8 value[8];
 } neul_identity_packed_imei_es;
@@ -108,8 +108,8 @@ typedef struct {
 } neul_identity_serial_number_es;
 # 12 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
 
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\neul_log_etypes.h" 1
-# 13 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\neul_log_etypes.h"
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\neul_log_etypes.h" 1
+# 13 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\neul_log_etypes.h"
 typedef enum U8
 {
     NEUL_LOG_LEVEL_NONE,
@@ -128,7 +128,7 @@ typedef struct {
 } NEUL_LOG_LEVEL_es;
 # 14 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
 
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\neul_shared_etypes.h" 1
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\neul_shared_etypes.h" 1
 
 
 
@@ -136,14 +136,14 @@ typedef struct {
 
 
 
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\base_etypes.h" 1
-# 9 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\neul_shared_etypes.h" 2
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\neul_identity_etypes.h" 1
-# 10 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\neul_shared_etypes.h" 2
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\neul_log_etypes.h" 1
-# 11 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\neul_shared_etypes.h" 2
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\platform_etypes.h" 1
-# 18 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\platform_etypes.h"
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\base_etypes.h" 1
+# 9 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\neul_shared_etypes.h" 2
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\neul_identity_etypes.h" 1
+# 10 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\neul_shared_etypes.h" 2
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\neul_log_etypes.h" 1
+# 11 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\neul_shared_etypes.h" 2
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\platform_etypes.h" 1
+# 18 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\platform_etypes.h"
 typedef enum U8
 {
     PIN_0 = 0,
@@ -201,14 +201,14 @@ typedef struct
     PIN cts_pin;
     PIN rts_pin;
 } uart_pin_configuration;
-# 12 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\neul_shared_etypes.h" 2
+# 12 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\neul_shared_etypes.h" 2
 # 16 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
 
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\platform_etypes.h" 1
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\platform_etypes.h" 1
 # 18 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
 
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\pmu_vdd_io_etypes.h" 1
-# 17 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\pmu_vdd_io_etypes.h"
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\pmu_vdd_io_etypes.h" 1
+# 17 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\pmu_vdd_io_etypes.h"
 typedef enum U8
 {
     PMU_VDD_IO_BANK_R1 = 0,
@@ -241,16 +241,16 @@ typedef enum U8
 PMU_VDD_IO_LEVEL;
 # 20 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
 
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\shared_etypes.h" 1
-# 11 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\shared_etypes.h"
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\neul_shared_etypes.h" 1
-# 12 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\shared_etypes.h" 2
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\shared_etypes.h" 1
+# 11 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\shared_etypes.h"
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\neul_shared_etypes.h" 1
+# 12 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\shared_etypes.h" 2
 
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\pmu_vdd_io_etypes.h" 1
-# 14 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared\\shared_etypes.h" 2
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\pmu_vdd_io_etypes.h" 1
+# 14 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared\\shared_etypes.h" 2
 # 22 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
 
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_etypes.h" 1
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_etypes.h" 1
 
 
 
@@ -258,18 +258,18 @@ PMU_VDD_IO_LEVEL;
 
 
 
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_ip4_etypes.h" 1
-# 14 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_ip4_etypes.h"
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_ip4_etypes.h" 1
+# 14 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_ip4_etypes.h"
 typedef struct ip4_addr {
     uint32 addr;
 } ip4_addr_t;
-# 9 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_etypes.h" 2
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_ip6_etypes.h" 1
-# 14 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_ip6_etypes.h"
+# 9 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_etypes.h" 2
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_ip6_etypes.h" 1
+# 14 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_ip6_etypes.h"
 typedef struct ip6_addr {
     uint32 addr[4];
 } ip6_addr_t;
-# 10 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_etypes.h" 2
+# 10 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_etypes.h" 2
 
 
 
@@ -291,17 +291,17 @@ typedef struct
 ip_addr_t;
 # 24 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
 
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_ip4_etypes.h" 1
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_ip4_etypes.h" 1
 # 26 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
 
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_ip6_etypes.h" 1
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_ip6_etypes.h" 1
 # 28 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
 
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared_ap\\tup_id_etypes.h" 1
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared_ap\\tup_id_etypes.h" 1
 # 30 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
 
-# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared_as\\neul_update_etypes.h" 1
-# 11 "D:\\DefStudio\\Project\\OpenCPUdemo\\Components\\LierdaLowPowertest\\src\\external\\etypes\\neul\\shared_as\\neul_update_etypes.h"
+# 1 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared_as\\neul_update_etypes.h" 1
+# 11 "D:\\DefStudio\\Project\\OpenCPUdemo\\Network\\LierdaUDPtest\\src\\external\\etypes\\neul\\shared_as\\neul_update_etypes.h"
 typedef enum U8
 {
     INSTALL_TYPE_UNKNOWN,

@@ -1,0 +1,20 @@
+{
+"Version":"version 1",
+"Description":"Memory Config",
+"CPU":"Hi2115",
+"Platform":"SDK",
+"Items":[
+               {
+               "Name":"FLASH_PAGE_SIZE",
+               "Value":8192
+               },
+               {
+               "Name":"APPS_A_FLASH_REGION_LENGTH",
+               "Value":360448
+               },
+               {
+               "Name":"APPS_B_FLASH_REGION_LENGTH",
+               "Value":0
+               }
+        ]
+}

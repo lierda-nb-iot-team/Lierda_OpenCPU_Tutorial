@@ -20,7 +20,6 @@ static void Lierda_DAC_Init(void)
 	lierdaDACConnect(LIERDA_AIO1);//用于建立DAC连接AIO引脚
 }
 
-
 static void lierda_test_task(void *param)
 {
 	UNUSED(param);

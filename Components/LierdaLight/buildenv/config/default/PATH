@@ -1,0 +1,4 @@
+thirdparty\python-2.7.14\pkg
+thirdparty\scons-2.3.6\bin
+thirdparty\gcc-arm-none-eabi-7-2017-q4-major-win32\pkg\bin
+thirdparty\pypiwin32-219-cp27-none-win32\pkg\pywin32_system32

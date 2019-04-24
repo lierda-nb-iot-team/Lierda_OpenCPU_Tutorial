@@ -1,0 +1,49 @@
+####################################################
+#
+# manifest template for ApplicationA
+# Paths are relative to location of manifest file itself
+# E.g. images\application.bin
+#
+####################################################
+
+# Path for application core assets
+appsA: .\applicationAssets\application.bin
+
+# Path for application core sha256 signature
+appsA_signature_sha: .\applicationAssets\sha256\application.sha256
+
+## Paths to application core DER signatures
+#appsA_signature_der:
+#  - path1
+#  - path2
+#  - ...
+
+## Path to the application key Yaml file
+AppsKeyYaml: .\applicationAssets\application_core.yml
+
+## Path to the application key DSL file
+AppsKeyDsl: .\applicationAssets\application_core.etypes
+
+## Path for memory configuration file
+#MemConfigFile: path
+
+## Path to the security key Yaml file
+#SecKeyYaml: path
+
+## Path to the security key DSL file
+#SecKeyDsl: path
+
+## Paths of certificate data files
+#Certificates:
+#  - path1
+#  - path2
+#  - ...
+
+## Paths to key stores
+#KeyStores:
+#  - path1
+#  - path2
+#  - ...
+
+
+####################################################

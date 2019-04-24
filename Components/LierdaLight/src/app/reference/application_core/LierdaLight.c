@@ -9,6 +9,7 @@
 #include "lierda_app_main.h"
 #include "LierdaLight.h"
 
+
 osThreadAttr_t test_task_attr = { "lierda_test_task"/*任务名称*/, 0, NULL, 0, NULL,
 		(512) /*任务堆栈大小*/, 11/*任务优先级*/, 0, 0 };//任务属性结构体
 uint32 * test_task_handle = NULL;
@@ -46,7 +47,7 @@ static void OPT3001Config(void)
 
     lierdaI2CWrite(&sensorI2CHandle,OPT3001DN_I2C_ADDRESS,temp,3);
 
-    osDelay(15);  //
+    osDelay(15);
 }
 
 static uint16 GetOPT3001ManufacturerID(void)

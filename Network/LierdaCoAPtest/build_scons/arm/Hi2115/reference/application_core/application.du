@@ -1780,8 +1780,11 @@
 52      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdaModuleStatus/private/lierda_module_status.c/get_Lstate_registration_status
 22      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdaModuleStatus/private/lierda_module_status.c/get_psm_saving_mode
 208     ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdaModuleStatus/private/lierda_module_status.c/lierda_module_status_read
-292     ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdalib/private/lierdaCloudConnected.c/lierdaSendMsgToPlatform
+4       ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdalib/private/lierdaNNMIData.c/LIERDA_NNMI_QUEUE_TEMP
 20      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdalib/private/lierdaNNMIData.c/lierda_nnmi_trigger_received_data_notify_callback
+28      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdalib/private/lierdaNNMIData.c/lierdannmi_data_incoming_queue_from_isr
+52      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdalib/private/lierdaNNMIData.c/lierdaNNMIDataInit
+68      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdalib/private/lierdaNNMIData.c/lierdaNNMIDataReceived
 20      ./.text/DefStudio/Project/OpenCPUStudio/BoudicaV150R100C20B500_OpenCPU_src/src/os/LiteOS/kernel/base/core/los_priqueue.c/osPriqueueDequeue
 28      ./.text/DefStudio/Project/OpenCPUStudio/BoudicaV150R100C20B500_OpenCPU_src/src/os/LiteOS/kernel/base/core/los_priqueue.c/osPriqueueEnqueue
 52      ./.text/DefStudio/Project/OpenCPUStudio/BoudicaV150R100C20B500_OpenCPU_src/src/os/LiteOS/kernel/base/core/los_priqueue.c/osPriqueueInit
@@ -1902,7 +1905,7 @@
 0       ./.text/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/app/reference/application_core/startup.s/.version_table_valid
 156     ./.text/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/app/reference/application_core/startup.s/Reset_Handler
 44      ./.text/DefStudio/Project/OpenCPUdemo/Network/LierdaCoAPtest/src/app/reference/application_core/LierdaCoAPtest.c/lierda_test_main
-128     ./.text/DefStudio/Project/OpenCPUdemo/Network/LierdaCoAPtest/src/app/reference/application_core/LierdaCoAPtest.c/lierda_test_task
+252     ./.text/DefStudio/Project/OpenCPUdemo/Network/LierdaCoAPtest/src/app/reference/application_core/LierdaCoAPtest.c/lierda_test_task
 52      ./.text/DefStudio/Project/OpenCPUdemo/Network/LierdaCoAPtest/src/app/reference/application_core/main.c/hw_init
 8       ./.text/DefStudio/Project/OpenCPUdemo/Network/LierdaCoAPtest/src/app/reference/application_core/main.c/lierda_app_main
 66      ./.text/DefStudio/Project/OpenCPUdemo/Network/LierdaCoAPtest/src/app/reference/application_core/main.c/main
@@ -2583,6 +2586,7 @@
 1       ./.bss/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/iccid.c/iccid_return_num
 1024    ./.bss/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdalib/private/lierdaNNMIData.c/lierda_nnmi_data_receive_buffer
 4       ./.bss/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdalib/private/lierdaNNMIData.c/lierda_nnmi_data_received_notify_callback
+4       ./.bss/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdalib/private/lierdaNNMIData.c/lierdannmi_data_incoming_queue
 2       ./.bss/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdalib/private/lierdaNNMIData.c/message_len
 12      ./.bss/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdalib/private/../public/lierdaUART.h/lierdaUARTHandle
 4       ./.bss/DefStudio/Project/OpenCPUStudio/BoudicaV150R100C20B500_OpenCPU_src/src/os/LiteOS/kernel/base/core/los_priqueue.c/g_pstLosPriorityQueueList
@@ -2611,6 +2615,8 @@
 4       ./.bss/DefStudio/Project/OpenCPUStudio/BoudicaV150R100C20B500_OpenCPU_src/src/os/LiteOS/platform/cpu/los_sleep.c/ulStopClockVetoes
 0       ./.bss/DefStudio/Project/OpenCPUdemo/Network/LierdaCoAPtest/src/app/reference/application_core/LierdaCoAPtest.c/__bss_begin__
 4       ./.bss/DefStudio/Project/OpenCPUdemo/Network/LierdaCoAPtest/src/app/reference/application_core/LierdaCoAPtest.c/at_cgpaddr_ret
+128     ./.bss/DefStudio/Project/OpenCPUdemo/Network/LierdaCoAPtest/src/app/reference/application_core/LierdaCoAPtest.c/nnmi_buff
+2       ./.bss/DefStudio/Project/OpenCPUdemo/Network/LierdaCoAPtest/src/app/reference/application_core/LierdaCoAPtest.c/nnmi_buff_len
 4       ./.bss/DefStudio/Project/OpenCPUdemo/Network/LierdaCoAPtest/src/app/reference/application_core/LierdaCoAPtest.c/test_task_handle
 21      ./.bss/DefStudio/Project/OpenCPUdemo/Network/LierdaCoAPtest/src/app/reference/application_core/main.c/projcfg_userdata
 23      ./.bss/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio/shared_ap/aio_manager_control.c/aio_resources_status_table
@@ -2738,4 +2744,4 @@
 160     ./.ipc_mailbox/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/non-os/ipc/shared/ipc.c/ipc_mailboxes
 160     ./startup/DefStudio/Project/OpenCPUdemo/Network/LierdaCoAPtest/src/config/vectors/Hi2115/application_core/vectors.c/isr_vector_table
 32      ./.sys_status/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/non-os/system_status/shared/system_status.c/system_status
-done. Lines: 3237, Matches: 2740
+done. Lines: 3243, Matches: 2746

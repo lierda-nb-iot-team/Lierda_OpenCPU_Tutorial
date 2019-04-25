@@ -4,21 +4,21 @@
   Section             Start Addr        Size      Used
   ------------------  ----------  ----------  --------
   
-  Aliased 0 (Flash)   0x00000000   0x1000000   0x4A2CC = 303820
+  Aliased 0 (Flash)   0x00000000   0x1000000   0x4A0D4 = 303316
     startup           0x00000000                  0xA0                  
     .version_str      0x000000C0                   0x0                  
-    .text             0x00000120               0x46544                  
-    .init             0x00046664                   0x4                  
-    .fini             0x00046668                   0x4                  
-    .ARM.exidx        0x0004666C                0x3620                  
-    .ARM.extab        0x00049C8C                 0x2B8                  
-    .ramtext          0x00049F44                  0xD0                  
-    .data             0x0004A014                 0x2B8                  
+    .text             0x00000120               0x4633C                  
+    .init             0x0004645C                   0x4                  
+    .fini             0x00046460                   0x4                  
+    .ARM.exidx        0x00046464                0x3630                  
+    .ARM.extab        0x00049A94                 0x2B8                  
+    .ramtext          0x00049D4C                  0xD0                  
+    .data             0x00049E1C                 0x2B8                  
   
   Aliased 1 (RAM)     0x01000000   0x1000000    0xFFA0 = 65440
     .stacks           0x01000000                 0x400                  
-    .ramtext          0x01000400                  0xD0 load address 0x49F44
-    .data             0x010004D0                 0x2B8 load address 0x4A014
+    .ramtext          0x01000400                  0xD0 load address 0x49D4C
+    .data             0x010004D0                 0x2B8 load address 0x49E1C
     .bss              0x01000800                0x3C54                  
     .preserve         0x01004458                  0x72                  
     .heap             0x010044CA                   0x2                  
@@ -36,9 +36,9 @@
   Section                              Total      Size 
   --------------------------------  --------  -------- 
 
-  .text                               226742
+  .text                               226670
 
-    DefStudio                         203036
+    DefStudio                         202964
       Project                               
         BoudicaV150R100C20B500         68225
           Hi2115_B500_SDK              59989
@@ -120,7 +120,7 @@
               os                            
                 LiteOS                            8358
 
-        OpenCPUdemo                      682
+        OpenCPUdemo                      610
           Components                     156
             LierdaDACtest                   
               src                           
@@ -129,13 +129,12 @@
                     application_core        
                       startup                      156
 
-          Network                        526
+          Network                        454
             LierdaCoAPtest                  
               src                           
-                app                      498
+                app                      126
                   reference                 
                     application_core        
-                      LierdaCoAPtest               372
                       main                         126
 
                 config                    28
@@ -143,6 +142,9 @@
                     Hi2115                  
                       application_core      
                         vectors                     28
+
+                lib                      300
+                  Demo                             300
 
     RemoteStudio                       23706
       BoudicaV150R100C20B500_OpenCPU_src    
@@ -202,9 +204,9 @@
   Section                              Total      Size 
   --------------------------------  --------  -------- 
 
-  .bss                                 13150
+  .bss                                 13146
 
-    DefStudio                          11552
+    DefStudio                          11548
       Project                               
         BoudicaV150R100C20B500          1631
           Hi2115_B500_SDK               1557
@@ -273,15 +275,17 @@
               os                            
                 LiteOS                             136
 
-        OpenCPUdemo                      159
+        OpenCPUdemo                      155
           Network                           
             LierdaCoAPtest                  
               src                           
-                app                         
+                app                       21
                   reference                 
                     application_core        
-                      LierdaCoAPtest               138
                       main                          21
+
+                lib                      134
+                  Demo                             134
 
     RemoteStudio                        1598
       BoudicaV150R100C20B500_OpenCPU_src    
@@ -392,10 +396,8 @@
           Network                           
             LierdaCoAPtest                  
               src                           
-                app                         
-                  reference                 
-                    application_core        
-                      LierdaCoAPtest                36
+                lib                         
+                  Demo                              36
 
     RemoteStudio                          21
       BoudicaV150R100C20B500_OpenCPU_src    
@@ -502,14 +504,14 @@
 
   Mismatched section sizes...
 
-         .text  .lst file = 288068 (0x46544)
-                 .du file = 226742 (0x375B6)
+         .text  .lst file = 287548 (0x4633C)
+                 .du file = 226670 (0x3756E)
 
          .data  .lst file = 696 (0x2B8)
                  .du file = 590 (0x24E)
 
           .bss  .lst file = 15444 (0x3C54)
-                 .du file = 13150 (0x335E)
+                 .du file = 13146 (0x335A)
 
      .preserve  .lst file = 114 (0x72)
                  .du file = 110 (0x6E)

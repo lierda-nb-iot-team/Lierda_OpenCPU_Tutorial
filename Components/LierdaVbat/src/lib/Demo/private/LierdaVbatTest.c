@@ -1,10 +1,5 @@
-/*
- * Button.c
- *
- *  Created on: 2019Äê4ÔÂ25ÈÕ
- *      Author: Administrator
- */
-#include "Button.h"
+
+#include "LierdaVbatTest.h"
 
 
 /******************************************************************************

@@ -18,6 +18,9 @@ char *at_cgpaddr_ret = NULL;
 uint8 nnmi_buff[128];//测试buff
 uint16 nnmi_buff_len;//下行数据接收长度
 
+void TitlePrint( void );
+
+
 static uint8 lierdaATCalldemo(char* cmd, char* result, uint16 timeOut, uint16 num)
 {
 	uint16 i;
@@ -76,12 +79,28 @@ static void sendCoAPdata(void)
 
 }
 
+void TitlePrint( void )
+{
+
+	lierdaLog("******************************************************************************");
+	lierdaLog("                       NB86 EVK开发板例程----CoAP数据收发                                                                                \r\n");
+	lierdaLog(" 利尔达科技集团<www.lierda.com>");
+	lierdaLog(" LSD Science&Technology Co.,Ltd");
+	lierdaLog(" 杭州市余杭区文一西路1326号利尔达科技园");
+	lierdaLog(" 物联网开发者社区<http://bbs.lierda.com>");
+	lierdaLog("******************************************************************************\r\n");
+
+}
 
 
 static void lierda_test_task(void *param)
 {
 	UNUSED(param);
 	uint8 i = 0;
+
+	osDelay(500);
+
+	TitlePrint();
 
 	osDelay(5000);
 

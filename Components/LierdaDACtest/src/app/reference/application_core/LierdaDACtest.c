@@ -24,6 +24,16 @@ static void lierda_test_task(void *param)
 {
 	UNUSED(param);
 
+	osDelay(3000);
+
+	lierdaLog("******************************************************************************");
+	lierdaLog("                       NB86 EVK开发板例程----DAC输出                                                                                \r\n");
+	lierdaLog(" 利尔达科技集团<www.lierda.com>");
+	lierdaLog(" LSD Science&Technology Co.,Ltd");
+	lierdaLog(" 杭州市余杭区文一西路1326号利尔达科技园");
+	lierdaLog(" 物联网开发者社区<http://bbs.lierda.com>");
+	lierdaLog("******************************************************************************\r\n");
+
 	Lierda_DAC_Init();
 
 	osDelay(3000);

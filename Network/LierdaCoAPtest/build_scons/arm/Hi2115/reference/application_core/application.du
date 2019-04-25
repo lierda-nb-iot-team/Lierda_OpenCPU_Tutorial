@@ -1905,7 +1905,7 @@
 0       ./.text/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/app/reference/application_core/startup.s/.version_table_valid
 156     ./.text/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/app/reference/application_core/startup.s/Reset_Handler
 44      ./.text/DefStudio/Project/OpenCPUdemo/Network/LierdaCoAPtest/src/app/reference/application_core/LierdaCoAPtest.c/lierda_test_main
-252     ./.text/DefStudio/Project/OpenCPUdemo/Network/LierdaCoAPtest/src/app/reference/application_core/LierdaCoAPtest.c/lierda_test_task
+328     ./.text/DefStudio/Project/OpenCPUdemo/Network/LierdaCoAPtest/src/app/reference/application_core/LierdaCoAPtest.c/lierda_test_task
 52      ./.text/DefStudio/Project/OpenCPUdemo/Network/LierdaCoAPtest/src/app/reference/application_core/main.c/hw_init
 8       ./.text/DefStudio/Project/OpenCPUdemo/Network/LierdaCoAPtest/src/app/reference/application_core/main.c/lierda_app_main
 66      ./.text/DefStudio/Project/OpenCPUdemo/Network/LierdaCoAPtest/src/app/reference/application_core/main.c/main

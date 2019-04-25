@@ -4,21 +4,21 @@
   Section             Start Addr        Size      Used
   ------------------  ----------  ----------  --------
   
-  Aliased 0 (Flash)   0x00000000   0x1000000   0x4A0C0 = 303296
+  Aliased 0 (Flash)   0x00000000   0x1000000   0x4A2CC = 303820
     startup           0x00000000                  0xA0                  
     .version_str      0x000000C0                   0x0                  
-    .text             0x00000120               0x46338                  
-    .init             0x00046458                   0x4                  
-    .fini             0x0004645C                   0x4                  
-    .ARM.exidx        0x00046460                0x3620                  
-    .ARM.extab        0x00049A80                 0x2B8                  
-    .ramtext          0x00049D38                  0xD0                  
-    .data             0x00049E08                 0x2B8                  
+    .text             0x00000120               0x46544                  
+    .init             0x00046664                   0x4                  
+    .fini             0x00046668                   0x4                  
+    .ARM.exidx        0x0004666C                0x3620                  
+    .ARM.extab        0x00049C8C                 0x2B8                  
+    .ramtext          0x00049F44                  0xD0                  
+    .data             0x0004A014                 0x2B8                  
   
   Aliased 1 (RAM)     0x01000000   0x1000000    0xFFA0 = 65440
     .stacks           0x01000000                 0x400                  
-    .ramtext          0x01000400                  0xD0 load address 0x49D38
-    .data             0x010004D0                 0x2B8 load address 0x49E08
+    .ramtext          0x01000400                  0xD0 load address 0x49F44
+    .data             0x010004D0                 0x2B8 load address 0x4A014
     .bss              0x01000800                0x3C54                  
     .preserve         0x01004458                  0x72                  
     .heap             0x010044CA                   0x2                  
@@ -36,9 +36,9 @@
   Section                              Total      Size 
   --------------------------------  --------  -------- 
 
-  .text                               226666
+  .text                               226742
 
-    DefStudio                         202960
+    DefStudio                         203036
       Project                               
         BoudicaV150R100C20B500         68225
           Hi2115_B500_SDK              59989
@@ -120,7 +120,7 @@
               os                            
                 LiteOS                            8358
 
-        OpenCPUdemo                      606
+        OpenCPUdemo                      682
           Components                     156
             LierdaDACtest                   
               src                           
@@ -129,13 +129,13 @@
                     application_core        
                       startup                      156
 
-          Network                        450
+          Network                        526
             LierdaCoAPtest                  
               src                           
-                app                      422
+                app                      498
                   reference                 
                     application_core        
-                      LierdaCoAPtest               296
+                      LierdaCoAPtest               372
                       main                         126
 
                 config                    28
@@ -502,8 +502,8 @@
 
   Mismatched section sizes...
 
-         .text  .lst file = 287544 (0x46338)
-                 .du file = 226666 (0x3756A)
+         .text  .lst file = 288068 (0x46544)
+                 .du file = 226742 (0x375B6)
 
          .data  .lst file = 696 (0x2B8)
                  .du file = 590 (0x24E)

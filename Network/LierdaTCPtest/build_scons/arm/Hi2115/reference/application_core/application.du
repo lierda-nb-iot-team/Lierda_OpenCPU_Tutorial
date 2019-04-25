@@ -830,6 +830,7 @@
 68      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU/BoudicaV150R100C20B500SP1_OpenCPU_src/src/app/reference/application_core/ref_lib/app_at_ref/private/app_at_cmd_parse_ref.c/check_if_NCDP_be_set
 34      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU/BoudicaV150R100C20B500SP1_OpenCPU_src/src/app/reference/application_core/ref_lib/app_at_ref/private/app_at_cmd_parse_ref.c/check_ue_ip
 376     ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU/BoudicaV150R100C20B500SP1_OpenCPU_src/src/app/reference/application_core/ref_lib/app_at_ref/private/app_at_cmd_parse_ref.c/DNSResolve
+100     ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU/BoudicaV150R100C20B500SP1_OpenCPU_src/src/app/reference/application_core/ref_lib/app_at_ref/private/app_at_cmd_parse_ref.c/lierda_at_handle_NMSTATUS_cmd_read
 244     ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU/BoudicaV150R100C20B500SP1_OpenCPU_src/src/app/reference/application_core/ref_lib/app_at_ref/private/app_at_cmd_parse_ref.c/lwm2m_get_config
 16      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU/BoudicaV150R100C20B500SP1_OpenCPU_src/src/app/reference/application_core/ref_lib/app_at_ref/private/app_at_cmd_parse_ref.c/lwm2m_recv_appdata_callback_init
 128     ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU/BoudicaV150R100C20B500SP1_OpenCPU_src/src/app/reference/application_core/ref_lib/app_at_ref/private/app_at_cmd_parse_ref.c/lwm2m_set_config.constprop.14
@@ -1595,6 +1596,7 @@
 264     ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/app_at_cmd_parse.c/ctzr_callback
 2232    ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/app_at_cmd_parse.c/g_at_cmd_table
 36      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/app_at_cmd_parse.c/lierda_socket_create_semaphore
+40      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/app_at_cmd_parse.c/lierdaSocketAcquireSemaphore
 36      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/app_at_cmd_parse.c/lierdaSocketReleaseSemaphore
 24      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/app_at_cmd_parse.c/log_level_names
 20      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/app_at_cmd_parse.c/mem_stats_labels
@@ -1718,6 +1720,7 @@
 128     ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/app_at_uart_driver.c/at_uart_switch_to_new_config
 64      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/app_at_uart_driver.c/at_uart_switch_to_ppp
 20      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/app_at_uart_driver.c/at_uart_trigger_received_at_notify_callback
+128     ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/app_at_uart_driver.c/lierdaATCall
 44      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/app_at_ue_stats.h/ue_stats_bler_labels
 56      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/app_at_ue_stats.h/ue_stats_labels
 60      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/app_at_utils.c/at_check_hex_string_prefix
@@ -1775,6 +1778,9 @@
 24      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/iccid.c/set_iccid_result
 160     ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/public/app_at.h/g_cmee_errno_table
 16      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/public/app_at.h/g_cms_errno_table
+52      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdaModuleStatus/private/lierda_module_status.c/get_Lstate_registration_status
+22      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdaModuleStatus/private/lierda_module_status.c/get_psm_saving_mode
+208     ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdaModuleStatus/private/lierda_module_status.c/lierda_module_status_read
 20      ./.text/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/lierdalib/private/lierdaNNMIData.c/lierda_nnmi_trigger_received_data_notify_callback
 20      ./.text/DefStudio/Project/OpenCPUStudio/BoudicaV150R100C20B500_OpenCPU_src/src/os/LiteOS/kernel/base/core/los_priqueue.c/osPriqueueDequeue
 28      ./.text/DefStudio/Project/OpenCPUStudio/BoudicaV150R100C20B500_OpenCPU_src/src/os/LiteOS/kernel/base/core/los_priqueue.c/osPriqueueEnqueue
@@ -1896,7 +1902,7 @@
 0       ./.text/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/app/reference/application_core/startup.s/.version_table_valid
 156     ./.text/DefStudio/Project/OpenCPUdemo/Components/LierdaDACtest/src/app/reference/application_core/startup.s/Reset_Handler
 44      ./.text/DefStudio/Project/OpenCPUdemo/Network/LierdaTCPtest/src/app/reference/application_core/LierdaTCPtest.c/lierda_test_main
-16      ./.text/DefStudio/Project/OpenCPUdemo/Network/LierdaTCPtest/src/app/reference/application_core/LierdaTCPtest.c/lierda_test_task
+352     ./.text/DefStudio/Project/OpenCPUdemo/Network/LierdaTCPtest/src/app/reference/application_core/LierdaTCPtest.c/lierda_test_task
 52      ./.text/DefStudio/Project/OpenCPUdemo/Network/LierdaTCPtest/src/app/reference/application_core/main.c/hw_init
 8       ./.text/DefStudio/Project/OpenCPUdemo/Network/LierdaTCPtest/src/app/reference/application_core/main.c/lierda_app_main
 66      ./.text/DefStudio/Project/OpenCPUdemo/Network/LierdaTCPtest/src/app/reference/application_core/main.c/main
@@ -2604,6 +2610,8 @@
 8       ./.bss/DefStudio/Project/OpenCPUStudio/BoudicaV150R100C20B500_OpenCPU_src/src/os/LiteOS/platform/cpu/los_sleep.c/rtc_delay
 4       ./.bss/DefStudio/Project/OpenCPUStudio/BoudicaV150R100C20B500_OpenCPU_src/src/os/LiteOS/platform/cpu/los_sleep.c/ulStopClockVetoes
 0       ./.bss/DefStudio/Project/OpenCPUdemo/Network/LierdaTCPtest/src/app/reference/application_core/LierdaTCPtest.c/__bss_begin__
+1       ./.bss/DefStudio/Project/OpenCPUdemo/Network/LierdaTCPtest/src/app/reference/application_core/LierdaTCPtest.c/socketID
+100     ./.bss/DefStudio/Project/OpenCPUdemo/Network/LierdaTCPtest/src/app/reference/application_core/LierdaTCPtest.c/tcp_UDPcmd_buff
 4       ./.bss/DefStudio/Project/OpenCPUdemo/Network/LierdaTCPtest/src/app/reference/application_core/LierdaTCPtest.c/test_task_handle
 21      ./.bss/DefStudio/Project/OpenCPUdemo/Network/LierdaTCPtest/src/app/reference/application_core/main.c/projcfg_userdata
 23      ./.bss/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio/shared_ap/aio_manager_control.c/aio_resources_status_table
@@ -2717,6 +2725,7 @@
 4       ./.data/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/cJSON.c/cJSON_free
 4       ./.data/DefStudio/Project/OpenCPUStudio/B500SP1_OpenCPU_src/BoudicaV150R100C20B500SP1_OpenCPU_src/src/lib/app_at/private/cJSON.c/cJSON_malloc
 36      ./.data/DefStudio/Project/OpenCPUdemo/Network/LierdaTCPtest/src/app/reference/application_core/LierdaTCPtest.c/test_task_attr
+20      ./.data/DefStudio/Project/OpenCPUdemo/Network/LierdaTCPtest/src/app/reference/application_core/LierdaTCPtest.c/udpcmd_buff
 10      ./.data/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/spi/application_core/spi.c/spi_pins
 2       ./.data/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/temp_mon/shared_ap/temp_mon.c/temperature_coeff
 3       ./.data/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/uart/shared/uart.c/uart_rx_dma_ch
@@ -2731,4 +2740,4 @@
 160     ./.ipc_mailbox/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/non-os/ipc/shared/ipc.c/ipc_mailboxes
 160     ./startup/DefStudio/Project/OpenCPUdemo/Network/LierdaTCPtest/src/config/vectors/Hi2115/application_core/vectors.c/isr_vector_table
 32      ./.sys_status/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/non-os/system_status/shared/system_status.c/system_status
-done. Lines: 3230, Matches: 2733
+done. Lines: 3239, Matches: 2742

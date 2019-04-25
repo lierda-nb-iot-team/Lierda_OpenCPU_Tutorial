@@ -10,8 +10,8 @@
 #include "cmsis_os2.h"
 #include "string.h"
 #include <assert.h>
+#include "LierdaVbatTest.h"
 #include "lierda_app_main.h"
-#include "Button.h"
 
 
 void lierda_App_main(void);

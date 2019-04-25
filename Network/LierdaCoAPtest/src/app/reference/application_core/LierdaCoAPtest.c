@@ -66,7 +66,7 @@ static void sendCoAPdata(void)
 
 	}
 
-	if( count >= 5 )
+	if( count >= 7 )
 	{
 
 		lierdaLog("The network is poor!");

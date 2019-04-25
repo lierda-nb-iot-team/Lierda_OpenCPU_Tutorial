@@ -12,7 +12,7 @@ osThreadAttr_t Gps_task_attr = { "lierda_Gps_task"/*任务名称*/, 0, NULL, 0, NULL
 uint32 * Gps_task_handle = NULL;
 osTimerId_t LierdaTimer_handle=NULL;
 
-
+static void TitlePrint( char *name);
 /******************************************************************************
 * @函数名	app任务线程
 * @参数	    param : 空参数，无效
@@ -23,7 +23,7 @@ void lierda_App_task(void *param)
 	UNUSED(param);
 	osDelay(500);//等待模组初始化完成
 	char *pRMC=NULL;
-	lierdaLog("GPS Demo");
+	TitlePrint("GPS例程");
 	for (;;)
 	{
 		if(DataEnd==1)//GPS数据接收完成
@@ -42,7 +42,9 @@ void lierda_App_task(void *param)
 	    			lierdaLog("GPS未定位成功");
 	    	}
 	    	else
+	    	{
 	    		lierdaLog("GPS未定位成功");
+	    	}
 			osDelay(10);
 			Gps_data_clear();//清空GPS报文数据
 		}
@@ -85,4 +87,21 @@ void lierda_App_main(void)
 	{
 		lierdaLog("	LierdaTimer_handle定时器创建失败");
 	}
+}
+
+/******************************************************************************
+* @函数名 系统信息打印
+* @参数	 *name : 例程名
+* @返回值  无
+******************************************************************************/
+static void TitlePrint( char *name)
+{
+
+ lierdaLog("******************************************************************************");
+ lierdaLog("                       NB86 EVK开发板例程----%s                                    \r\n",name);
+ lierdaLog(" 利尔达科技集团<www.lierda.com>");
+ lierdaLog(" LSD Science&Technology Co.,Ltd");
+ lierdaLog(" 杭州市余杭区文一西路1326号利尔达科技园");
+ lierdaLog(" 物联网开发者社区<http://bbs.lierda.com>");
+ lierdaLog("******************************************************************************\r\n");
 }

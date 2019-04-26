@@ -9,7 +9,12 @@
 #include "lierda_module_status.h"
 #include "stdio.h"
 
-
+/******************************************************************************
+ * @函数名	lierdaATCalldemo
+ * @描述    调用虚拟AT接口发送AT指令
+ * @参数    无
+ * @返回值  无
+ ******************************************************************************/
 static uint8 lierdaATCalldemo(char* cmd, char* result, uint16 timeOut, uint16 num)
 {
 	uint16 i;
@@ -31,9 +36,15 @@ static uint8 lierdaATCalldemo(char* cmd, char* result, uint16 timeOut, uint16 nu
 		}
 	}
 
-	return 0;  //发送失败重启
+	return 0;
 }
 
+/******************************************************************************
+ * @函数名	sendCoAPdata
+ * @描述    发送CoAP数据
+ * @参数    无
+ * @返回值  无
+ ******************************************************************************/
 void sendCoAPdata(void)
 {
 	uint8 count = 0;

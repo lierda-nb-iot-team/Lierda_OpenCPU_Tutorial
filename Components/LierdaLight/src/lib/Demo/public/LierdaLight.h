@@ -27,6 +27,10 @@
 #define OPT3001DN_MANUFACTURER_ID   0x5449
 #define OPT3001DN_DEVICE_IDNum      0x3001
 
-void lierda_test_main(void);
+I2C_HandleTypeDef  sensorI2CHandle;
+
+uint8 lierda_OPT3001_Init(void);
+
+void lierda_OPT3001_UpdataInfo(uint32 *Lux);
 
 #endif /* SRC_APP_REFERENCE_APPLICATION_CORE_LIERDALIGHT_H_ */

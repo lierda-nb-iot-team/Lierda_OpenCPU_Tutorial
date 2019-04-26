@@ -4,17 +4,7 @@
  *  Created on: 2019年4月24日
  *      Author: Def_Lin
  */
-
-
-#include "lierda_app_main.h"
 #include "LierdaLight.h"
-
-
-osThreadAttr_t test_task_attr = { "lierda_test_task"/*任务名称*/, 0, NULL, 0, NULL,
-		(512) /*任务堆栈大小*/, 11/*任务优先级*/, 0, 0 };//任务属性结构体
-uint32 * test_task_handle = NULL;
-
-I2C_HandleTypeDef  sensorI2CHandle;
 
 
 static void I2c_Init(void)
@@ -69,7 +59,7 @@ static uint16 OPT3001DN_Read_DeviceID(void)
     return ((buffer[0]<<8)|buffer[1]);
 }
 
-static uint8 lierda_OPT3001_Init(void)
+uint8 lierda_OPT3001_Init(void)
 {
 
    uint8 ucCount = 0;
@@ -112,7 +102,7 @@ static uint8 lierda_OPT3001_Init(void)
    return 1;
 }
 
-static void lierda_OPT3001_UpdataInfo(uint32 *Lux)
+void lierda_OPT3001_UpdataInfo(uint32 *Lux)
 {
 	uint8 buffer[2] = {0};
 	uint32 Result = 0;
@@ -129,34 +119,3 @@ static void lierda_OPT3001_UpdataInfo(uint32 *Lux)
 	*Lux = Result;
 }
 
-static void lierda_test_task(void *param)
-{
-	UNUSED(param);
-
-	uint32 Lux = 0;
-
-	lierda_OPT3001_Init();
-
-	osDelay(3000);
-
-	for(;;)
-	{
-
-		lierda_OPT3001_UpdataInfo(&Lux);
-
-		lierdaLog("Now illumination intensity is : %d",Lux);
-
-		osDelay(5000);
-	}
-
-}
-
-void lierda_test_main(void)
-{
-	test_task_handle = osThreadNew(lierda_test_task, NULL, &test_task_attr); //创建测试任务
-
-	if (test_task_handle == NULL)
-	{
-		lierdaLog("lierda_test_task任务创建失败");
-	}
-}

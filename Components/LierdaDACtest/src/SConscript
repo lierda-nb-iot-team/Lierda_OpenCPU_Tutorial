@@ -10,7 +10,7 @@ from EnvironmentUtils import NeulBuildConfig, NeulTargetConfig, CORE_RELATIVE_FO
 
 
 # Add the 'common' include path
-# env.Append(CPPPATH = [os.path.join(Dir('.').srcnode().abspath, 'lib', 'Demo')])
+env.Append(CPPPATH = [os.path.join(Dir('.').srcnode().abspath, 'lib', 'Demo')])
 env.Append(CPPPATH = [os.path.join(Dir('.').srcnode().abspath, 'lib', 'common_headers')])
 env.Append(CPPPATH = [os.path.join(Dir('.').srcnode().abspath, 'app', 'reference', 'application_core')])
 
@@ -94,7 +94,7 @@ if NeulTargetConfig.get_build_os(env) in ['FreeRTOS_v_10_0_1', 'LiteOS']:
         #os.path.join('lib', 'irmalloc'),
         #os.path.join('lib', 'nlibc'),
         #os.path.join('lib', 'preserve'),
-        #os.path.join('lib', 'Demo'),
+        os.path.join('lib', 'Demo'),
     ]
 
     env.Append(CPPDEFINES  = [ 'USE_FREERTOS' ]) #for consistency with legacy code
@@ -108,7 +108,7 @@ else:
         #os.path.join('lib', 'irmalloc'),
         #os.path.join('lib', 'nlibc'),
         #os.path.join('lib', 'preserve'),
-        #os.path.join('lib', 'Demo'),
+        os.path.join('lib', 'Demo'),
     ]
 
 # Platform libraries

@@ -4,21 +4,21 @@
   Section             Start Addr        Size      Used
   ------------------  ----------  ----------  --------
   
-  Aliased 0 (Flash)   0x00000000   0x1000000   0x49C44 = 302148
+  Aliased 0 (Flash)   0x00000000   0x1000000   0x49E2C = 302636
     startup           0x00000000                  0xA0                  
     .version_str      0x000000C0                   0x0                  
-    .text             0x00000120               0x45F10                  
-    .init             0x00046030                   0x4                  
-    .fini             0x00046034                   0x4                  
-    .ARM.exidx        0x00046038                0x35D8                  
-    .ARM.extab        0x00049610                 0x2AC                  
-    .ramtext          0x000498BC                  0xD0                  
-    .data             0x0004998C                 0x2B8                  
+    .text             0x00000120               0x460F8                  
+    .init             0x00046218                   0x4                  
+    .fini             0x0004621C                   0x4                  
+    .ARM.exidx        0x00046220                0x35D8                  
+    .ARM.extab        0x000497F8                 0x2AC                  
+    .ramtext          0x00049AA4                  0xD0                  
+    .data             0x00049B74                 0x2B8                  
   
   Aliased 1 (RAM)     0x01000000   0x1000000    0xFFA0 = 65440
     .stacks           0x01000000                 0x400                  
-    .ramtext          0x01000400                  0xD0 load address 0x498BC
-    .data             0x010004D0                 0x2B8 load address 0x4998C
+    .ramtext          0x01000400                  0xD0 load address 0x49AA4
+    .data             0x010004D0                 0x2B8 load address 0x49B74
     .bss              0x01000800                0x3BCC                  
     .preserve         0x010043D0                  0x72                  
     .heap             0x01004442                   0x2                  
@@ -36,9 +36,9 @@
   Section                              Total      Size 
   --------------------------------  --------  -------- 
 
-  .text                               225768
+  .text                               225856
 
-    DefStudio                         202062
+    DefStudio                         202150
       Project                               
         BoudicaV150R100C20B500         68225
           Hi2115_B500_SDK              59989
@@ -119,14 +119,21 @@
               os                            
                 LiteOS                            8358
 
-        OpenCPUdemo                      370
+        OpenCPUdemo                      458
           Components                        
-            LierdaDACtest                184
+            LierdaDACtest                156
               src                           
-                app                      156
+                app                         
                   reference                 
                     application_core        
                       startup                      156
+
+            LierdaLowPowertest           302
+              src                           
+                app                      126
+                  reference                 
+                    application_core        
+                      main                         126
 
                 config                    28
                   vectors                   
@@ -134,13 +141,8 @@
                       application_core      
                         vectors                     28
 
-            LierdaLowPowertest           186
-              src                           
-                app                         
-                  reference                 
-                    application_core        
-                      LierdaLowPowertest            60
-                      main                         126
+                lib                      148
+                  Demo                             148
 
     RemoteStudio                       23706
       BoudicaV150R100C20B500_OpenCPU_src    
@@ -275,11 +277,13 @@
           Components                        
             LierdaLowPowertest              
               src                           
-                app                         
+                app                       21
                   reference                 
                     application_core        
-                      LierdaLowPowertest             4
                       main                          21
+
+                lib                        4
+                  Demo                               4
 
     RemoteStudio                        1598
       BoudicaV150R100C20B500_OpenCPU_src    
@@ -390,10 +394,8 @@
           Components                        
             LierdaLowPowertest              
               src                           
-                app                         
-                  reference                 
-                    application_core        
-                      LierdaLowPowertest            36
+                lib                         
+                  Demo                              36
 
     RemoteStudio                          21
       BoudicaV150R100C20B500_OpenCPU_src    
@@ -475,7 +477,7 @@
       Project                               
         OpenCPUdemo                         
           Components                        
-            LierdaDACtest                   
+            LierdaLowPowertest              
               src                           
                 config                      
                   vectors                   
@@ -500,8 +502,8 @@
 
   Mismatched section sizes...
 
-         .text  .lst file = 286480 (0x45F10)
-                 .du file = 225768 (0x371E8)
+         .text  .lst file = 286968 (0x460F8)
+                 .du file = 225856 (0x37240)
 
          .data  .lst file = 696 (0x2B8)
                  .du file = 590 (0x24E)

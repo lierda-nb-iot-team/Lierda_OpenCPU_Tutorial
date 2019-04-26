@@ -13,7 +13,11 @@
 #include "app_at_log.h"
 #include "string.h"
 #include <assert.h>
+#include "lierda_module_status.h"
+#include "lierdaNNMIData.h"
 
-void lierda_test_main(void);
+uint8 socketID;
+
+void lierdaTCPsendTest( void );
 
 #endif /* SRC_APP_REFERENCE_APPLICATION_CORE_LIERDATCPTEST_H_ */

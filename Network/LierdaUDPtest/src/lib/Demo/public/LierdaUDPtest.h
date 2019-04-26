@@ -12,8 +12,14 @@
 #include "neulfw.h"
 #include "app_at_log.h"
 #include "string.h"
-#include <assert.h>
+#include "assert.h"
+#include "lierdaNNMIData.h"
+#include "lierda_module_status.h"
 
-void lierda_test_main(void);
+
+
+uint8 socketID;
+
+void lierdaUDPsend(void);
 
 #endif /* SRC_APP_REFERENCE_APPLICATION_CORE_LIERDAUDPTEST_H_ */

@@ -4,21 +4,21 @@
   Section             Start Addr        Size      Used
   ------------------  ----------  ----------  --------
   
-  Aliased 0 (Flash)   0x00000000   0x1000000   0x4A500 = 304384
+  Aliased 0 (Flash)   0x00000000   0x1000000   0x4A6EC = 304876
     startup           0x00000000                  0xA0                  
     .version_str      0x000000C0                   0x0                  
-    .text             0x00000120               0x46788                  
-    .init             0x000468A8                   0x4                  
-    .fini             0x000468AC                   0x4                  
-    .ARM.exidx        0x000468B0                0x3618                  
-    .ARM.extab        0x00049EC8                 0x2AC                  
-    .ramtext          0x0004A174                  0xD0                  
-    .data             0x0004A244                 0x2BC                  
+    .text             0x00000120               0x46974                  
+    .init             0x00046A94                   0x4                  
+    .fini             0x00046A98                   0x4                  
+    .ARM.exidx        0x00046A9C                0x3618                  
+    .ARM.extab        0x0004A0B4                 0x2AC                  
+    .ramtext          0x0004A360                  0xD0                  
+    .data             0x0004A430                 0x2BC                  
   
   Aliased 1 (RAM)     0x01000000   0x1000000    0xFFA0 = 65440
     .stacks           0x01000000                 0x400                  
-    .ramtext          0x01000400                  0xD0 load address 0x4A174
-    .data             0x010004D0                 0x2BC load address 0x4A244
+    .ramtext          0x01000400                  0xD0 load address 0x4A360
+    .data             0x010004D0                 0x2BC load address 0x4A430
     .bss              0x01000800                0x3BCC                  
     .preserve         0x010043D0                  0x72                  
     .heap             0x01004442                   0x2                  
@@ -36,9 +36,9 @@
   Section                              Total      Size 
   --------------------------------  --------  -------- 
 
-  .text                               227806
+  .text                               227898
 
-    DefStudio                         202776
+    DefStudio                         202868
       Project                               
         BoudicaV150R100C20B500         68445
           Hi2115_B500_SDK              60209
@@ -119,14 +119,13 @@
               os                            
                 LiteOS                            8358
 
-        OpenCPUdemo                      418
+        OpenCPUdemo                      510
           Components                        
             LierdaDACtest                   
               src                           
-                app                      390
+                app                      282
                   reference                 
                     application_core        
-                      LierdaDACtest                108
                       main                         126
                       startup                      156
 
@@ -135,6 +134,9 @@
                     Hi2115                  
                       application_core      
                         vectors                     28
+
+                lib                      200
+                  Demo                             200
 
     RemoteStudio                       25030
       BoudicaV150R100C20B500_OpenCPU_src    
@@ -277,11 +279,13 @@
           Components                        
             LierdaDACtest                   
               src                           
-                app                         
+                app                       21
                   reference                 
                     application_core        
-                      LierdaDACtest                  4
                       main                          21
+
+                lib                        4
+                  Demo                               4
 
     RemoteStudio                        1598
       BoudicaV150R100C20B500_OpenCPU_src    
@@ -392,10 +396,8 @@
           Components                        
             LierdaDACtest                   
               src                           
-                app                         
-                  reference                 
-                    application_core        
-                      LierdaDACtest                 36
+                lib                         
+                  Demo                              36
 
     RemoteStudio                          21
       BoudicaV150R100C20B500_OpenCPU_src    
@@ -502,8 +504,8 @@
 
   Mismatched section sizes...
 
-         .text  .lst file = 288648 (0x46788)
-                 .du file = 227806 (0x379DE)
+         .text  .lst file = 289140 (0x46974)
+                 .du file = 227898 (0x37A3A)
 
          .data  .lst file = 700 (0x2BC)
                  .du file = 590 (0x24E)

@@ -1,0 +1,8 @@
+B300SP2:
+UpdatePackage.exe updateApplication --in C:\Users\Administrator\Desktop\openMCU\fwpkg\LSD4NBN-LB03000001_V0105.fwpkg --folder C:\Users\Administrator\Desktop\openMCU\demo\v1.3_180910\src_release\build_scons\arm\Hi2115\reference\application_core --out C:\Users\Administrator\Desktop\openMCU\fwpkg\fwpkg_new\Lierda_B300SP2_test02.fwpkg
+
+B300SP5:
+UpdatePackage.exe UpdateApplicationA -f -m C:\Users\Administrator\Desktop\openMCU\B300SP5_openCPU\src_release\build_scons\arm\Hi2115\reference\application_core\manifest.txt --in C:\Users\Administrator\Desktop\openMCU\fwpkg\NB86-G_X0A_B300SP5_V0211.fwpkg -o C:\Users\Administrator\Desktop\openMCU\fwpkg\fwpkg_new\B300SP5_Demo.fwpkg
+
+B500SP1:
+UpdatePackage.exe UpdateApplicationA -f -m C:\Users\Administrator\Desktop\openMCU\B300SP5_openCPU\src_release\build_scons\arm\Hi2115\reference\application_core\manifest.txt --in C:\Users\Administrator\Desktop\openMCU\fwpkg\old.fwpkg -o C:\Users\Administrator\Desktop\openMCU\fwpkg\fwpkg_new\B500SP1_Demo.fwpkg

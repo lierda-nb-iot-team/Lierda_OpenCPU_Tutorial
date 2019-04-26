@@ -7,20 +7,9 @@
 
 #include "LierdaUDPtest.h"
 #include "lierda_app_main.h"
-#include "lierdaNNMIData.h"
-#include "lierda_module_status.h"
-
-osThreadAttr_t test_task_attr = { "lierda_test_task"/*任务名称*/, 0, NULL, 0, NULL,
-		(512) /*任务堆栈大小*/, 11/*任务优先级*/, 0, 0 };//任务属性结构体
-uint32 * test_task_handle = NULL;
-
-#define UDP_DATASEND  "AT+NSOST="
-
-char udpcmd_buff[20]="AT+NSORF=";//AT指令读取数据
-uint8 socketID;
 
 
-static void lierdaUDPsend(void)
+void lierdaUDPsend(void)
 {
 	char * ret = NULL;
 	char tcp_UDPcmd_buff[100] = {0};
@@ -33,7 +22,7 @@ static void lierdaUDPsend(void)
 
 	if(strstr(ret,"OK"))
 	{
-		memcpy(tcp_UDPcmd_buff, UDP_DATASEND, 9);
+		memcpy(tcp_UDPcmd_buff, "AT+NSOST=", 9);
 
 		tcp_UDPcmd_buff[9] = socketID;
 
@@ -73,44 +62,4 @@ static void lierdaUDPsend(void)
 	}
 }
 
-static void lierda_test_task(void *param)
-{
-	UNUSED(param);
 
-	char *udpData_addr=NULL;
-
-	osDelay(3000);
-
-	lierdaUDPsend();
-
-	for(;;)
-	{
-		lierdaSocketAcquireSemaphore();
-
-		lierdaLog("DBG_INFO:收到TCP/UDP数据");
-
-		udpcmd_buff[9] = socketID;
-
-		memcpy(udpcmd_buff + 10, ",512", 4);
-
-		lierdaLog("DBG_INFO:cmd:%s", udpcmd_buff);
-
-		udpData_addr = lierdaATCall(udpcmd_buff, 3000);  //读取数据
-
-		lierdaLog("DBG_INFO:result:%s", udpData_addr);  //打印UDP/TCP下行的数据
-
-		osDelay(1);
-
-	}
-
-}
-
-void lierda_test_main(void)
-{
-	test_task_handle = osThreadNew(lierda_test_task, NULL, &test_task_attr); //创建测试任务
-
-	if (test_task_handle == NULL)
-	{
-		lierdaLog("lierda_test_task任务创建失败");
-	}
-}

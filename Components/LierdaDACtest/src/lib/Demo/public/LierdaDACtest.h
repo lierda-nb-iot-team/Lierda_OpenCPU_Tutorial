@@ -19,6 +19,6 @@
 #define LIERDA_AIO0 0
 #define LIERDA_AIO1 1
 
-void lierda_test_main(void);
+void Lierda_DAC_Init(void);
 
 #endif /* SRC_APP_REFERENCE_APPLICATION_CORE_LIERDADACTEST_H_ */

@@ -12,8 +12,7 @@
 #include "neulfw.h"
 #include "app_at_log.h"
 #include "string.h"
-#include <assert.h>
+#include "assert.h"
 
-void lierda_test_main(void);
 
 #endif /* SRC_APP_REFERENCE_APPLICATION_CORE_LIERDALOWPOWERTEST_H_ */

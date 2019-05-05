@@ -13,6 +13,12 @@
 #include "app_at_log.h"
 #include "string.h"
 #include "assert.h"
+#include "lierdaGPIO.h"
 
+osMessageQueueId_t msg_QueueId; //∂”¡–ID
+
+void createMsgQueue( void );
+
+void TestKeyInit(PIN key_pin, GPIO_DIRECTION mode);
 
 #endif /* SRC_APP_REFERENCE_APPLICATION_CORE_LIERDALOWPOWERTEST_H_ */

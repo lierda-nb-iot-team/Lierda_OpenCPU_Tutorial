@@ -12,7 +12,7 @@
 #include <assert.h>
 #include "LierdaLowPowertest.h"
 #include "lierda_app_main.h"
-
+#include "LIS3DHTR.h"
 
 void lierda_App_main(void);
 void lierda_App_task(void *param);

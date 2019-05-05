@@ -4,10 +4,12 @@
 ******************************************************************************/
 #include "app.h"
 
+
 osThreadAttr_t App_task_attr = { "lierda_App_task"/*任务名称*/, 0, NULL, 0, NULL,
 		(256) /*任务堆栈大小*/, 11/*任务优先级*/, 0, 0 };//任务属性结构体
 uint32 * App_task_handle = NULL;
 
+extern uint8 TestKeyFlag;
 
 /******************************************************************************
 * @函数名 系统信息打印
@@ -27,6 +29,7 @@ static void TitlePrint( char *name)
 }
 
 
+
 /******************************************************************************
 * @函数名	app任务线程
 * @参数	    param : 空参数，无效
@@ -36,17 +39,42 @@ void lierda_App_task(void *param)
 {
 	UNUSED(param);
 
+	uint8 temp = 0;
+	int16 LIS3DH_X = 0,LIS3DH_Y = 0,LIS3DH_Z = 0;
+
 	osDelay(500);
 
 	TitlePrint("低功耗测试");
 
+	createMsgQueue();
+
+	lierdaLog("waiting init complete.");
+
 	osDelay(3000);
+
+	TestKeyInit(PIN_12,GPIO_DIRECTION_INPUT);
+
+	I2c_Init();
+
+	LIS3DH_init();
+
+	lierdaLog("press k2 button to get LIS3DH data.");
 
 	for (;;)
 	{
+		if (osMessageQueueGet(msg_QueueId, &temp, NULL, 0xffffffff) == osOK)//等待消息队列，任务处于阻塞状态时进入低功耗模式
+		{
+			if(temp == TestKeyFlag)
+			{
 
+				LIS3DHUpdateInfo(&LIS3DH_X, &LIS3DH_Y, &LIS3DH_Z);  //三轴数据获取
 
-		osDelay(5000);
+				lierdaLog("X轴:%d,Y轴:%d,Z轴:%d", LIS3DH_X, LIS3DH_Y, LIS3DH_Z);  //三轴数据打印
+
+			}
+
+		}
+		osDelay(500);
 	}
 }
 

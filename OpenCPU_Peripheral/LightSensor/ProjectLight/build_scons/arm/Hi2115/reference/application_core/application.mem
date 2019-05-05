@@ -4,21 +4,21 @@
   Section             Start Addr        Size      Used
   ------------------  ----------  ----------  --------
   
-  Aliased 0 (Flash)   0x00000000   0x1000000   0x4A714 = 304916
+  Aliased 0 (Flash)   0x00000000   0x1000000   0x4A744 = 304964
     startup           0x00000000                  0xA0                  
     .version_str      0x000000C0                   0x0                  
-    .text             0x00000120               0x46958                  
-    .init             0x00046A78                   0x4                  
-    .fini             0x00046A7C                   0x4                  
-    .ARM.exidx        0x00046A80                0x3650                  
-    .ARM.extab        0x0004A0D0                 0x2B8                  
-    .ramtext          0x0004A388                  0xD0                  
-    .data             0x0004A458                 0x2BC                  
+    .text             0x00000120               0x46988                  
+    .init             0x00046AA8                   0x4                  
+    .fini             0x00046AAC                   0x4                  
+    .ARM.exidx        0x00046AB0                0x3650                  
+    .ARM.extab        0x0004A100                 0x2B8                  
+    .ramtext          0x0004A3B8                  0xD0                  
+    .data             0x0004A488                 0x2BC                  
   
   Aliased 1 (RAM)     0x01000000   0x1000000    0xFFA0 = 65440
     .stacks           0x01000000                 0x400                  
-    .ramtext          0x01000400                  0xD0 load address 0x4A388
-    .data             0x010004D0                 0x2BC load address 0x4A458
+    .ramtext          0x01000400                  0xD0 load address 0x4A3B8
+    .data             0x010004D0                 0x2BC load address 0x4A488
     .bss              0x01000800                0x3BE4                  
     .preserve         0x010043E8                  0x72                  
     .heap             0x0100445A                   0x2                  
@@ -120,29 +120,23 @@
                 LiteOS                            8358
 
         OpenCPUdemo                      772
-          Components                        
-            LierdaDACtest                156
-              src                           
-                app                         
-                  reference                 
-                    application_core        
-                      startup                      156
-
-            LierdaLight                  616
-              src                           
-                app                      126
-                  reference                 
-                    application_core        
-                      main                         126
-
-                config                    26
-                  vectors                   
-                    Hi2115                  
+          OpenCPU_Peripheral             616
+            LightSensor                     
+              ProjectLight                  
+                src                         
+                  app                    126
+                    reference               
                       application_core      
-                        vectors                     26
+                        main                       126
 
-                lib                      464
-                  Demo                             464
+                  config                  26
+                    vectors                 
+                      Hi2115                
+                        application_core    
+                          vectors                   26
+
+                  lib                    464
+                    Demo                           464
 
     RemoteStudio                       25286
       BoudicaV150R100C20B500_OpenCPU_src    
@@ -276,16 +270,17 @@
                 LiteOS                             136
 
         OpenCPUdemo                       33
-          Components                        
-            LierdaLight                     
-              src                           
-                app                       21
-                  reference                 
-                    application_core        
-                      main                          21
+          OpenCPU_Peripheral                
+            LightSensor                     
+              ProjectLight                  
+                src                         
+                  app                     21
+                    reference               
+                      application_core      
+                        main                        21
 
-                lib                       12
-                  Demo                              12
+                  lib                     12
+                    Demo                            12
 
     RemoteStudio                        1611
       BoudicaV150R100C20B500_OpenCPU_src    
@@ -395,11 +390,12 @@
                   app_at                           393
 
         OpenCPUdemo                       36
-          Components                        
-            LierdaLight                     
-              src                           
-                lib                         
-                  Demo                              36
+          OpenCPU_Peripheral                
+            LightSensor                     
+              ProjectLight                  
+                src                         
+                  lib                       
+                    Demo                            36
 
     RemoteStudio                          27
       BoudicaV150R100C20B500_OpenCPU_src    
@@ -481,14 +477,15 @@
     DefStudio                               
       Project                               
         OpenCPUdemo                         
-          Components                        
-            LierdaLight                     
-              src                           
-                config                      
-                  vectors                   
-                    Hi2115                  
-                      application_core      
-                        vectors                    160
+          OpenCPU_Peripheral                
+            LightSensor                     
+              ProjectLight                  
+                src                         
+                  config                    
+                    vectors                 
+                      Hi2115                
+                        application_core    
+                          vectors                  160
 
 
   Section                              Total      Size 
@@ -507,7 +504,7 @@
 
   Mismatched section sizes...
 
-         .text  .lst file = 289112 (0x46958)
+         .text  .lst file = 289160 (0x46988)
                  .du file = 227846 (0x37A06)
 
          .data  .lst file = 700 (0x2BC)

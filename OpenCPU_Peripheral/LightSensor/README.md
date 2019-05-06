@@ -51,7 +51,7 @@
 ![示例代码](../../Picture/光感示例代码3.jpg)  
 
 5.4  编译工程，如没有错误则编译通过：  
-![编译结果](../../Picture/编译结果.png)  
+![编译结果](../../Picture/编译结果.jpg)  
 编译成功后，烧写固件，烧写过程详见[《Lierda NB-IoT模组 OpenCPU DemoCode说明文档》
 ](../../Doc/基本资料/Lierda_NB-IoT模组OpenCPU_DEMO说明文档V1.8_190403.pdf)
 5.5 烧写完毕，打开串口助手，选择AT串口，波特率为9600，可看到如下结果：  

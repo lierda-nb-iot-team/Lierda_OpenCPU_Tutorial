@@ -1,0 +1,19 @@
+#===============================================================================
+# @brief    Scons make file
+# Copyright (c) 2016 NEUL LIMITED
+#===============================================================================
+
+Import('env')
+import os
+from ModuleUtils import *
+
+module = 'Demo'
+
+public_include_dirs = [os.path.join(Dir('.').srcnode().abspath, 'public')]
+
+mod = Module(module, env,
+             public_inc_dirs = public_include_dirs)
+
+products = mod.build(env)
+
+Return ('products')

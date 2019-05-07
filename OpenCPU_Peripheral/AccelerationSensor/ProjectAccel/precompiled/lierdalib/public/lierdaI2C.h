@@ -78,7 +78,7 @@ I2C_RET lierdaI2CRead(I2C_HandleTypeDef *hi2c,uint8 i2c_slave_addr,uint8 *data, 
  * 		i2c_rx_reg_addr 所要写入的寄存器地址，
  * 		*data 写入的数值（若往寄存器中写入数值，则将寄存器地址置于首位，后面跟要写入的数值）
  * 		data_len 写入的长度（该长度包括寄存器地址）
- * @返回值:若读取成功返回0，失败返回1
+ * @返回值:若成功返回0，失败返回1
  * @重要修改记录:180830，Def创建函数
 ******************************************************************************/
 I2C_RET lierdaI2CWrite(I2C_HandleTypeDef *hi2c,uint8 i2c_slave_addr,uint8 *data,uint8 data_len);

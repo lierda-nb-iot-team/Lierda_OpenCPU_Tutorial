@@ -27,10 +27,10 @@
 		|  |  └─reference
 		|  |       └─application_core :	主函数入口，客户也可以把应用代码放在这里（在这个文件夹下创建xx.c或xx.h文件即可）
 		|  ├─lib: 应用代码存放目录
-		|    └─Demo:
+		|     └─Demo:
 		|       ├─private：应用代码c文件目录
 		|       ├─public ：应用代码头文件目录
-		|        └─SConscript：配置文件，必须包含
+		|       └─SConscript：配置文件，必须包含
 		└─SConscript：编译配置文件，在lib文件夹下添加用户代码时需配置此文件 
 
 /**

@@ -3,7 +3,10 @@
  * @设计	Lierda NB-IoT 软件设计团队@2018
 ******************************************************************************/
 #include "led.h"
-
+#include "pwm.h"
+#include "lierda_app_main.h"
+#include "cmsis_os2.h"
+#include "core.h"
 
 /******************************************************************************
 * @函数名	LED初始化
@@ -71,3 +74,42 @@ void LEDx_StateSet(uint8 LEDx,LEDState_TypeDef state)
       LED12_TOGGLE;/* 设置引脚输出反转 */
   }
 }
+
+static void pwmcallback(PWM_NUMBER pwm)
+{
+
+	UNUSED(pwm);
+
+	lierdaGPIOToggle(LED_10);
+
+}
+
+
+void setPWM( void )
+{
+	PWM_CYCLE_DATA pwm_cycle_data;
+	PWM_BASE_CONFIGURATION pwm_config;
+	PWM_NUMBER pwm_num = 0;
+
+	uint8 ret = 0;
+
+	pwm_cycle_data.duty_cycle = 10;
+	pwm_cycle_data.period_cycles = 100;
+
+	pwm_config.cycles = 15;
+	pwm_config.length = 10;
+	pwm_config.repeat = 1;
+
+	pwm_init();
+
+	ret = pwm_open(pwm_num,LED_10);
+
+	lierdaLog("pwm_open ret :%d",ret);
+
+	pwm_cycle_start(pwm_num,pwm_config,&pwm_cycle_data);
+
+//	pwm_register_interrupt(pwm_num,pwmcallback);
+
+}
+
+

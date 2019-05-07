@@ -43,7 +43,8 @@ void Lierda_Led_Init(void);
 //…Ë÷√∞Â‘ÿLEDµ∆µƒ◊¥Ã¨
 void LEDx_StateSet(uint8 LEDx,LEDState_TypeDef state);
 
+void setPWM( void );
 
-
+void breathLED(void);
 
 #endif /* SRC_APP_REFERENCE_APPLICATION_CORE_LED_H_ */

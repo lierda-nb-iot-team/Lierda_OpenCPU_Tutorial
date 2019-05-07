@@ -21,29 +21,34 @@ void lierda_App_task(void *param)
 	osDelay(500);//等待模组初始化完成
 	lierdaLog("LED Demo");
 	Lierda_Led_Init();
-	LEDx_StateSet(LED10|LED11|LED12,LED_OFF);
-	osTimerStart(LierdaTimer_handle,700);//启动一个700ms定时器
+//	LEDx_StateSet(LED10|LED11|LED12,LED_OFF);
+//	osTimerStart(LierdaTimer_handle,700);//启动一个700ms定时器
+
+	setPWM();
+
 	for (;;)
 	{
-		switch (count)
-		{
-		case 0:
-			LED10_ON;
-			LED12_OFF;
-			break;
-		case 1:
-			LED10_OFF;
-			LED11_ON;
-			break;
-		case 2:
-			LED11_OFF;
-			LED12_ON;
-			break;
-		}
-		count++;
-		if (count == 3)
-			count = 0;
-		osThreadSuspend(App_task_handle); //挂起任务
+
+
+//		switch (count)
+//		{
+//		case 0:
+//			LED10_ON;
+//			LED12_OFF;
+//			break;
+//		case 1:
+//			LED10_OFF;
+//			LED11_ON;
+//			break;
+//		case 2:
+//			LED11_OFF;
+//			LED12_ON;
+//			break;
+//		}
+//		count++;
+//		if (count == 3)
+//			count = 0;
+//		osThreadSuspend(App_task_handle); //挂起任务
 	}
 }
 void Lierda_SoftTimerCallback(void *param)

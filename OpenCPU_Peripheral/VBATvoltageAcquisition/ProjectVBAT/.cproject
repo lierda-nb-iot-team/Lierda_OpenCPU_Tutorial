@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
 	<storageModule moduleId="org.eclipse.cdt.core.settings">
-		<cconfiguration id="0.1998599988">
-			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="0.1998599988" moduleId="org.eclipse.cdt.core.settings" name="Default">
+		<cconfiguration id="0.1225305628">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="0.1225305628" moduleId="org.eclipse.cdt.core.settings" name="Default">
 				<externalSettings/>
 				<extensions>
 					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
@@ -14,69 +14,69 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration buildProperties="" description="" id="0.1998599988" name="Default" parent="org.eclipse.cdt.build.core.prefbase.cfg">
-					<folderInfo id="0.1998599988." name="/" resourcePath="">
-						<toolChain id="org.eclipse.cdt.build.core.prefbase.toolchain.2004277735" name="No ToolChain" resourceTypeBasedDiscovery="false" superClass="org.eclipse.cdt.build.core.prefbase.toolchain">
-							<targetPlatform id="org.eclipse.cdt.build.core.prefbase.toolchain.2004277735.628764544" name=""/>
-							<builder id="org.eclipse.cdt.build.core.settings.default.builder.1642545862" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
-							<tool id="org.eclipse.cdt.build.core.settings.holder.libs.1975595000" name="holder for library settings" superClass="org.eclipse.cdt.build.core.settings.holder.libs"/>
-							<tool id="org.eclipse.cdt.build.core.settings.holder.1199263203" name="Assembly" superClass="org.eclipse.cdt.build.core.settings.holder">
-								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.384622407" languageId="org.eclipse.cdt.core.assembly" languageName="Assembly" sourceContentType="org.eclipse.cdt.core.asmSource" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+				<configuration buildProperties="" description="" id="0.1225305628" name="Default" parent="org.eclipse.cdt.build.core.prefbase.cfg">
+					<folderInfo id="0.1225305628." name="/" resourcePath="">
+						<toolChain id="org.eclipse.cdt.build.core.prefbase.toolchain.798224344" name="No ToolChain" resourceTypeBasedDiscovery="false" superClass="org.eclipse.cdt.build.core.prefbase.toolchain">
+							<targetPlatform id="org.eclipse.cdt.build.core.prefbase.toolchain.798224344.325928053" name=""/>
+							<builder id="org.eclipse.cdt.build.core.settings.default.builder.1182232154" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.libs.215383515" name="holder for library settings" superClass="org.eclipse.cdt.build.core.settings.holder.libs"/>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.883159890" name="Assembly" superClass="org.eclipse.cdt.build.core.settings.holder">
+								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.143104247" languageId="org.eclipse.cdt.core.assembly" languageName="Assembly" sourceContentType="org.eclipse.cdt.core.asmSource" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>
-							<tool id="org.eclipse.cdt.build.core.settings.holder.877177630" name="GNU C++" superClass="org.eclipse.cdt.build.core.settings.holder">
-								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.695380884" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\peripheral_drivers\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\backtrace\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\neul\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\lierdalib\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\nlibc\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\lwm2m\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\neul_network\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\external\etypes\neul\shared_ap"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\build_scons\merged\customer_neul_rdk\config\sw_modules\application_core"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\iflog\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\external\etypes\neul\shared_as"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\rpc_interface\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\app\reference\application_core\version"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\cmsis\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\lib\common_headers"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\preserve\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\lib\Demo"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\config\eflash\application_core"/>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.1561442493" name="GNU C++" superClass="org.eclipse.cdt.build.core.settings.holder">
+								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.30167737" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\config\vectors\Hi21XX\shared"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\activity_indication\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\neul\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\peripheral_drivers\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\app\reference\application_core"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\nlibc\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\LiteOS\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\logical_channel\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\iflog\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\lwm2m\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\external\etypes\neul\shared_as"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\build_version\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\external\etypes\neul\shared"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\lierda_gps\public"/>
 									<listOptionValue builtIn="false" value="c:\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\build_scons\merged\customer_neul_rdk\config\keys\application_core"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\log\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\lwip_support\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\ppp\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\external\etypes\neul\shared"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\lib\Demo\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\irmalloc\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\arm_core\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\log_reader\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\lierda_gps\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\LiteOS\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\drivers\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\neul_kv_storage\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\app_at\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\neul_utils\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\mbedtls\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\config\vectors\Hi21XX\shared"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\ota\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\activity_indication\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\app_at_ref\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\lierda_sensor\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\config\memory\standard\Hi2115\shared"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\aio_functions\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\lierdaModuleStatus\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\config\vectors\Hi2115\application_core"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\panic\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\external\etypes\neul\application_core"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\logical_channel\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\dns\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\app_at_module_production\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\build_version\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\app\reference\application_core"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\lib\Demo"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\lierdaModuleStatus\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\backtrace\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\build_scons\merged\customer_neul_rdk\config\sw_modules\application_core"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\log_reader\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\mbedtls\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\rpc_interface\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\neul_network\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\app_at_module_production\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\lwip_support\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\log\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\drivers\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\arm_core\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\app_at\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\panic\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\neul_utils\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\app\reference\application_core\version"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\config\eflash\application_core"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\external\etypes\neul\shared_ap"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\ppp\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\app_at_ref\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\lierda_sensor\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\irmalloc\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\external\etypes\neul\application_core"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\config\vectors\Hi2115\application_core"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\lib\Demo\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\lib\common_headers"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\build_scons\merged\customer_neul_rdk\config\keys\application_core"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\aio_functions\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\ota\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\lierdalib\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\cmsis\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\dns\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\preserve\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\neul_kv_storage\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\config\memory\standard\Hi2115\shared"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release"/>
 									<listOptionValue builtIn="false" value="c:\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include-fixed"/>
 									<listOptionValue builtIn="false" value="c:\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\c++\7.2.1\backward"/>
 									<listOptionValue builtIn="false" value="c:\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\c++\7.2.1"/>
@@ -84,7 +84,7 @@
 									<listOptionValue builtIn="false" value="c:\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include"/>
 									<listOptionValue builtIn="false" value="c:\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\c++\7.2.1\arm-none-eabi"/>
 								</option>
-								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.147146106" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols">
+								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.975808412" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="USE_CMSIS_OS"/>
 									<listOptionValue builtIn="false" value="FIRMWARE_GIT_HASH=\&quot;UNKNOWN\&quot;"/>
 									<listOptionValue builtIn="false" value="LWM2M_LOG_EVENT_STD"/>
@@ -552,65 +552,65 @@
 									<listOptionValue builtIn="false" value="__DEC128_MAX_EXP__=6145"/>
 									<listOptionValue builtIn="false" value="__DEC_EVAL_METHOD__=2"/>
 								</option>
-								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1556689034" languageId="org.eclipse.cdt.core.g++" languageName="GNU C++" sourceContentType="org.eclipse.cdt.core.cxxSource,org.eclipse.cdt.core.cxxHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.2139693702" languageId="org.eclipse.cdt.core.g++" languageName="GNU C++" sourceContentType="org.eclipse.cdt.core.cxxSource,org.eclipse.cdt.core.cxxHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>
-							<tool id="org.eclipse.cdt.build.core.settings.holder.210712317" name="GNU C" superClass="org.eclipse.cdt.build.core.settings.holder">
-								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.1118768757" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\peripheral_drivers\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\backtrace\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\neul\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\lierdalib\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\nlibc\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\lwm2m\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\neul_network\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\external\etypes\neul\shared_ap"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\build_scons\merged\customer_neul_rdk\config\sw_modules\application_core"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\iflog\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\external\etypes\neul\shared_as"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\rpc_interface\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\app\reference\application_core\version"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\cmsis\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\lib\common_headers"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\preserve\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\lib\Demo"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\config\eflash\application_core"/>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.1571709054" name="GNU C" superClass="org.eclipse.cdt.build.core.settings.holder">
+								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.512321283" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\config\vectors\Hi21XX\shared"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\activity_indication\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\neul\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\peripheral_drivers\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\app\reference\application_core"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\nlibc\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\LiteOS\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\logical_channel\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\iflog\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\lwm2m\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\external\etypes\neul\shared_as"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\build_version\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\external\etypes\neul\shared"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\lierda_gps\public"/>
 									<listOptionValue builtIn="false" value="c:\gcc-arm-none-eabi-7-2017-q4-major-win32\lib\gcc\arm-none-eabi\7.2.1\include"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\build_scons\merged\customer_neul_rdk\config\keys\application_core"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\log\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\lwip_support\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\ppp\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\external\etypes\neul\shared"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\lib\Demo\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\irmalloc\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\arm_core\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\log_reader\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\lierda_gps\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\LiteOS\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\drivers\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\neul_kv_storage\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\app_at\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\neul_utils\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\mbedtls\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\config\vectors\Hi21XX\shared"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\ota\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\activity_indication\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\app_at_ref\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\lierda_sensor\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\config\memory\standard\Hi2115\shared"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\aio_functions\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\lierdaModuleStatus\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\config\vectors\Hi2115\application_core"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\panic\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\external\etypes\neul\application_core"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\logical_channel\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\dns\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\app_at_module_production\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\precompiled\build_version\public"/>
-									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaButton\Code\src_release\src\app\reference\application_core"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\lib\Demo"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\lierdaModuleStatus\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\backtrace\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\build_scons\merged\customer_neul_rdk\config\sw_modules\application_core"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\log_reader\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\mbedtls\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\rpc_interface\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\neul_network\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\app_at_module_production\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\lwip_support\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\log\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\drivers\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\arm_core\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\app_at\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\panic\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\neul_utils\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\app\reference\application_core\version"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\config\eflash\application_core"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\external\etypes\neul\shared_ap"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\ppp\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\app_at_ref\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\lierda_sensor\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\irmalloc\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\external\etypes\neul\application_core"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\config\vectors\Hi2115\application_core"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\lib\Demo\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\lib\common_headers"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\build_scons\merged\customer_neul_rdk\config\keys\application_core"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\aio_functions\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\ota\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\lierdalib\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\cmsis\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\dns\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\preserve\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\precompiled\neul_kv_storage\public"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release\src\config\memory\standard\Hi2115\shared"/>
+									<listOptionValue builtIn="false" value="E:\Lierda_EVKcurriculum_190422\LierdaVBAT\Code\src_release"/>
 									<listOptionValue builtIn="false" value="c:\gcc-arm-none-eabi-7-2017-q4-major-win32\arm-none-eabi\include\newlib-nano"/>
 								</option>
-								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.1712559504" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols">
+								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.188646824" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="USE_CMSIS_OS"/>
 									<listOptionValue builtIn="false" value="FIRMWARE_GIT_HASH=\&quot;UNKNOWN\&quot;"/>
 									<listOptionValue builtIn="false" value="LWM2M_LOG_EVENT_STD"/>
@@ -1041,7 +1041,7 @@
 									<listOptionValue builtIn="false" value="__DEC128_MAX_EXP__=6145"/>
 									<listOptionValue builtIn="false" value="__DEC_EVAL_METHOD__=2"/>
 								</option>
-								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.715639674" languageId="org.eclipse.cdt.core.gcc" languageName="GNU C" sourceContentType="org.eclipse.cdt.core.cSource,org.eclipse.cdt.core.cHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.475884254" languageId="org.eclipse.cdt.core.gcc" languageName="GNU C" sourceContentType="org.eclipse.cdt.core.cSource,org.eclipse.cdt.core.cHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>
 						</toolChain>
 					</folderInfo>
@@ -1051,7 +1051,7 @@
 		</cconfiguration>
 	</storageModule>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-		<project id="BoudicaV150R100C20B500_OpenCPU_EVKcurriculumButton.null.191498142" name="BoudicaV150R100C20B500_OpenCPU_EVKcurriculumButton"/>
+		<project id="BoudicaV150R100C20B500_OpenCPU_LierdaVBAT.null.2049709993" name="BoudicaV150R100C20B500_OpenCPU_LierdaVBAT"/>
 	</storageModule>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>

@@ -38,8 +38,11 @@
 `#include "lierdaGPIO.h"`  
 库函数：  
 `void lierdaGPIOInit(void);	//GPIO初始化`
+
 `bool lierdaGPIOClaim(PIN pin,GPIO_DIRECTION dir);	//GPIO声明`
+
 `void lierdaGPIORegisterCallback(PIN pin, GPIO_INTERRUPT trigger, GPIO_CALLBACK callback);	//GPIO中断声明函数`
+
 `bool lierdaGPIORead(PIN pin);	//GPIO读取函数`
 
 5.3.2 按键驱动

@@ -35,7 +35,9 @@
 `#include "lierdaADC.h"`  
 库函数：  
 `LIERDA_ADC_RET lierdaADCInit(void);//ADC初始化`
+
 `AIO_FUNC_RET lierdaAIOCalibrateADC(void);//电压校准`
+
 `AIO_FUNC_RET lierdaAIOTempVolt(int16 *temp,uint32 *voltage);//Vbat电压采样`
 
 5.3.2 Vbat电压采样样例

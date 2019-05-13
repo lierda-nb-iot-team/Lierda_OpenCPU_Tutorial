@@ -38,7 +38,9 @@
 `#include "lierdaUART.h"`  
 库函数：  
 `void lierdaUARTInit(UART_HandleTypeDef *huart);	//UART初始化`
+
 `uint16 lierdaUARTReceive(UART_HandleTypeDef *huart,uint8 *UserDataPtr, uint16 *UserDataLen, uint32 WaitTimeOut);	//UART数据接收函数`
+
 `void lierdaUARTSend(UART_HandleTypeDef *huart,const uint8 *buffer, uint32 length); 	//UART数据发送函数`
 
 

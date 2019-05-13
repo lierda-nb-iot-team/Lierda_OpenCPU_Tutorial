@@ -1,0 +1,31 @@
+#===============================================================================
+# @brief    Scons make file
+# Copyright (c) 2018 Huawei Technologies Co. Ltd
+#===============================================================================
+
+# concatenate the yml definitions for each core as required by FirmwarePackager.
+Import('env')
+
+env = env.Clone(tools=['textfile'], LINESEPARATOR='\r\n')
+
+# non-module config required for packages without a customer.
+yml_definition_files = []
+for src_dir in (['neul'] + env['ADDITIONAL_SRC']):
+    yml_definition_files.append(env.Glob('sw_modules/%s/$CORE/*.yml' % src_dir))
+    yml_definition_files.append(env.Glob('keys/%s/$CORE/*_external.yml' % src_dir))
+
+keydefs = env.Substfile('${CORE}.yml',
+              yml_definition_files
+)
+
+for customer in env.Glob('modules/*'):
+    custenv = env.Clone(CUSTOMER=customer)
+    for module in custenv.Glob('$CUSTOMER/module/*'):
+        modenv = custenv.Clone(MODULE=module)
+
+        modenv.Substfile('$MODULE/$CORE/${CORE}.yml', [
+            '${CORE}.yml',
+            modenv.Glob('$MODULE/${CORE}_*.yml')
+        ])
+
+Return('keydefs')

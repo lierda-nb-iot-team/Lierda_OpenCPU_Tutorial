@@ -39,8 +39,11 @@
 `#include "lierdaGPIO.h"`  
 库函数：  
 `void lierdaGPIOInit(void);	//GPIO初始化`
+
 `bool lierdaGPIOClaim(PIN pin,GPIO_DIRECTION dir);	//GPIO声明`
+
 `void lierdaGPIOSet(PIN pin); 	//GPIO拉高`
+
 `void lierdaGPIOClear(PIN pin); 	//GPIO拉低`
  
 

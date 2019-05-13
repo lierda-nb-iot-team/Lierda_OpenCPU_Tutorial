@@ -35,7 +35,9 @@
 `#include "lierdaADC.h"`  
 库函数：  
 `LIERDA_ADC_RET lierdaADCInit(void);//ADC初始化`
+
 `AIO_FUNC_RET lierdaAIOCalibrateADC(void);//电压校准`
+
 `AIO_FUNC_RET lierdaReadAIOPin(uint32 *voltage, uint8 aio_pin_number);;//AIO口电压采样`
 
 5.3.2 AIO电压采样样例

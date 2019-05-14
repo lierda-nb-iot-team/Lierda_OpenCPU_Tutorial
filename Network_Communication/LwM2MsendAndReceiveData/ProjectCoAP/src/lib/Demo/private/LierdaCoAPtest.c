@@ -39,6 +39,7 @@ static uint8 lierdaATCalldemo(char* cmd, char* result, uint16 timeOut, uint16 nu
 	return 0;
 }
 
+
 /******************************************************************************
  * @函数名	sendCoAPdata
  * @描述    发送CoAP数据

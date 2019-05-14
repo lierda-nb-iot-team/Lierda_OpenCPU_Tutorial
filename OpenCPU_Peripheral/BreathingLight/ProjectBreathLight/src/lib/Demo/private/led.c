@@ -7,6 +7,9 @@
 #include "lierda_app_main.h"
 #include "cmsis_os2.h"
 #include "core.h"
+#include "stdio.h"
+
+static bool test_pwm_callback_triggered = false;
 
 /******************************************************************************
 * @函数名	LED初始化
@@ -16,7 +19,7 @@
 void Lierda_Led_Init(void)
 {
 	lierdaGPIOInit();
-	lierdaGPIOClaim(LED_10,GPIO_DIRECTION_OUTPUT);  //LED_10 GPIO声明
+//	lierdaGPIOClaim(LED_10,GPIO_DIRECTION_OUTPUT);  //LED_10 GPIO声明
 	lierdaGPIOClaim(LED_11,GPIO_DIRECTION_OUTPUT);  //LED_11 GPIO声明
 	lierdaGPIOClaim(LED_12,GPIO_DIRECTION_OUTPUT);  //LED_12 GPIO声明
 }
@@ -77,38 +80,46 @@ void LEDx_StateSet(uint8 LEDx,LEDState_TypeDef state)
 
 static void pwmcallback(PWM_NUMBER pwm)
 {
-
 	UNUSED(pwm);
+	test_pwm_callback_triggered = true;
 
-	lierdaGPIOToggle(LED_10);
+	LED10_ON;
+
+	pwm_stop(pwm);
+	pwm_close(pwm);
 
 }
 
 
 void setPWM( void )
 {
-	PWM_CYCLE_DATA pwm_cycle_data;
-	PWM_BASE_CONFIGURATION pwm_config;
-	PWM_NUMBER pwm_num = 0;
-
-	uint8 ret = 0;
-
-	pwm_cycle_data.duty_cycle = 10;
-	pwm_cycle_data.period_cycles = 100;
-
-	pwm_config.cycles = 15;
-	pwm_config.length = 10;
-	pwm_config.repeat = 1;
+	PIN pin = PIN_25;
+	PWM_NUMBER pwm_num = PWM_NUMBER_0;
 
 	pwm_init();
 
-	ret = pwm_open(pwm_num,LED_10);
+	if (true == pwm_open(pwm_num, pin)) {
+	PWM_BASE_CONFIGURATION pwm_cfg;
+	PWM_CYCLE_DATA pwm_cyc_data;// U can also choose PWM_US_DATA or PWM_MS_DATA
+//	uint16 duty_cycle;
 
-	lierdaLog("pwm_open ret :%d",ret);
+	//Support output several group PWM waves by setting length. 1 means only have one kind of configuration
+	pwm_cfg.length = 1;
+	//determine the cycles numbers of PWM
+	pwm_cfg.cycles = 200;
+	//repeat or Not, if using interrupt callback, make sure false.
+	pwm_cfg.repeat = false;
+	pwm_register_interrupt(pwm_num, pwmcallback);
+	test_pwm_callback_triggered = false;
+	//period cycles determine the freq.
+	pwm_cyc_data.period_cycles = 50;
+	// Duty cycle (parts per 1000)
+	pwm_cyc_data.duty_cycle = 500;
 
-	pwm_cycle_start(pwm_num,pwm_config,&pwm_cycle_data);
+	pwm_cycle_start(pwm_num, pwm_cfg, &pwm_cyc_data);
 
-//	pwm_register_interrupt(pwm_num,pwmcallback);
+//	while(!test_pwm_callback_triggered);
+	}
 
 }
 

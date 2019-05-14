@@ -3,11 +3,69 @@
  * @设计	Lierda NB-IoT 软件设计团队@2018
 ******************************************************************************/
 #include "app.h"
+#include "core.h"
+#include "watchdog.h"
+
 
 osThreadAttr_t App_task_attr = { "lierda_App_task"/*任务名称*/, 0, NULL, 0, NULL,
 		(256) /*任务堆栈大小*/, 11/*任务优先级*/, 0, 0 };//任务属性结构体
 uint32 * App_task_handle = NULL;
 osTimerId_t LierdaTimer_handle=NULL;
+
+
+#define MAX_TIME (0X20000)
+#define MIN_TIME (0)
+#define SPEED    (1000)
+
+int PWMtime = 0;
+
+static void delay_us(uint32 us)
+{
+	for (uint32 i = us; i > 0; i--)
+	{
+		__NOP();
+		__NOP();
+		__NOP();
+		__NOP();
+		__NOP();
+		__NOP();
+		__NOP();
+		__NOP();
+		__NOP();
+	}
+}
+
+
+static void Led_loop(int on,int off)
+{
+	LED10_ON;
+	delay_us(on);
+	LED10_OFF;
+	delay_us(off);
+}
+
+
+static void Led_breath(void)
+{
+	/*渐暗*/
+	PWMtime = MAX_TIME;
+	while(1){
+		PWMtime -= SPEED;
+		Led_loop(PWMtime,MAX_TIME-PWMtime);
+		if(PWMtime < SPEED)
+			break;
+	}
+	/*渐亮*/
+	PWMtime = MAX_TIME;
+	while(1)
+	{
+		PWMtime -= SPEED;
+		Led_loop(MAX_TIME-PWMtime,PWMtime);
+		if(PWMtime < SPEED)
+			break;
+	}
+
+}
 
 
 /******************************************************************************
@@ -17,40 +75,17 @@ osTimerId_t LierdaTimer_handle=NULL;
 ******************************************************************************/
 void lierda_App_task(void *param)
 {
-	UNUSED(param);uint8 count=0;
-	osDelay(500);//等待模组初始化完成
-	lierdaLog("LED Demo");
-	Lierda_Led_Init();
-//	LEDx_StateSet(LED10|LED11|LED12,LED_OFF);
-//	osTimerStart(LierdaTimer_handle,700);//启动一个700ms定时器
+	UNUSED(param);
 
-	setPWM();
-
+	gpio_claim(PIN_25, GPIO_DIRECTION_OUTPUT);
 	for (;;)
 	{
+		Led_breath();
+		osDelay(1);
 
-
-//		switch (count)
-//		{
-//		case 0:
-//			LED10_ON;
-//			LED12_OFF;
-//			break;
-//		case 1:
-//			LED10_OFF;
-//			LED11_ON;
-//			break;
-//		case 2:
-//			LED11_OFF;
-//			LED12_ON;
-//			break;
-//		}
-//		count++;
-//		if (count == 3)
-//			count = 0;
-//		osThreadSuspend(App_task_handle); //挂起任务
 	}
 }
+
 void Lierda_SoftTimerCallback(void *param)
 {
 	UNUSED(param);

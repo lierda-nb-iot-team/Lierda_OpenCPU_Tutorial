@@ -4,21 +4,21 @@
   Section             Start Addr        Size      Used
   ------------------  ----------  ----------  --------
   
-  Aliased 0 (Flash)   0x00000000   0x1000000   0x4A31C = 303900
+  Aliased 0 (Flash)   0x00000000   0x1000000   0x4A410 = 304144
     startup           0x00000000                  0xA0                  
     .version_str      0x000000C0                   0x0                  
-    .text             0x00000120               0x46594                  
-    .init             0x000466B4                   0x4                  
-    .fini             0x000466B8                   0x4                  
-    .ARM.exidx        0x000466BC                0x3610                  
-    .ARM.extab        0x00049CCC                 0x2B8                  
-    .ramtext          0x00049F84                  0xD0                  
-    .data             0x0004A054                 0x2C8                  
+    .text             0x00000120               0x46674                  
+    .init             0x00046794                   0x4                  
+    .fini             0x00046798                   0x4                  
+    .ARM.exidx        0x0004679C                0x3618                  
+    .ARM.extab        0x00049DB4                 0x2C4                  
+    .ramtext          0x0004A078                  0xD0                  
+    .data             0x0004A148                 0x2C8                  
   
   Aliased 1 (RAM)     0x01000000   0x1000000    0xFFA0 = 65440
     .stacks           0x01000000                 0x400                  
-    .ramtext          0x01000400                  0xD0 load address 0x49F84
-    .data             0x010004D0                 0x2C8 load address 0x4A054
+    .ramtext          0x01000400                  0xD0 load address 0x4A078
+    .data             0x010004D0                 0x2C8 load address 0x4A148
     .bss              0x01000800                0x3BD4                  
     .preserve         0x010043D8                  0x72                  
     .heap             0x0100444A                   0x2                  
@@ -36,9 +36,9 @@
   Section                              Total      Size 
   --------------------------------  --------  -------- 
 
-  .text                               226758
+  .text                               226966
 
-    DefStudio                         203052
+    DefStudio                         203260
       Project                               
         BoudicaV150R100C20B500         68225
           Hi2115_B500_SDK              59989
@@ -90,7 +90,7 @@
                   lib                   2596
                     app_at_module_production      2596
 
-        OpenCPUStudio                 134017
+        OpenCPUStudio                 134225
           B500SP1_OpenCPU              79156
             BoudicaV150R100C20B500SP1_OpenCPU_src
               src                           
@@ -102,7 +102,7 @@
                 lib                    19198
                   rpc_interface                  19198
 
-          B500SP1_OpenCPU_src          46503
+          B500SP1_OpenCPU_src          46711
             BoudicaV150R100C20B500SP1_OpenCPU_src
               src                           
                 app                       16
@@ -110,8 +110,8 @@
                     application_core        
                       ref_lib                       16
 
-                lib                    46487
-                  app_at                         46185
+                lib                    46695
+                  app_at                         46393
                   lierdaModuleStatus               282
                   lierdalib                         20
 
@@ -121,30 +121,24 @@
                 LiteOS                            8358
 
         OpenCPUdemo                      810
-          Components                     156
-            LierdaDACtest                   
-              src                           
-                app                         
-                  reference                 
-                    application_core        
-                      startup                      156
-
-          Network                        654
-            LierdaTCPtest                   
-              src                           
-                app                      126
-                  reference                 
-                    application_core        
-                      main                         126
-
-                config                    28
-                  vectors                   
-                    Hi2115                  
+          Network_Communication             
+            TCPsendAndReceiveData           
+              ProjectTCP                    
+                src                         
+                  app                    282
+                    reference               
                       application_core      
-                        vectors                     28
+                        main                       126
+                        startup                    156
 
-                lib                      500
-                  Demo                             500
+                  config                  28
+                    vectors                 
+                      Hi2115                
+                        application_core    
+                          vectors                   28
+
+                  lib                    500
+                    Demo                           500
 
     RemoteStudio                       23706
       BoudicaV150R100C20B500_OpenCPU_src    
@@ -204,9 +198,9 @@
   Section                              Total      Size 
   --------------------------------  --------  -------- 
 
-  .bss                                 13113
+  .bss                                 13114
 
-    DefStudio                          11515
+    DefStudio                          11516
       Project                               
         BoudicaV150R100C20B500          1631
           Hi2115_B500_SDK               1557
@@ -251,7 +245,7 @@
                       application_core      
                         ref_lib                     74
 
-        OpenCPUStudio                   9758
+        OpenCPUStudio                   9759
           B500SP1_OpenCPU               4363
             BoudicaV150R100C20B500SP1_OpenCPU_src
               src                           
@@ -263,11 +257,11 @@
                 lib                     3586
                   rpc_interface                   3586
 
-          B500SP1_OpenCPU_src           5259
+          B500SP1_OpenCPU_src           5260
             BoudicaV150R100C20B500SP1_OpenCPU_src
               src                           
                 lib                         
-                  app_at                          4217
+                  app_at                          4218
                   lierdalib                       1042
 
           BoudicaV150R100C20B500_OpenCPU_src       136
@@ -276,16 +270,17 @@
                 LiteOS                             136
 
         OpenCPUdemo                      126
-          Network                           
-            LierdaTCPtest                   
-              src                           
-                app                       21
-                  reference                 
-                    application_core        
-                      main                          21
+          Network_Communication             
+            TCPsendAndReceiveData           
+              ProjectTCP                    
+                src                         
+                  app                     21
+                    reference               
+                      application_core      
+                        main                        21
 
-                lib                      105
-                  Demo                             105
+                  lib                    105
+                    Demo                           105
 
     RemoteStudio                        1598
       BoudicaV150R100C20B500_OpenCPU_src    
@@ -393,11 +388,12 @@
                   app_at                           393
 
         OpenCPUdemo                       56
-          Network                           
-            LierdaTCPtest                   
-              src                           
-                lib                         
-                  Demo                              56
+          Network_Communication             
+            TCPsendAndReceiveData           
+              ProjectTCP                    
+                src                         
+                  lib                       
+                    Demo                            56
 
     RemoteStudio                          21
       BoudicaV150R100C20B500_OpenCPU_src    
@@ -478,14 +474,15 @@
     DefStudio                               
       Project                               
         OpenCPUdemo                         
-          Network                           
-            LierdaTCPtest                   
-              src                           
-                config                      
-                  vectors                   
-                    Hi2115                  
-                      application_core      
-                        vectors                    160
+          Network_Communication             
+            TCPsendAndReceiveData           
+              ProjectTCP                    
+                src                         
+                  config                    
+                    vectors                 
+                      Hi2115                
+                        application_core    
+                          vectors                  160
 
 
   Section                              Total      Size 
@@ -504,14 +501,14 @@
 
   Mismatched section sizes...
 
-         .text  .lst file = 288148 (0x46594)
-                 .du file = 226758 (0x375C6)
+         .text  .lst file = 288372 (0x46674)
+                 .du file = 226966 (0x37696)
 
          .data  .lst file = 712 (0x2C8)
                  .du file = 610 (0x262)
 
           .bss  .lst file = 15316 (0x3BD4)
-                 .du file = 13113 (0x3339)
+                 .du file = 13114 (0x333A)
 
      .preserve  .lst file = 114 (0x72)
                  .du file = 110 (0x6E)

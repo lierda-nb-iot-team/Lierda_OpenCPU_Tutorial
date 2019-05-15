@@ -1,10 +1,16 @@
 /******************************************************************************
+
  * @brief    LDS file setting the memory and code locations
+
  * Copyright (c) 2015 NEUL LIMITED
+
 ******************************************************************************/
 /******************************************************************************
+
  * @brief    Default memory configurations
+
  * Copyright (c) 2016 NEUL LIMITED
+
 ******************************************************************************/
 /* Each core sees RAM starting at the same relative location */
 /* 64K for APPS core. */
@@ -15,11 +21,17 @@
 /* Apps core - can be reduced to give more space to KV, system etc */
 /* Make the last alias region the logging one*/
 /*
+
  * ******************* PERIPHERAL MANAGER *******************
+
  * The Peripheral Manager is a section of memory mapped registers that are addressable by all cores.
+
  * It provides means to claim and configure the various peripherals provided.
+
  * There are 40 PIOs provided by the Hi2115.  Each PIO can be mapped to a different function.
+
  * The register maps for each PIO are ordered consecutively in the address space, with each PIO allocated 16 32-bit words
+
  */
 /* Reserved for System Status. */
 /* Used to load functions in RAM or not for ROM builds */
@@ -66,8 +78,11 @@ SECTIONS
         . = ALIGN(4);
     } > FLASH_PROGRAM
     /* exidx and extab are debugging information to allow the unwinding of the
+
      * stack. See the "backtrace" module. exidx appears to be generated even if we
+
      * don't ask for full unwinding information (with the -funwind-tables option to
+
      * the compiler), so was present before backtracing was added. */
     .ARM.exidx :
     {

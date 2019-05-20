@@ -21,7 +21,7 @@
 集成开发环境：Eclipse  
 
 ### 4 电气连接
-FOTA事件在模组内完成。
+![网络连接电气连接](../../Picture/网络连接电气连接.png)
 
 ### 5 实验步骤
 5.1 将`ProjectLight`文件夹导入eclipse，导入方法详见[《Lierda NB-IoT模组 OpenCPU DemoCode说明文档》
@@ -39,7 +39,7 @@ FOTA事件在模组内完成。
 库函数：  
 `void lierda_module_status_read(void);	//用于事件状态更新`
 
-- 软件定时器相关库函数  
+- FOTA规避相关库函数  
 头文件：  
 `#include "lierda_module_status.h"`  
 库函数：  

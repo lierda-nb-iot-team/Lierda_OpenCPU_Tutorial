@@ -12,7 +12,7 @@ uint16 HDC1000_Read_Config(void);
 uint16 HDC1000_Read_ManufacturerID(void);
 uint8  HDC1000_Read_Temper_Humidity(int16 *nTemper,int16 *nHumidity);
 uint8 HDC1000_Writereg(uint8 reg_addr,uint8 *data,uint8 len);
-uint8 HDC1000_Rradreg(uint8 reg_addr,uint8 *data_buff,uint8 len);
+uint8 HDC1000_Readreg(uint8 reg_addr,uint8 *data_buff,uint8 len);
 
 USER_THS_DEV_Typedef  thsDeviceInfo;
 
@@ -58,11 +58,11 @@ uint8 HDC1000_Init(void)
 	thsDeviceInfo.Manufacture = HDC1000_Read_ManufacturerID();
 	osDelay(10);
 	//Read Serial ID
-	HDC1000_Rradreg(0xfb,thsDeviceInfo.Serial_ID,2);
+	HDC1000_Readreg(0xfb,thsDeviceInfo.Serial_ID,2);
 	osDelay(10);
-	HDC1000_Rradreg(0xfc,thsDeviceInfo.Serial_ID+2,2);
+	HDC1000_Readreg(0xfc,thsDeviceInfo.Serial_ID+2,2);
 	osDelay(10);
-	HDC1000_Rradreg(0xfd,thsDeviceInfo.Serial_ID+4,2);
+	HDC1000_Readreg(0xfd,thsDeviceInfo.Serial_ID+4,2);
 	osDelay(10);
 	return 1;
 }
@@ -106,14 +106,14 @@ void HDC1000_Setting(void)
 uint16 HDC1000_Read_ManufacturerID(void)
 {
     uint8 buffer[2];
-    HDC1000_Rradreg(HDC1000_Manufacturer_ID, buffer,2);
+    HDC1000_Readreg(HDC1000_Manufacturer_ID, buffer,2);
     return ((buffer[0]<<8)|buffer[1]);
 }
 
 uint16 HDC1000_Read_Config(void)
 {
     uint8 buffer[2];
-    HDC1000_Rradreg(HDC1000_Read_Conf, buffer,2);
+    HDC1000_Readreg(HDC1000_Read_Conf, buffer,2);
     return ((buffer[0]<<8)|buffer[1]);
 }
 /******************************************************************************
@@ -137,7 +137,7 @@ uint8 HDC1000_Writereg(uint8 reg_addr,uint8 *data,uint8 len)
 * @参数	*data_buff    :读回来的数据buff地址
 * @返回值   0：成功  1：失败
 ******************************************************************************/
-uint8 HDC1000_Rradreg(uint8 reg_addr,uint8 *data_buff,uint8 len)
+uint8 HDC1000_Readreg(uint8 reg_addr,uint8 *data_buff,uint8 len)
 {
 	if(lierdaI2CWrite(&sensorI2CHandle,HDC1000_I2C_ADDRESS,&reg_addr,1))
 		return 1;
@@ -157,7 +157,7 @@ void HDC1000_Soft_Reset(void)
 uint16 HDC1000_Read_DeviceID(void)
 {
     uint8 buffer[2];
-    HDC1000_Rradreg(HDC1000_DEVICE_ID,buffer,2);
+    HDC1000_Readreg(HDC1000_DEVICE_ID,buffer,2);
     return ((buffer[0]<<8)|buffer[1]);
 }
 

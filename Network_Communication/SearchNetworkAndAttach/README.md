@@ -1,4 +1,4 @@
-# 网络附着例程
+﻿# 网络附着例程
 
 ### 1 简介
 
@@ -44,6 +44,7 @@
 `#include "lierda_network_dealwith.h"`  
 库函数：  
 `NET_PARA_RET lierda_net_local_config_init(struct NET_Local_Para *p_local_para);//网络连接参数初始化`
+
 `void lierda_network_dealwith_task_enable(void);//网络连接使能`
 
 5.3.2 网络连接初始化

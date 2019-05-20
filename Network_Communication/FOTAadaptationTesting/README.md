@@ -1,4 +1,4 @@
-# FOTA测试例程
+﻿# FOTA测试例程
 
 ### 1 简介
 
@@ -44,6 +44,7 @@
 `#include "lierda_module_status.h"`  
 库函数：  
 `lierda_fotaSta lierda_FotaStatus(void);//FOTA状态查询函数`
+
 `lierdaFota lierda_FotaEnableData(void);//FOTA是否可以做业务函数`
 
 5.3.2 FOTA规避相关说明

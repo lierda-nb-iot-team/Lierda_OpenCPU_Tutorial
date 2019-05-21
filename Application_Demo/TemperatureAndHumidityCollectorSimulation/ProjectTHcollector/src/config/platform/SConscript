@@ -1,0 +1,29 @@
+#===============================================================================
+# @brief    Config platform Sconscript
+# Copyright (c) 2017 NEUL LIMITED
+#===============================================================================
+
+Import('env')
+import os
+from EnvironmentUtils import NeulTargetConfig, BuildType
+from ModuleUtils import Module
+
+module = 'config_platform'
+source_files = []
+
+if (NeulTargetConfig.get_build_core(env) in ['application_core']):
+    additional_release_file_list = Glob(os.path.join('sdk', NeulTargetConfig.get_build_chip(env), '*.json'))
+else:
+    additional_release_file_list = []
+
+if NeulTargetConfig.get_build_type(env) in [BuildType.SOURCE_PACKAGE,BuildType.DOXYGEN]:
+    mod = Module(module, env,
+                 sources = source_files,
+                 public_inc_dirs = [],
+                 private_inc_dirs = [],
+                 additional_release_files = additional_release_file_list )
+
+    product = mod.build(env)
+    Return ('product')
+else:
+    Return('source_files')

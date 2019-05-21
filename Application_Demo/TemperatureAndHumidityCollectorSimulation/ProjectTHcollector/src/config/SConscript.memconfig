@@ -1,0 +1,16 @@
+#===============================================================================
+# @brief    Build merged memory config for SDK
+# Copyright (c) 2018 Huawei Technologies Co. Ltd
+#===============================================================================
+from EnvironmentUtils import NeulTargetConfig
+
+Import("env")
+
+env = env.Clone(CPU=NeulTargetConfig.get_build_chip(env))
+
+memconfig = env.MergeMemoryConfig("merged_memory_config.json", [
+    "platform/sdk/$CPU/module_memory_config.json",
+    "platform/sdk/$CPU/apps_only_update_package_system_memory_config.json",
+])
+
+Return("memconfig")

@@ -1,0 +1,25 @@
+#===============================================================================
+# @brief    Application Core AT Software Module KV Pair Definitions
+# Copyright (c) 2018 Huawei Technologies Co. Ltd
+#===============================================================================
+
+- entry: kv_definitions
+  version: 0.1
+  core: application
+  module: AT
+  module_id: 8
+  key_definitions:
+
+  - key_id: 2048
+    key_status: deprecated
+    key_name: AT_KEYID_ATCMD_UART_CONFIG_V1
+    description: Key AT_KEYID_ATCMD_UART_CONFIG description
+    structure_type: at_uart_config_v1
+
+  - key_id: 2049
+    key_status: alive
+    key_name: AT_KEYID_ATCMD_UART_CONFIG
+    description: Key AT_KEYID_ATCMD_UART_CONFIG description
+    structure_type: at_uart_config
+    
+

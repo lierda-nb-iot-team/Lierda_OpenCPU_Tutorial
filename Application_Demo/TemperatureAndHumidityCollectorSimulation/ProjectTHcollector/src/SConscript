@@ -1,0 +1,150 @@
+#===============================================================================
+# @brief    Scons make file
+# Copyright (c) 2018 Huawei Technologies Co. Ltd
+#===============================================================================
+
+Import('env')
+import os
+import itertools
+from EnvironmentUtils import NeulBuildConfig, NeulTargetConfig, CORE_RELATIVE_FOLDERS
+
+
+# Add the 'common' include path
+env.Append(CPPPATH = [os.path.join(Dir('.').srcnode().abspath, 'lib', 'Demo')])
+env.Append(CPPPATH = [os.path.join(Dir('.').srcnode().abspath, 'lib', 'common_headers')])
+env.Append(CPPPATH = [os.path.join(Dir('.').srcnode().abspath, 'app', 'reference', 'application_core')])
+
+if 'rdk' in env['ADDITIONAL_SRC'] and 'libcoap' in NeulTargetConfig.get_support_libs(env):
+    env.Append(CPPPATH = [os.path.join(Dir('.').srcnode().abspath, 'lib_rdk', 'libcoap', 'libcoap-4.1.2','include','coap' ) ])
+
+# Add in the module and keys config include paths for generated headers
+core = NeulTargetConfig.get_build_core(env)
+env.Append(CPPPATH = [os.path.join(NeulBuildConfig.get_build_dir_root(), 'merged', env['MERGED_DIR'], "config", "sw_modules", core)])
+env.Append(CPPPATH = [os.path.join(NeulBuildConfig.get_build_dir_root(), 'merged', env['MERGED_DIR'], "config", "keys", core)])
+
+env.Append(HELPERPATH = [])
+env.Append(CPPDEFINES = [ '_'.join(['BUILD_APPLICATION',NeulTargetConfig.get_application(env).upper()] ) ] ) # Add BUILD_APPLICATION_APPLICATIONNAME to the defines
+
+core_relative_folders = ['shared', NeulTargetConfig.get_build_core(env)]
+if NeulTargetConfig.get_build_core(env) in ['application_core']:
+    core_relative_folders.append('shared_ap')
+
+# populate the support dirs paths with what is defined in the support_libs in the target
+support_dirs = []
+additional_src_lib = ['lib_%s' % s for s in env['ADDITIONAL_SRC']]
+for sl in NeulTargetConfig.get_support_libs(env):
+    # look first in src/lib otherwise in src/lib_additionalsrc
+    if os.path.exists(os.path.join(Dir('#').srcnode().abspath, 'src', 'lib', sl)):
+        support_dirs.append( os.path.join('lib', sl) )
+    else:
+        for lib_additionalsrc in additional_src_lib:
+            if os.path.exists(os.path.join(Dir('#').srcnode().abspath, 'src', lib_additionalsrc, sl)):
+                support_dirs.append( os.path.join(lib_additionalsrc, sl) )
+                break
+    # set library presence defines
+    env.Append(CPPDEFINES  = ['LIB'+sl.upper()])
+
+support_whole_dirs = []
+for sl in NeulTargetConfig.get_support_libs_whole(env):
+    support_whole_dirs.append( os.path.join('lib', sl) )
+
+for dir in support_dirs + support_whole_dirs:
+    env.export_all_public_dirs(dir)
+    env.export_all_helper_dirs(dir, ['helper'])
+
+if NeulTargetConfig.get_build_defines(env):
+    env.Append( CPPDEFINES = NeulTargetConfig.get_build_defines(env) )
+
+# Add precompiled libraries. The convention is that for a library named <lib>,
+# there will exist this directory structure:
+# - precompiled/<lib>/public                        (header files)
+# - precompiled/<lib>/lib/<platform>/lib<lib>.a     (library bin)
+# where <platform> = arm,ming32 etc...
+precompiled_libs = []
+for l in NeulTargetConfig.get_build_precompiled_libs(env):
+    lib_variant = 'arm'
+    if l not in ['coap']: # normal cases
+        env.Append(CPPPATH = [os.path.join(Dir('#').srcnode().abspath, 'precompiled', l, 'public')])
+    elif l == 'coap':
+        env.Append(CPPPATH = [os.path.join(Dir('#').srcnode().abspath, 'precompiled', l, 'public', 'app_coap' )])
+        env.Append(CPPPATH = [os.path.join(Dir('#').srcnode().abspath, 'precompiled', l, 'public', 'coap' )])
+    lib_file = [os.path.join('#', 'precompiled', l, 'lib', lib_variant, 'lib%s.a' % l)]
+    # irmalloc need add this 
+    if os.path.exists(os.path.join(Dir('#').srcnode().abspath, 'precompiled',l, 'lib', lib_variant, 'lib%s.a' % l)):
+        lib = env.Library(target = 'lib%s' % l, source = [lib_file])
+        precompiled_libs.extend([lib])
+
+# Application specific source code.
+application_sources =  [ SConscript(os.path.join('app', 'SConscript'), {'env': env }) ]
+application_sources.append (SConscript(os.path.join('config', 'SConscript'), {'env': env }))
+sources = application_sources
+
+# Add etypes header file
+SConscript(os.path.join('external', 'etypes', 'SConscript'), {'env': env})
+
+# 'Platform' related code - the order IS important, as this is the order in which they are linked!
+if NeulTargetConfig.get_build_os(env) in ['FreeRTOS_v_10_0_1', 'LiteOS']:
+    platform = [
+        #os.path.join('lib', 'arm_core', NeulTargetConfig.get_build_chip_family(env)),
+        #os.path.join('lib', 'arm_core', NeulTargetConfig.get_build_chip(env)),
+        #os.path.join('os', NeulTargetConfig.get_build_os(env)),
+        #os.path.join('os','cmsis'),
+        #os.path.join('drivers'),
+        #s.path.join('peripheral_drivers'),
+        #os.path.join('lib', 'irmalloc'),
+        #os.path.join('lib', 'nlibc'),
+        #os.path.join('lib', 'preserve'),
+        os.path.join('lib', 'Demo'),
+    ]
+
+    env.Append(CPPDEFINES  = [ 'USE_FREERTOS' ]) #for consistency with legacy code
+    env.Append(CPPDEFINES  = [ 'USE_CMSIS_OS' ])
+else:
+    platform = [
+        #os.path.join('lib', 'arm_core', NeulTargetConfig.get_build_chip_family(env)),
+        #os.path.join('lib', 'arm_core', NeulTargetConfig.get_build_chip(env)),
+        #os.path.join('drivers'),
+        #os.path.join('peripheral_drivers'),
+        #os.path.join('lib', 'irmalloc'),
+        #os.path.join('lib', 'nlibc'),
+        #os.path.join('lib', 'preserve'),
+        os.path.join('lib', 'Demo'),
+    ]
+
+# Platform libraries
+env.Append(CCFLAGS = NeulTargetConfig.get_build_flags(env))
+env.Append(CPPDEFINES = NeulTargetConfig.get_build_chip_define(env))
+env.Append(CPPDEFINES = NeulBuildConfig.get_build_version_string())
+env.Append(CPPDEFINES = NeulBuildConfig.get_build_git_hash())
+platform_libs = [ SConscript(os.path.join(component, 'SConscript'), {'env': env }) for component in platform ]
+whole_include_libs = [ SConscript(os.path.join(component, 'SConscript'), {'env': env }) for component in support_whole_dirs ]
+support_libs = [ SConscript(os.path.join(s, 'SConscript'), {'env' : env}) for s in support_dirs ]
+
+libs = []
+libs.extend( support_libs )
+libs.extend( platform_libs )
+libs.extend( precompiled_libs )
+libs.extend( [ 'gcc' ] )
+
+lds = env.LinkFile(  target = os.path.join('linker') , source = NeulTargetConfig.get_build_prelink_script(env))
+#remove the '_core' from the core name
+elf = env.Program( NeulTargetConfig.get_build_core(env)[:-5] + '.elf', sources, LIBS = [ libs ], LIBPATH = NeulTargetConfig.get_build_dir(env), WHOLE_ARCHIVE_LIBS =whole_include_libs )
+
+bin = env.Binary(elf)
+lst = env.Listing(elf)
+du = env.DuFile(elf)
+env.Depends(elf, lds)
+if whole_include_libs:
+    env.Depends(elf, whole_include_libs)
+mem = env.MemFile(source=[lst, du])
+sha = env.ShaFile(bin)
+ver = env.VerFile(elf)
+sha256 = env.SHA256_SignatureFile(bin)
+memconfig = SConscript("config/SConscript.memconfig", "env")
+
+codeloader_version = NeulTargetConfig.get_codeloader_version(env)
+env["CODELOADER_VERSION"] = str(codeloader_version)
+manifest = env.CreatePackageManifest("pkg_manifest", [
+    env["FWPKG_KEYDEFS"], bin, memconfig, sha256,
+])
+#env.CreatePackage("application.fwpkg", manifest)

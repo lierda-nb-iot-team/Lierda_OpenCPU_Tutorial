@@ -1,0 +1,40 @@
+#===============================================================================
+# @brief    Scons make file
+# Copyright (c) 2016 NEUL LIMITED
+#===============================================================================
+
+Import('env')
+import os
+from EnvironmentUtils import NeulTargetConfig, BuildType
+from ModuleUtils import Module
+
+module = 'config_memory'
+
+core = NeulTargetConfig.get_build_core(env)
+chip = NeulTargetConfig.get_build_chip(env)
+application = NeulTargetConfig.get_application(env)
+
+# Export headers.
+public_include_dirs =[]
+public_include_dirs.extend( [ os.path.join(Dir('.').srcnode().abspath, NeulTargetConfig.get_memory_config(env), NeulTargetConfig.get_build_chip(env), 'shared' ) ])
+
+# Gather all source files. Note we don't want to build lots of small libraries, so simply gather the sources together
+source_files = []
+
+private_include_dirs = []
+
+if NeulTargetConfig.get_build_type(env) in [BuildType.SOURCE_PACKAGE, BuildType.DOXYGEN]:
+    mod = Module(module, env,
+                 sources = source_files,
+                 public_inc_dirs = public_include_dirs,
+                 private_inc_dirs = private_include_dirs,
+                 additional_release_files = [])
+
+    product = mod.build(env)
+    Return ('product')
+else:
+    for cp in public_include_dirs:
+        env.Append(CPPPATH = [ cp ])
+    product = source_files
+
+Return ('product')

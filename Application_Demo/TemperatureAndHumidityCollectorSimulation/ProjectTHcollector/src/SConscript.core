@@ -1,0 +1,16 @@
+#===============================================================================
+# @brief    Scons make file
+# Copyright (c) 2018 Huawei Technologies Co. Ltd
+#===============================================================================
+
+# Called once for each core to build per-core files.
+Import('env')
+
+# generate headers for key / module definitions
+SConscript('config/SConscript.headers', {'env': env}, duplicate=0)
+
+# configuration for firmware packages
+keydefs = SConscript('config/SConscript.package', {'env': env}, duplicate=0)
+etypes = SConscript('external/etypes/SConscript.package', {'env': env}, duplicate=0)
+
+Return('keydefs etypes')

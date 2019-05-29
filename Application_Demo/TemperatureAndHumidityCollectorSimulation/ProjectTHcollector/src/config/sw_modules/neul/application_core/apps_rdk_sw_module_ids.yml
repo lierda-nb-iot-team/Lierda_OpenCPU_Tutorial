@@ -1,0 +1,28 @@
+#===============================================================================
+# @brief    Application Core Software Module Definitions
+# Copyright (c) 2018 Huawei Technologies Co. Ltd
+#===============================================================================
+
+#
+# Software Modules numberspace is divided:
+#   - module ids 0-95: Neul/Huawei
+#   - module ids 96-128: RDK
+#   - module ids 129-255: customer configurable
+#
+
+- entry: module_definitions
+  version: 0.1
+  core: application
+  module_definitions:
+
+  # Neul/Huawei modules(0-95):
+  - module_id: 132
+    module_name: DNS
+    module_description: Module DNS description
+  - module_id: 16
+    module_name: DTLS
+    module_description: Module DTLS description
+  - module_id: 128
+    module_name: LWM2M 
+    module_description: Module LWM2M description
+

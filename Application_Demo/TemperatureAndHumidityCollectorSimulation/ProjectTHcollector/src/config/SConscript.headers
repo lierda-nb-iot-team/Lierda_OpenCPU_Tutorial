@@ -1,0 +1,51 @@
+#===============================================================================
+# @brief    Scons make file
+# Copyright (c) 2018 Huawei Technologies Co. Ltd
+#===============================================================================
+
+# generate the headers from yml definitions
+Import('env')
+
+import neul_yaml
+
+def write_modules_hfile(target, source, env):
+    neul_yaml.write_modules_hfile(env["CORENAME"], env['MODS'], target[0].path)
+
+
+def write_keys_hfile(target, source, env):
+    keys = neul_yaml.parse_kv_defs(env['CORENAME'], [str(s) for s in source])
+    neul_yaml.write_keys_hfile(env["MODNAME"], keys, target[0].path)
+
+for stree in ['neul'] + env['ADDITIONAL_SRC']:
+    corename = env["CORE"][:-len("_core")]
+    streeenv = env.Clone(
+        COREPREFIX=neul_yaml.CORE_TO_PREFIX[corename],
+        CORENAME=corename,
+        STREE=stree
+    )
+    
+    ymls = streeenv.Glob('sw_modules/$STREE/$CORE/${COREPREFIX}_*sw_module_ids.yml')
+    for moduledefs_yml in ymls:
+        mdefs_yml_env = streeenv.Clone(MODS=neul_yaml.parse_moduledefs(corename, str(moduledefs_yml)))
+
+        mdefs_yml_env.Command(
+            'sw_modules/$CORE/${SOURCE.filebase}.h',
+            [moduledefs_yml, neul_yaml.__file__],
+            write_modules_hfile
+        )
+            
+        if mdefs_yml_env.get("MODS", None):
+            for m in mdefs_yml_env["MODS"]:
+                coreenv = mdefs_yml_env.Clone(
+                    MODULE=m["module_name"].lower(),
+                    MODNAME=m["module_name"],
+                )
+                key_yml_src = coreenv.Glob('keys/$STREE/$CORE/${COREPREFIX}_${MODULE}_*.yml')
+                if len(key_yml_src) < 1:
+                    raise Exception('Key definition file for module "%s" not found' % m['module_name'])
+                coreenv.Command(
+                    'keys/$CORE/${COREPREFIX}_${MODULE}_keys.h',
+                    coreenv.Glob('keys/$STREE/$CORE/${COREPREFIX}_${MODULE}_*.yml'),
+                    write_keys_hfile,
+                )
+                coreenv.Depends('keys/$CORE/${COREPREFIX}_${MODULE}_keys.h', neul_yaml.__file__)

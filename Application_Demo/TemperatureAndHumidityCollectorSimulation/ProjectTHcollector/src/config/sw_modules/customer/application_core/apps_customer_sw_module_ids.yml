@@ -1,0 +1,21 @@
+#===============================================================================
+# @brief    Application Core Example Software Module Definitions
+# Copyright (c) 2018 Huawei Technologies Co. Ltd
+#===============================================================================
+
+#
+# Software Modules numberspace is divided:
+#   - module ids 0-95: Neul/Huawei
+#   - module ids 96-132: RDK
+#   - module ids 133-255: customer configurable
+#
+
+- entry: module_definitions
+  version: 0.1
+  core: application
+  module_definitions:
+
+  # Customer Software Modules (133-255):
+  - module_id: 134
+    module_name: LCGMR
+    module_description: Module LCGMR description

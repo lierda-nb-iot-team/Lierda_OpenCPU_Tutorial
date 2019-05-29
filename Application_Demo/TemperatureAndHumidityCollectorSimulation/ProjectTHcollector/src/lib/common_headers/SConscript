@@ -1,0 +1,24 @@
+#===============================================================================
+# @brief    Scons make file
+# Copyright (c) 2016 NEUL LIMITED
+#===============================================================================
+
+Import('env')
+import os
+from EnvironmentUtils import *
+from ModuleUtils import Module
+
+
+module = 'common_headers'
+
+# Public API
+public_include_dirs = [os.path.join(Dir('.').srcnode().abspath)]
+
+mod = Module(module, env,
+             public_inc_dirs = public_include_dirs,
+             private_inc_dirs =[], # avoid taking 'private' folder as default
+             )
+
+products = mod.build(env)
+
+Return ('products')

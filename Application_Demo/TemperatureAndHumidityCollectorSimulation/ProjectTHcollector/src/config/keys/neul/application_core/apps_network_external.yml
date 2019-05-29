@@ -1,0 +1,18 @@
+#===============================================================================
+# @brief    Application Core NETWORK Software Module KV Pair Definitions
+# Copyright (c) 2018 Huawei Technologies Co. Ltd
+#===============================================================================
+
+- entry: kv_definitions
+  version: 0.1
+  core: application
+  module: NETWORK
+  module_id: 28
+  key_definitions:
+
+  - key_id: 7168
+    key_status: alive
+    key_name: NETWORK_SOCKET_SILENCE
+    description: Key NETWORK_SOCKET_SILENCE description
+    structure_type: uint16
+

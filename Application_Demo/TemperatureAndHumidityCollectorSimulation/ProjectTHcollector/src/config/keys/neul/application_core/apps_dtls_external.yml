@@ -1,0 +1,137 @@
+#===============================================================================
+# @brief    Application Core LOG Software Module KV Pair Definitions
+# Copyright (c) 2018 Huawei Technologies Co. Ltd
+#===============================================================================
+
+- entry: kv_definitions
+  version: 0.1
+  core: application
+  module: DTLS
+  module_id: 16
+  key_definitions:
+
+  - key_id: 4096
+    key_status: alive
+    key_name: DTLS_SECURE_SWT
+    description: Key DTLS_SECURE_SWT description
+    structure_type: PIN
+
+  - key_id: 4097
+    key_status: alive
+    key_name: DTLS_SECURE_PSK
+    description: Key DTLS_SECURE_PSK description
+    structure_type: PIN
+
+  - key_id: 4098
+    key_status: alive
+    key_name: DTLS_SECURE_PSKID
+    description: Key DTLS_SECURE_PSKID description
+    structure_type: PIN
+
+  - key_id: 4099
+    key_status: alive
+    key_name: DTLS_SECURE_TIME
+    description: Key DTLS_SECURE_TIME description
+    structure_type: PIN
+    
+  - key_id: 4100
+    key_status: alive
+    key_name: DTLS_SECURE_HANDSHAKE_TYPE
+    description: Key DTLS_SECURE_HANDSHAKE_TYPE description
+    structure_type: PIN
+
+  - key_id: 4101
+    key_status: alive
+    key_name: DTLS_SECURE_PSKIV
+    description: Key DTLS_SECURE_PSKIV description
+    structure_type: PIN
+
+  - key_id: 4102
+    key_status: alive
+    key_name: DTLS_SECURE_PASSWORD
+    description: Key DTLS_SECURE_PASSWORD description
+    structure_type: PIN
+
+  - key_id: 4103
+    key_status: alive
+    key_name: DTLS_SECURE_SALT
+    description: Key DTLS_SECURE_SALT description
+    structure_type: PIN
+
+  - key_id: 4104
+    key_status: alive
+    key_name: DTLS_SECURE_OLD_PSK
+    description: Key DTLS_SECURE_OLD_PSK description
+    structure_type: PIN
+
+  - key_id: 4105
+    key_status: alive
+    key_name: DTLS_SECURE_NEW_PSK
+    description: Key DTLS_SECURE_NEW_PSK description
+    structure_type: PIN
+    
+  - key_id: 4106
+    key_status: alive
+    key_name: DTLS_SECURE_CONFIGING
+    description: Key DTLS_SECURE_CONFIGING description
+    structure_type: PIN
+
+  - key_id: 4107
+    key_status: alive
+    key_name: DTLS_SECURE_NAT_TYPE
+    description: Key DTLS_SECURE_NAT_TYPE description
+    structure_type: PIN
+
+  - key_id: 4108
+    key_status: alive
+    key_name: DTLS_SECURE_NEW_PSKID
+    description: Key DTLS_SECURE_NEW_PSKID description
+    structure_type: PIN
+    
+  - key_id: 4109
+    key_status: alive
+    key_name: DTLS_SECURE_NEW_HANDSHAKE_TYPE
+    description: Key DTLS_SECURE_NEW_HANDSHAKE_TYPE description
+    structure_type: PIN
+
+  - key_id: 4110
+    key_status: alive
+    key_name: DTLS_BS_SECURE_PSK
+    description: Key DTLS_BS_SECURE_PSK description
+    structure_type: PIN
+
+  - key_id: 4111
+    key_status: alive
+    key_name: DTLS_BS_SECURE_NEW_PSK
+    description: Key DTLS_BS_SECURE_NEW_PSK description
+    structure_type: PIN
+    
+  - key_id: 4112
+    key_status: alive
+    key_name: DTLS_BS_SECURE_PSKID
+    description: Key DTLS_BS_SECURE_PSKID description
+    structure_type: PIN
+
+  - key_id: 4113
+    key_status: alive
+    key_name: DTLS_BS_SECURE_NEW_PSKID
+    description: Key DTLS_BS_SECURE_NEW_PSKID description
+    structure_type: PIN
+
+  - key_id: 4114
+    key_status: alive
+    key_name: DTLS_BS_SECURE_HANDSHAKE_TYPE
+    description: Key DTLS_BS_SECURE_HANDSHAKE_TYPE description
+    structure_type: PIN
+    
+  - key_id: 4115
+    key_status: alive
+    key_name: DTLS_BS_SECURE_NEW_HANDSHAKE_TYPE
+    description: Key DTLS_BS_SECURE_NEW_HANDSHAKE_TYPE description
+    structure_type: PIN
+
+  - key_id: 4116
+    key_status: alive
+    key_name: DTLS_BS_SECURE_NAT_TYPE
+    description: Key DTLS_BS_SECURE_NAT_TYPE description
+    structure_type: PIN

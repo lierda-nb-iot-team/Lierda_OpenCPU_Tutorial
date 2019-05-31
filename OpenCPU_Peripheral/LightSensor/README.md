@@ -26,7 +26,8 @@
 ![光线传感器连接示意图](../../Picture/光线传感器2.png)
 ### 5 实验步骤
 5.1 将`ProjectLight`文件夹导入eclipse，导入方法详见[《Lierda NB-IoT模组 OpenCPU DemoCode说明文档》
-](../../Doc/基本资料/Lierda_NB-IoT模组OpenCPU_DEMO说明文档V1.8_190403.pdf)
+](../../Doc/基本资料/Lierda_NB-IoT模组OpenCPU_DEMO说明文档V1.8_190403.pdf)  
+
 5.2 打开`Demo`文件夹下示例代码：  
 ![示例代码](../../Picture/光感示例代码1.png)
 

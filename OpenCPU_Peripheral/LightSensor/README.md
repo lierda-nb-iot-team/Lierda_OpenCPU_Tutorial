@@ -70,5 +70,5 @@
 ### 7 参考资料
 
 | 技术论坛 | 热污染|
-| :----------- | :dfsdfdsf|
-| [物联网开发者社区](http://bbs.lierda.com) | erasfd a|
+| :----------- | :----------- |
+| [物联网开发者社区](http://bbs.lierda.com) | erasfd a |

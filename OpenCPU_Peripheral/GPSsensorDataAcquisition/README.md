@@ -36,14 +36,12 @@
 - UART相关库函数 
 头文件：  
 `#include "lierdaUART.h"`  
-库函数：  
-`void lierdaUARTInit(UART_HandleTypeDef *huart);	//UART初始化`
-
-`uint16 lierdaUARTReceive(UART_HandleTypeDef *huart,uint8 *UserDataPtr, uint16 *UserDataLen, uint32 WaitTimeOut);	//UART数据接收函数`
-
-`void lierdaUARTSend(UART_HandleTypeDef *huart,const uint8 *buffer, uint32 length); 	//UART数据发送函数`
-
-
+库函数： 
+``` cpp 
+void lierdaUARTInit(UART_HandleTypeDef *huart);//UART初始化  
+uint16 lierdaUARTReceive(UART_HandleTypeDef *huart,uint8 *UserDataPtr, uint16 *UserDataLen, uint32 WaitTimeOut);//UART数据接收函数  
+void lierdaUARTSend(UART_HandleTypeDef *huart,const uint8 *buffer, uint32 length);//UART数据发送函数  
+```  
 5.3.2 华大北斗数据接收
 
 串口初始化：对GPS所用的串口进行初始化操作，详见例程代码中void GPS_uart_init(void)函数。
@@ -68,6 +66,6 @@
 
 ### 7 参考资料
 
-| 技术论坛 |
-| :----------- |
-| [物联网开发者社区](http://bbs.lierda.com) |
+| 技术论坛 | OpenCPU资料 | NB86 EVK资料
+| :----------- | :----------- | :----------- |
+| [物联网开发者社区](http://bbs.lierda.com) |  [OpenCPU基本资料集](https://github.com/lierda-nb-iot-team/Lierda_OpenCPU_SDK) |  [NB86 EVK基本资料集](https://github.com/lierda-nb-iot-team/Lierda_NB86_EVK) |

@@ -34,12 +34,11 @@
 头文件：  
 `#include "lierdaADC.h"`  
 库函数：  
-`LIERDA_ADC_RET lierdaADCInit(void);//ADC初始化`
-
-`AIO_FUNC_RET lierdaAIOCalibrateADC(void);//电压校准`
-
-`AIO_FUNC_RET lierdaAIOTempVolt(int16 *temp,uint32 *voltage);//Vbat电压采样`
-
+``` cpp 
+LIERDA_ADC_RET lierdaADCInit(void);//ADC初始化  
+AIO_FUNC_RET lierdaAIOCalibrateADC(void);//电压校准  
+AIO_FUNC_RET lierdaAIOTempVolt(int16 *temp,uint32 *voltage);//Vbat电压采样  
+```
 5.3.2 Vbat电压采样样例
 
 对Vbat采样进行初始化配置，详见例程代码中void VbatSampInit(void)函数。
@@ -62,6 +61,6 @@
 
 ### 7 参考资料
 
-| 技术论坛 |
-| :----------- |
-| [物联网开发者社区](http://bbs.lierda.com) |
+| 技术论坛 | OpenCPU资料 | NB86 EVK资料
+| :----------- | :----------- | :----------- |
+| [物联网开发者社区](http://bbs.lierda.com) |  [OpenCPU基本资料集](https://github.com/lierda-nb-iot-team/Lierda_OpenCPU_SDK) |  [NB86 EVK基本资料集](https://github.com/lierda-nb-iot-team/Lierda_NB86_EVK) |

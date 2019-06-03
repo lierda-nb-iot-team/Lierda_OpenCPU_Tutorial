@@ -36,24 +36,21 @@
 - 硬件SPI相关库函数  
 头文件：	
 `#include "lierdaSPI.h"`  
-库函数：  
-`SPI_RET lierdaSPIInit(SPI_CONFIGURATION spi_config, SPI_PIN spi_pin);	//SPI初始化函数`
-
-`SPI_RET lierdaSPISendData(SPI_BUS bus, uint8* cmd_buff,uint16 cmd_len, uint8* data_buff, uint16 data_len, SPI_CALLBACK callback);//SPI数据发送函数`
-
-`SPI_RET lierdaSPIRecvData(SPI_BUS bus, uint8* cmd_buff, uint16 cmd_len, uint8* data_buff, uint16 data_len, SPI_CALLBACK callback, bool ignore_rx_while_tx);//SPI数据接收函数`
-
-- 软件SPI相关库函数	
+库函数:  
+``` cpp
+SPI_RET lierdaSPIInit(SPI_CONFIGURATION spi_config, SPI_PIN spi_pin);//SPI初始化函数  
+SPI_RET lierdaSPISendData(SPI_BUS bus, uint8* cmd_buff,uint16 cmd_len, uint8* data_buff, uint16 data_len, SPI_CALLBACK callback);//SPI数据发送函数  
+SPI_RET lierdaSPIRecvData(SPI_BUS bus, uint8* cmd_buff, uint16 cmd_len, uint8* data_buff, uint16 data_len, SPI_CALLBACK callback, bool ignore_rx_while_tx);//SPI数据接收函数  
+```  
+- 软件SPI相关库函数  	
 头文件：	
 `#include "lierdaSPIsoft.h"`
-库函数：	
-`uint8 lierdaSPISoftInit(SPI_InitTypeDef *SPI_Init);//SPI初始化函数`
-
-`uint8 lierdaSPIWriteByte(SPI_InitTypeDef *lierda_spi,uint8 TxData);//SPI数据发送函数`
-
-`uint8 lierdaSPIReadByte(SPI_InitTypeDef *lierda_spi);//SPI数据接收函数`
-
-5.3.2 MX25L12835F Flash驱动
+库函数：  
+``` cpp	 
+uint8 lierdaSPISoftInit(SPI_InitTypeDef *SPI_Init);//SPI初始化函数  uint8 lierdaSPIWriteByte(SPI_InitTypeDef *lierda_spi,uint8 TxData);//SPI数据发送函数  
+uint8 lierdaSPIReadByte(SPI_InitTypeDef *lierda_spi);//SPI数据接收函数  
+```  
+5.3.2 MX25L12835F Flash驱动  
 
 Flash初始化：Flash相关配置，详见例程代码中	void MX25L12835F_spiInit(void)函数。
 
@@ -79,6 +76,6 @@ Flash数据读写操作：通过使用SPI的读写函数，对Flash进行读写�
 
 ### 7 参考资料
 
-| 技术论坛 |
-| :----------- |
-| [物联网开发者社区](http://bbs.lierda.com) |
+| 技术论坛 | OpenCPU资料 | NB86 EVK资料
+| :----------- | :----------- | :----------- |
+| [物联网开发者社区](http://bbs.lierda.com) |  [OpenCPU基本资料集](https://github.com/lierda-nb-iot-team/Lierda_OpenCPU_SDK) |  [NB86 EVK基本资料集](https://github.com/lierda-nb-iot-team/Lierda_NB86_EVK) |

@@ -37,34 +37,32 @@
 - GPIO相关库函数  
 头文件：  
 `#include "lierdaGPIO.h"`  
-库函数：  
-`void lierdaGPIOInit(void);	//GPIO初始化`
-
-`bool lierdaGPIOClaim(PIN pin,GPIO_DIRECTION dir);	//GPIO声明`
-
-`void lierdaGPIOSet(PIN pin); 	//GPIO拉高`
-
-`void lierdaGPIOClear(PIN pin); 	//GPIO拉低`
- 
-
+库函数:  
+``` cpp  
+void lierdaGPIOInit(void);//GPIO初始化  
+bool lierdaGPIOClaim(PIN pin,GPIO_DIRECTION dir);//GPIO声明  
+void lierdaGPIOSet(PIN pin);//GPIO拉高  
+void lierdaGPIOClear(PIN pin);//GPIO拉低   
+```  
 - 软件定时器相关库函数  
 头文件：  
 `#include "cmsis_os2.h"`  
-库函数：  
-`osTimerId_t osTimerNew (osTimerFunc_t func, osTimerType_t type, void *argument, const osTimerAttr_t *attr);	//软件定时器创建`
-`osStatus_t osTimerStart (osTimerId_t timer_id, uint32_t ticks);		//软件定时器启动`
-`osStatus_t osTimerStop (osTimerId_t timer_id);	//软件定时器停止`
- 
+库函数： 
+ ``` cpp  
+osTimerId_t osTimerNew (osTimerFunc_t func, osTimerType_t type, void *argument, const osTimerAttr_t *attr);//软件定时器创建  
+osStatus_t osTimerStart (osTimerId_t timer_id, uint32_t ticks);//软件定时器启动  
+osStatus_t osTimerStop (osTimerId_t timer_id);//软件定时器停止  
+```  
 5.3.2 LED灯驱动
 
-打开灯只需让相应的GPIO引脚输出低电平即可：
-
-`#define LED10_ON lierdaGPIOClear(LED_10)`
-
-关闭灯只需让相应的GPIO引脚输出高电平即可：
-
-`#define LED10_OFF lierdaGPIOSet(LED_10)`
-
+打开灯只需让相应的GPIO引脚输出低电平即可：  
+``` cpp 
+ #define LED10_ON lierdaGPIOClear(LED_10) 
+```  
+关闭灯只需让相应的GPIO引脚输出高电平即可：  
+``` cpp  
+ #define LED10_OFF lierdaGPIOSet(LED_10)  
+```  
 详见例程中的示例代码。
 
 5.4  编译工程，如没有错误则编译通过：  
@@ -83,6 +81,6 @@
 
 ### 7 参考资料
 
-| 技术论坛 |
-| :----------- |
-| [物联网开发者社区](http://bbs.lierda.com) |
+| 技术论坛 | OpenCPU资料 | NB86 EVK资料
+| :----------- | :----------- | :----------- |
+| [物联网开发者社区](http://bbs.lierda.com) |  [OpenCPU基本资料集](https://github.com/lierda-nb-iot-team/Lierda_OpenCPU_SDK) |  [NB86 EVK基本资料集](https://github.com/lierda-nb-iot-team/Lierda_NB86_EVK) |

@@ -34,11 +34,11 @@
 头文件：  
 `#include "lierdaADC.h"`  
 库函数：  
-`LIERDA_ADC_RET lierdaADCInit(void);//ADC初始化`
-
-`AIO_FUNC_RET lierdaAIOCalibrateADC(void);//电压校准`
-
-`AIO_FUNC_RET lierdaReadAIOPin(uint32 *voltage, uint8 aio_pin_number);;//AIO口电压采样`
+``` cpp
+LIERDA_ADC_RET lierdaADCInit(void);//ADC初始化  
+AIO_FUNC_RET lierdaAIOCalibrateADC(void);//电压校准  
+AIO_FUNC_RET lierdaReadAIOPin(uint32 *voltage, uint8 aio_pin_number);;//AIO口电压采样  
+```
 
 5.3.2 AIO电压采样样例
 
@@ -61,6 +61,6 @@
 
 ### 7 参考资料
 
-| 技术论坛 |
-| :----------- |
-| [物联网开发者社区](http://bbs.lierda.com) |
+| 技术论坛 | OpenCPU资料 | NB86 EVK资料
+| :----------- | :----------- | :----------- |
+| [物联网开发者社区](http://bbs.lierda.com) |  [OpenCPU基本资料集](https://github.com/lierda-nb-iot-team/Lierda_OpenCPU_SDK) |  [NB86 EVK基本资料集](https://github.com/lierda-nb-iot-team/Lierda_NB86_EVK) |

@@ -36,29 +36,27 @@
 - GPIO相关库函数  
 头文件：  
 `#include "lierdaGPIO.h"`  
-库函数：  
-`void lierdaGPIOInit(void);	//GPIO初始化`
-
-`bool lierdaGPIOClaim(PIN pin,GPIO_DIRECTION dir);	//GPIO声明`
-
-`void lierdaGPIORegisterCallback(PIN pin, GPIO_INTERRUPT trigger, GPIO_CALLBACK callback);	//GPIO中断声明函数`
-
-`bool lierdaGPIORead(PIN pin);	//GPIO读取函数`
+库函数：
+``` cpp  
+void lierdaGPIOInit(void);//GPIO初始化  
+bool lierdaGPIOClaim(PIN pin,GPIO_DIRECTION dir);//GPIO声明  
+void lierdaGPIORegisterCallback(PIN pin, GPIO_INTERRUPT trigger, GPIO_CALLBACK callback);//GPIO中断声明函数  
+bool lierdaGPIORead(PIN pin);//GPIO读取函数  
+```
 
 5.3.2 按键驱动
 
-按键按下，相应的引脚为低电平，只需读取相应的IO电平即可，若为低电平按键按下，反之。
-
-`static void sos_key_callback(PIN pin)`
-
-	{
-		if (0==Lierda_KEY_Read(pin))
-	
-		{
-			while (lierdaGPIORead(pin) == 0) ;//等待按键松开
-			LEDx_StateSet(LED10 | LED11 | LED12, LED_TOGGLE); //按键中断		来临LED10,LED11,LED12状态改变
-		}
-	}
+按键按下，相应的引脚为低电平，只需读取相应的IO电平即可，若为低电平按键按下，反之。  
+``` cpp
+static void sos_key_callback(PIN pin)  
+	{  
+		if (0==Lierda_KEY_Read(pin))  
+		{  
+			while (lierdaGPIORead(pin) == 0) ;//等待按键松开  
+			LEDx_StateSet(LED10 | LED11 | LED12,LED_TOGGLE); //按键中断来临LED10,LED11,LED12状态改变  
+		}  
+	}    
+```
 
 详见例程中的示例代码。
 
@@ -78,6 +76,6 @@
 
 ### 7 参考资料
 
-| 技术论坛 |
-| :----------- |
-| [物联网开发者社区](http://bbs.lierda.com) |
+| 技术论坛 | OpenCPU资料 | NB86 EVK资料
+| :----------- | :----------- | :----------- |
+| [物联网开发者社区](http://bbs.lierda.com) |  [OpenCPU基本资料集](https://github.com/lierda-nb-iot-team/Lierda_OpenCPU_SDK) |  [NB86 EVK基本资料集](https://github.com/lierda-nb-iot-team/Lierda_NB86_EVK) |

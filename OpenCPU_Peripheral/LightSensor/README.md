@@ -37,7 +37,7 @@
 头文件：  
 `#include "lierdaI2C.h"`  
 库函数：  
-```cpp 
+``` cpp 
 HAL_StatusTypeDef lierdaI2CInit(I2C_HandleTypeDef *hi2c);//I2C初始化  
 I2C_RET lierdaI2CRead(I2C_HandleTypeDef *hi2c,uint8 i2c_slave_addr,uint8 *data, uint8 data_len);//读操作
 I2C_RET lierdaI2CWrite(I2C_HandleTypeDef *hi2c,uint8 i2c_slave_addr,uint8 *data,uint8 data_len);//写操作 
@@ -46,9 +46,11 @@ I2C_RET lierdaI2CWrite(I2C_HandleTypeDef *hi2c,uint8 i2c_slave_addr,uint8 *data,
 - OPT3001相关库函数  
 头文件：  
 `#include "lierda_OPT3001DN.h"`  
-库函数：  
-`uint8 lierda_OPT3001_Init(void);//初始化芯片，包括验证出厂ID等`  
-`void lierda_OPT3001_UpdataInfo(uint32 *Lux);//获取更新的传感器数值`  
+库函数：
+``` cpp
+uint8 lierda_OPT3001_Init(void);//初始化芯片，包括验证出厂ID等  
+void lierda_OPT3001_UpdataInfo(uint32 *Lux);//获取更新的传感器数值
+```
 
 5.3.2 在使用I2C读写接口时，建议根据传感器芯片特性封装相应的函数，例如：  
 ![示例代码](../../Picture/光感示例代码3.jpg)  

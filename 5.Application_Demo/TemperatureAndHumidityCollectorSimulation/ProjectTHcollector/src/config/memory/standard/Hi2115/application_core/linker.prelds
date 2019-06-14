@@ -1,0 +1,167 @@
+/******************************************************************************
+ * @brief    LDS file setting the memory and code locations
+ * Copyright (c) 2015 NEUL LIMITED
+******************************************************************************/
+
+#include "memory_config.h"
+OUTPUT_FORMAT("elf32-littlearm")
+OUTPUT_ARCH(arm)
+ENTRY(Reset_Handler)
+
+/* FLASH sector size is 2K */
+/* make this table consistent with the configuration given by the security core */
+MEMORY
+{
+    VECTORS                       : ORIGIN = AC_VECTORS_ORIGIN,     LENGTH = VECTORS_LENGTH
+
+    /* FLASH Version Information */
+    FLASH_VERSION                 : ORIGIN = AC_VERSION_ORIGIN,     LENGTH = VERSION_LENGTH
+
+    FLASH_PROGRAM                 : ORIGIN = AC_PROGRAM_ORIGIN,     LENGTH = AC_PROGRAM_MAX_LENGTH
+    
+    /* AC_RAM_LENGTH is total RAM available, including area reserved at the top for IPC Mailboxes. */
+    SRAM                          : ORIGIN = AC_RAM_ORIGIN,         LENGTH = AC_RAM_LENGTH - MESSAGE_QUEUE_RESERVE_LENGTH - AC_SYSTEM_STATUS_LENGTH
+    SYSTEM_STATUS                 : ORIGIN = AC_SYSTEM_STATUS_ORIGIN, LENGTH = AC_SYSTEM_STATUS_LENGTH
+    IPC_MAILBOX                   : ORIGIN = AC_IPC_MAILBOX_ORIGIN, LENGTH = MESSAGE_QUEUE_RESERVE_LENGTH
+    
+    /* Peripheral Manager register map */
+    PERIPHERALS                   : ORIGIN = PM_BASE,                   LENGTH = PM_LENGTH
+}
+
+SECTIONS
+{
+    
+    /* Vectors */
+    . = 0;
+    startup :
+    {
+        KEEP (*(.isr_vector))
+    } > VECTORS
+
+    .version_str :
+    {
+        . = ALIGN(4);
+        KEEP (*(.flash_version))
+    } > FLASH_VERSION
+
+    /* Code and const data */
+    .text :
+    {
+        . = ALIGN(4);
+        *(.text)
+        *(.text*)
+        *(.rodata)
+        *(.rodata*)
+        KEEP (*(.gdb_debug))
+        . = ALIGN(4);
+    } > FLASH_PROGRAM
+    
+    /* exidx and extab are debugging information to allow the unwinding of the
+     * stack. See the "backtrace" module. exidx appears to be generated even if we
+     * don't ask for full unwinding information (with the -funwind-tables option to
+     * the compiler), so was present before backtracing was added. */
+    .ARM.exidx :
+    {
+        __exidx_start = .;
+        *(.ARM.exidx*)
+        __exidx_end = .;
+    } > FLASH_PROGRAM
+
+    .ARM.extab :
+    {
+        *(.ARM.extab*)
+    } > FLASH_PROGRAM
+
+    __RAM_BEGIN__ = ORIGIN(SRAM);
+    __RAM_SIZE__ = LENGTH(SRAM);
+
+    /* Stack in SRAM at lowest addresses */
+    .stacks (NOLOAD):
+    {
+        __SYSTEM_STACK_BEGIN__ = .;
+        KEEP(*(.stacks))
+        __SYSTEM_STACK_END__ = .;
+    } > SRAM
+    __SYSTEM_STACK_SIZE__ = __SYSTEM_STACK_END__ - __SYSTEM_STACK_BEGIN__;
+    
+    /* Code relocated into RAM */
+    .ramtext :
+    {
+        . = ALIGN(4);
+        __ramtext_load__ = LOADADDR(.ramtext);
+        __ramtext_begin__ = .;
+        *(.ramtext)
+        *(.ramtext*)
+        . = ALIGN(4);
+        __ramtext_end__ = .;
+    } > SRAM AT > FLASH_PROGRAM
+    __ramtext_size__ = __ramtext_end__ - __ramtext_begin__;
+
+    /* Initialised data */
+    .data :
+    {
+        FILL(0xFF)
+        __data_load__ = LOADADDR(.data);
+        __data_begin__ = .;
+        *(.data)
+        *(.data*)
+        . = ALIGN(4);
+        __data_end__ = .;
+    } > SRAM AT > FLASH_PROGRAM
+    __data_size__ = __data_end__ - __data_begin__;
+
+
+    /* Uninitialised data */
+    .bss (NOLOAD):
+    {
+        . = ALIGN(4);
+        __bss_begin__ = .;
+        *(.bss)
+        *(.bss*)
+        *(COMMON)
+        . = ALIGN(4);
+        __bss_end__ = . ;
+    } > SRAM
+    __bss_size__ = __bss_end__ - __bss_begin__;
+    
+    /* Like Uninitialised data, but we don't want to 0 it. Stores backtrace among other things. */
+    .preserve (NOLOAD):
+    {
+        . = ALIGN(4);
+        *(preserve)
+    } > SRAM
+    
+        /* The internal heap uses whatever RAM space remains and so must be the last section for SRAM in the linker script. */
+    .heap (NOLOAD):
+    {
+        . = ALIGN(4);
+        __INTHEAP_BEGIN__ = ABSOLUTE(.);
+        __INTHEAP_SIZE__ = (ORIGIN(SRAM) + LENGTH(SRAM)) - __INTHEAP_BEGIN__;
+    } > SRAM
+    
+    /* The System Status Area is under the IPC mailboxes */
+    .sys_status (NOLOAD) :
+    {
+        . = ALIGN(4);
+        __sys_status_start__ = .;
+        *(.sys_status)
+        *(.sys_status*)
+        __sys_status_end__ = .;
+    } > SYSTEM_STATUS   
+    
+    /* The IPC mailboxes are at the top of the RAM */
+    .ipc_mailbox (NOLOAD):
+    {
+        . = ALIGN(4);
+        __ipc_mailbox_start__ = .;
+        *(.ipc_mailbox)
+        *(.ipc_mailbox*)
+        __ipc_mailbox_end__ = .;
+    } > IPC_MAILBOX
+
+    /* Peripheral Manager */
+    .peripherals (NOLOAD) :
+    {
+        *(.peripherals*)
+    } > PERIPHERALS
+}

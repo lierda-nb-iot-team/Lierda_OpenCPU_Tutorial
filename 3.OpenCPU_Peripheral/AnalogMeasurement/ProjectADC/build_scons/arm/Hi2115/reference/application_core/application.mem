@@ -1,0 +1,550 @@
+
+  Memory Usage Summary...
+  
+  Section             Start Addr        Size      Used
+  ------------------  ----------  ----------  --------
+  
+  Aliased 0 (Flash)   0x00000000   0x1000000   0x4AC00 = 306176
+    startup           0x00000000                  0xA0                  
+    .version_str      0x000000C0                   0x0                  
+    .text             0x00000120               0x46E08                  
+    .init             0x00046F28                   0x4                  
+    .fini             0x00046F2C                   0x4                  
+    .ARM.exidx        0x00046F30                0x3678                  
+    .ARM.extab        0x0004A5A8                 0x2D0                  
+    .ramtext          0x0004A878                  0xD0                  
+    .data             0x0004A948                 0x2B8                  
+  
+  Aliased 1 (RAM)     0x01000000   0x1000000    0xFFA0 = 65440
+    .stacks           0x01000000                 0x400                  
+    .ramtext          0x01000400                  0xD0 load address 0x4A878
+    .data             0x010004D0                 0x2B8 load address 0x4A948
+    .bss              0x01000800                0x3BCC                  
+    .preserve         0x010043D0                  0x72                  
+    .heap             0x01004442                   0x2                  
+    .sys_status       0x0100FEE0                  0x20                  
+    .ipc_mailbox      0x0100FF00                  0xA0                  
+  
+  Registers           0x40000000   0x1000000     0xA00 = 2560
+    .peripherals      0x40001000                 0xA00                  
+
+  ====================================================
+
+
+  Memory Usage Details...
+
+  Section                              Total      Size 
+  --------------------------------  --------  -------- 
+
+  .text                               229068
+
+    C:                                   184
+      Users                                 
+        Administrator                       
+          Desktop                           
+            openMCU                         
+              Software_DEMO                 
+                B500SP1_190412_08           
+                  src_release               
+                    src                     
+                      app                156
+                        reference           
+                          application_core  
+                            startup                156
+
+                      config              28
+                        vectors             
+                          Hi2115            
+                            application_core
+                              vectors               28
+
+    D:                                228510
+      DefStudio                       203568
+        Project                             
+          BoudicaV150R100C20B500       69167
+            Hi2115_B500_SDK            60931
+              src_release                   
+                src                         
+                  app                  20977
+                    reference               
+                      application_core      
+                        ref_lib                  20977
+
+                  lib                  37048
+                    activity_indication            316
+                    aio_functions                  342
+                    backtrace                       56
+                    iflog                          468
+                    log                            716
+                    log_reader                    1586
+                    logical_channel                260
+                    lwip_support                  1668
+                    neul                          7140
+                    neul_kv_storage               1286
+                    neul_network                  3522
+                    neul_utils                     238
+                    nlibc                         3968
+                    ota                            688
+                    panic                           88
+                    ppp                          14530
+                    preserve                       176
+
+                  os                    1528
+                    LiteOS                           2
+                    cmsis                         1526
+
+                  peripheral_drivers      1378
+                    cmsis                   
+                      eflash                
+                        private             
+                          eflash                  1378
+
+            Program                     8236
+              Hi2115_B500_REG_20181226      
+                src_release                 
+                  src                       
+                    app                 5640
+                      reference             
+                        application_core    
+                          ref_lib                 5640
+
+                    lib                 2596
+                      app_at_module_production      2596
+
+          OpenCPUStudio               134401
+            B500SP1_OpenCPU            79646
+              BoudicaV150R100C20B500SP1_OpenCPU_src
+                src                         
+                  app                  59858
+                    reference               
+                      application_core      
+                        ref_lib                  59858
+
+                  lib                  19788
+                    rpc_interface                19788
+
+            B500SP1_OpenCPU_src        46285
+              BoudicaV150R100C20B500SP1_OpenCPU_src
+                src                         
+                  app                     16
+                    reference               
+                      application_core      
+                        ref_lib                     16
+
+                  lib                  46269
+                    app_at                       46017
+                    lierdalib                      252
+
+            BoudicaV150R100C20B500_OpenCPU_src      8470
+              src                           
+                os                          
+                  LiteOS                          8470
+
+      RemoteStudio                     24942
+        BoudicaV150R100C20B500_OpenCPU_src  
+          src                               
+            drivers                         
+              cmsis                    10262
+                aio                                662
+                aio_pin                             64
+                dma                               1734
+                spi                               1712
+                temp_mon                            36
+                uart                              6016
+                vref                                38
+
+              hal                       7541
+                Hi2115                  1885
+                  application_core       404
+                    hal_lpuart_specific            404
+
+                  shared                1025
+                    hal_gpio                        96
+                    hal_pio                        530
+                    hal_uart_specific              399
+
+                  shared_ap              456
+                    hal_aio_manager                456
+
+                Hi21XX                  5656
+                  application_core      1756
+                    hal_ipc_irq                    112
+                    hal_lpuart                     688
+                    hal_ssp                        956
+
+                  shared                3868
+                    hal                            216
+                    hal_clocks                      96
+                    hal_dma                       2052
+                    hal_lpc                         68
+                    hal_reboot                      36
+                    hal_rtc                        248
+                    hal_uart                      1152
+
+                  shared_ap               32
+                    hal_vref                        32
+
+              non-os                    6301
+                clocks                               8
+                gpio                               891
+                ipc                                492
+                log                               1640
+                lp_uart                           1386
+                non_os                             160
+                pio                                 88
+                reboot                             114
+                rtc                               1074
+                system_status                      244
+                watchdog                           204
+
+              platform                   838
+                Hi21XX                      
+                  shared                    
+                    uart_common                    838
+
+    E:                                   374
+      Lierda_EVKcurriculum_190422           
+        LierdaADCtest                       
+          Code                              
+            src_release                     
+              src                           
+                app                      126
+                  reference                 
+                    application_core        
+                      main                         126
+
+                lib                      248
+                  Demo                             248
+
+
+  Section                              Total      Size 
+  --------------------------------  --------  -------- 
+
+  .bss                                 13016
+
+    D:                                 12991
+      DefStudio                        11393
+        Project                             
+          BoudicaV150R100C20B500        1635
+            Hi2115_B500_SDK             1561
+              src_release                   
+                src                         
+                  app                     12
+                    reference               
+                      application_core      
+                        ref_lib                     12
+
+                  lib                   1528
+                    activity_indication              9
+                    backtrace                        1
+                    iflog                          264
+                    log                              9
+                    log_reader                     154
+                    lwip_support                    25
+                    neul                           164
+                    neul_kv_storage                 60
+                    neul_network                    89
+                    nlibc                           36
+                    ota                            537
+                    panic                            5
+                    ppp                            174
+                    preserve                         1
+
+                  os                       8
+                    cmsis                            8
+
+                  peripheral_drivers        13
+                    cmsis                   
+                      eflash                
+                        private             
+                          eflash                    13
+
+            Program                       74
+              Hi2115_B500_REG_20181226      
+                src_release                 
+                  src                       
+                    app                     
+                      reference             
+                        application_core    
+                          ref_lib                   74
+
+          OpenCPUStudio                 9758
+            B500SP1_OpenCPU             4363
+              BoudicaV150R100C20B500SP1_OpenCPU_src
+                src                         
+                  app                    777
+                    reference               
+                      application_core      
+                        ref_lib                    777
+
+                  lib                   3586
+                    rpc_interface                 3586
+
+            B500SP1_OpenCPU_src         5259
+              BoudicaV150R100C20B500SP1_OpenCPU_src
+                src                         
+                  lib                       
+                    app_at                        4217
+                    lierdalib                     1042
+
+            BoudicaV150R100C20B500_OpenCPU_src       136
+              src                           
+                os                          
+                  LiteOS                           136
+
+      RemoteStudio                      1598
+        BoudicaV150R100C20B500_OpenCPU_src  
+          src                               
+            drivers                         
+              cmsis                      240
+                aio                                 29
+                dma                                104
+                spi                                 10
+                uart                                97
+
+              hal                        349
+                Hi21XX                      
+                  application_core        37
+                    hal_lpuart                       5
+                    hal_ssp                         32
+
+                  shared                 312
+                    hal                              4
+                    hal_dma                        242
+                    hal_reboot                       2
+                    hal_rtc                         12
+                    hal_uart                        52
+
+              non-os                    1009
+                gpio                               184
+                ipc                                 36
+                log                                 46
+                lp_uart                            171
+                non_os                               6
+                reboot                               2
+                rtc                                557
+                system_status                        1
+                watchdog                             6
+
+    E:                                    25
+      Lierda_EVKcurriculum_190422           
+        LierdaADCtest                       
+          Code                              
+            src_release                     
+              src                           
+                app                       21
+                  reference                 
+                    application_core        
+                      main                          21
+
+                lib                        4
+                  Demo                               4
+
+
+  Section                              Total      Size 
+  --------------------------------  --------  -------- 
+
+  .ramtext                               208
+
+    D:                                      
+      DefStudio                           32
+        Project                             
+          OpenCPUStudio                     
+            BoudicaV150R100C20B500_OpenCPU_src
+              src                           
+                os                          
+                  LiteOS                            32
+
+      RemoteStudio                       176
+        BoudicaV150R100C20B500_OpenCPU_src  
+          src                               
+            drivers                         
+              hal                         44
+                Hi21XX                      
+                  shared                    
+                    hal_lpc                         12
+                    hal_rtc                         32
+
+              non-os                     132
+                system_status                      132
+
+
+  Section                              Total      Size 
+  --------------------------------  --------  -------- 
+
+  .data                                  590
+
+    D:                                   554
+      DefStudio                          533
+        Project                             
+          BoudicaV150R100C20B500          53
+            Hi2115_B500_SDK               49
+              src_release                   
+                src                         
+                  lib                       
+                    activity_indication              1
+                    iflog                            1
+                    log                              2
+                    log_reader                       1
+                    lwip_support                    12
+                    nlibc                           32
+
+            Program                        4
+              Hi2115_B500_REG_20181226      
+                src_release                 
+                  src                       
+                    app                     
+                      reference             
+                        application_core    
+                          ref_lib                    4
+
+          OpenCPUStudio                  480
+            B500SP1_OpenCPU               87
+              BoudicaV150R100C20B500SP1_OpenCPU_src
+                src                         
+                  app                       
+                    reference               
+                      application_core      
+                        ref_lib                     87
+
+            B500SP1_OpenCPU_src          393
+              BoudicaV150R100C20B500SP1_OpenCPU_src
+                src                         
+                  lib                       
+                    app_at                         393
+
+      RemoteStudio                        21
+        BoudicaV150R100C20B500_OpenCPU_src  
+          src                               
+            drivers                         
+              cmsis                       18
+                spi                                 10
+                temp_mon                             2
+                uart                                 6
+
+              hal                          1
+                Hi21XX                      
+                  application_core          
+                    hal_lpuart                       1
+
+              non-os                       2
+                lp_uart                              2
+
+    E:                                    36
+      Lierda_EVKcurriculum_190422           
+        LierdaADCtest                       
+          Code                              
+            src_release                     
+              src                           
+                lib                         
+                  Demo                              36
+
+
+  Section                              Total      Size 
+  --------------------------------  --------  -------- 
+
+  .preserve                              110
+
+    D:                                      
+      DefStudio                             
+        Project                             
+          BoudicaV150R100C20B500         108
+            Hi2115_B500_SDK                 
+              src_release                   
+                src                         
+                  lib                       
+                    backtrace                       44
+                    preserve                        64
+
+          OpenCPUStudio                    2
+            B500SP1_OpenCPU                 
+              BoudicaV150R100C20B500SP1_OpenCPU_src
+                src                         
+                  app                       
+                    reference               
+                      application_core      
+                        ref_lib                      2
+
+
+  Section                              Total      Size 
+  --------------------------------  --------  -------- 
+
+  .peripherals                          2560
+
+    D:                                      
+      RemoteStudio                          
+        BoudicaV150R100C20B500_OpenCPU_src  
+          src                               
+            drivers                         
+              hal                           
+                Hi2115                      
+                  shared                    
+                    hal_pio                       2560
+
+
+  Section                              Total      Size 
+  --------------------------------  --------  -------- 
+
+  .ipc_mailbox                           160
+
+    D:                                      
+      RemoteStudio                          
+        BoudicaV150R100C20B500_OpenCPU_src  
+          src                               
+            drivers                         
+              non-os                        
+                ipc                                160
+
+
+  Section                              Total      Size 
+  --------------------------------  --------  -------- 
+
+  startup                                160
+
+    C:                                      
+      Users                                 
+        Administrator                       
+          Desktop                           
+            openMCU                         
+              Software_DEMO                 
+                B500SP1_190412_08           
+                  src_release               
+                    src                     
+                      config                
+                        vectors             
+                          Hi2115            
+                            application_core
+                              vectors              160
+
+
+  Section                              Total      Size 
+  --------------------------------  --------  -------- 
+
+  .sys_status                             32
+
+    D:                                      
+      RemoteStudio                          
+        BoudicaV150R100C20B500_OpenCPU_src  
+          src                               
+            drivers                         
+              non-os                        
+                system_status                       32
+
+  ====================================================
+
+  Mismatched section sizes...
+
+         .text  .lst file = 290312 (0x46E08)
+                 .du file = 229068 (0x37ECC)
+
+         .data  .lst file = 696 (0x2B8)
+                 .du file = 590 (0x24E)
+
+          .bss  .lst file = 15308 (0x3BCC)
+                 .du file = 13016 (0x32D8)
+
+     .preserve  .lst file = 114 (0x72)
+                 .du file = 110 (0x6E)
+
+  ====================================================
+

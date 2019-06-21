@@ -1,0 +1,339 @@
+# 1 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c"
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\application_core\\activity_indication_etypes.h" 1
+
+
+
+
+
+
+
+# 1 "src\\lib\\common_headers/neulfw.h" 1
+# 25 "src\\lib\\common_headers/neulfw.h"
+# 1 "src\\lib\\common_headers/etypes.h" 1
+# 18 "src\\lib\\common_headers/etypes.h"
+typedef U32 uintptr;
+
+typedef S8 int8;
+typedef S16 int16;
+typedef S32 int32;
+
+typedef U8 uint8;
+typedef U16 uint16;
+typedef U32 uint32;
+
+typedef BOOL8 bool;
+# 26 "src\\lib\\common_headers/neulfw.h" 2
+# 9 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\application_core\\activity_indication_etypes.h" 2
+
+
+
+
+
+;
+
+typedef uint8 activity_indication_delay_milliseconds_t[5];
+# 2 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
+
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\application_core\\app_at_uart_etypes.h" 1
+# 15 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\application_core\\app_at_uart_etypes.h"
+typedef struct
+{
+    uint32 baudrate;
+    uint8 syncmode;
+    uint8 stopbits;
+    uint8 parity;
+}at_uart_config_v1;
+
+
+typedef struct
+{
+    uint32 baudrate;
+    uint8 syncmode;
+    uint8 stopbits;
+    uint8 parity;
+    uint8 sw_flow_control;
+}at_uart_config;
+# 4 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
+
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\application_core\\application_config_etypes.h" 1
+# 16 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\application_core\\application_config_etypes.h"
+;
+
+typedef uint8 pin_map_buffer_t[10];
+# 6 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
+
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\application_core\\manufacturer_identity_etypes.h" 1
+# 8 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
+
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\base_etypes.h" 1
+# 10 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\base_etypes.h"
+typedef struct {
+    uint8 value;
+} uint8_es;
+
+
+typedef struct {
+    uint16 value;
+} uint16_es;
+
+
+typedef struct {
+    uint32 value;
+} uint32_es;
+
+
+typedef struct {
+    bool value;
+} bool_es;
+
+
+typedef uint8 generic_array_es;
+
+typedef uint8 UNDETERMINED_SIZE_BUFFER[0];
+
+typedef ASCII UNDETERMINED_SIZE_STRING[0];
+# 10 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
+
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\neul_identity_etypes.h" 1
+# 13 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\neul_identity_etypes.h"
+typedef struct {
+    uint8 value[8];
+} neul_identity_packed_imei_es;
+
+typedef struct {
+    uint8 value[16];
+} neul_identity_serial_number_es;
+# 12 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
+
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\neul_log_etypes.h" 1
+# 13 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\neul_log_etypes.h"
+typedef enum U8
+{
+    NEUL_LOG_LEVEL_NONE,
+    NEUL_LOG_LEVEL_VERBOSE,
+    NEUL_LOG_LEVEL_NORMAL,
+    NEUL_LOG_LEVEL_WARNING,
+    NEUL_LOG_LEVEL_ERROR,
+    NEUL_LOG_LEVEL_CUSTOM,
+    NEUL_LOG_MAX,
+}
+NEUL_LOG_LEVEL;
+
+
+typedef struct {
+    NEUL_LOG_LEVEL value;
+} NEUL_LOG_LEVEL_es;
+# 14 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
+
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\neul_shared_etypes.h" 1
+
+
+
+
+
+
+
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\base_etypes.h" 1
+# 9 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\neul_shared_etypes.h" 2
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\neul_identity_etypes.h" 1
+# 10 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\neul_shared_etypes.h" 2
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\neul_log_etypes.h" 1
+# 11 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\neul_shared_etypes.h" 2
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\platform_etypes.h" 1
+# 18 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\platform_etypes.h"
+typedef enum U8
+{
+    PIN_0 = 0,
+    PIN_1 = 1,
+    PIN_2 = 2,
+    PIN_3 = 3,
+    PIN_4 = 4,
+    PIN_5 = 5,
+    PIN_6 = 6,
+    PIN_7 = 7,
+    PIN_8 = 8,
+    PIN_9 = 9,
+    PIN_10 = 10,
+    PIN_11 = 11,
+    PIN_12 = 12,
+    PIN_13 = 13,
+    PIN_14 = 14,
+    PIN_15 = 15,
+    PIN_16 = 16,
+    PIN_17 = 17,
+    PIN_18 = 18,
+    PIN_19 = 19,
+    PIN_20 = 20,
+    PIN_21 = 21,
+    PIN_22 = 22,
+    PIN_23 = 23,
+    PIN_24 = 24,
+    PIN_25 = 25,
+    PIN_26 = 26,
+    PIN_27 = 27,
+    PIN_28 = 28,
+    PIN_29 = 29,
+    PIN_30 = 30,
+    PIN_31 = 31,
+    PIN_32 = 32,
+    PIN_33 = 33,
+    PIN_34 = 34,
+    PIN_35 = 35,
+    PIN_36 = 36,
+    PIN_37 = 37,
+    PIN_38 = 38,
+    PIN_39 = 39,
+    PIN_NONE = 40,
+} PIN;
+
+
+
+
+
+
+typedef struct
+{
+    PIN tx_pin;
+    PIN rx_pin;
+    PIN cts_pin;
+    PIN rts_pin;
+} uart_pin_configuration;
+# 12 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\neul_shared_etypes.h" 2
+# 16 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
+
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\platform_etypes.h" 1
+# 18 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
+
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\pmu_vdd_io_etypes.h" 1
+# 17 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\pmu_vdd_io_etypes.h"
+typedef enum U8
+{
+    PMU_VDD_IO_BANK_R1 = 0,
+    PMU_VDD_IO_BANK_R2 = 1,
+    PMU_VDD_IO_BANK_L2 = 2,
+    PMU_VDD_IO_BANK_L1 = 3,
+    PMU_VDD_IO_BANK_UNKNOWN = 4
+}
+PMU_VDD_IO_BANK;
+
+
+
+
+
+
+
+typedef enum U8
+{
+    PMU_VDD_IO_LEVEL_1V5 = 0,
+    PMU_VDD_IO_LEVEL_1V8 = 1,
+    PMU_VDD_IO_LEVEL_2V1 = 2,
+    PMU_VDD_IO_LEVEL_2V4 = 3,
+    PMU_VDD_IO_LEVEL_2V7 = 4,
+    PMU_VDD_IO_LEVEL_3V0 = 5,
+    PMU_VDD_IO_LEVEL_3V3 = 6,
+    PMU_VDD_IO_LEVEL_VBAT = 7,
+    PMU_VDD_IO_LEVEL_OFF = 8,
+    PMU_VDD_IO_LEVEL_UNKNOWN = 9,
+}
+PMU_VDD_IO_LEVEL;
+# 20 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
+
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\shared_etypes.h" 1
+# 11 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\shared_etypes.h"
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\neul_shared_etypes.h" 1
+# 12 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\shared_etypes.h" 2
+
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\pmu_vdd_io_etypes.h" 1
+# 14 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared\\shared_etypes.h" 2
+# 22 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
+
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_etypes.h" 1
+
+
+
+
+
+
+
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_ip4_etypes.h" 1
+# 14 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_ip4_etypes.h"
+typedef struct ip4_addr {
+    uint32 addr;
+} ip4_addr_t;
+# 9 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_etypes.h" 2
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_ip6_etypes.h" 1
+# 14 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_ip6_etypes.h"
+typedef struct ip6_addr {
+    uint32 addr[4];
+} ip6_addr_t;
+# 10 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_etypes.h" 2
+
+
+
+
+
+
+typedef union
+{
+    ip6_addr_t ip6;
+    ip4_addr_t ip4;
+}
+u_addr_u;
+
+typedef struct
+{
+    u_addr_u u_addr;
+    uint8 type;
+}
+ip_addr_t;
+# 24 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
+
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_ip4_etypes.h" 1
+# 26 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
+
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared_ap\\neul_ip_addr_ip6_etypes.h" 1
+# 28 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
+
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared_ap\\tup_id_etypes.h" 1
+# 30 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2
+
+# 1 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared_as\\neul_update_etypes.h" 1
+# 11 "E:\\Lierda_EVKcurriculum_190422\\LierdaHDC\\Code\\src_release\\src\\external\\etypes\\neul\\shared_as\\neul_update_etypes.h"
+typedef enum U8
+{
+    INSTALL_TYPE_UNKNOWN,
+    INSTALL_TYPE_NOT_SET,
+    INSTALL_TYPE_NEED_SHA256,
+    INSTALL_TYPE_NEED_SIGNATURE
+}INSTALL_TYPE;
+
+
+typedef enum U8
+{
+    NEUL_UPDATE_STAGE_UPGRADE_INIT = 0,
+    NEUL_UPDATE_STAGE_UPGRADE_SUCC = 1,
+    NEUL_UPDATE_STAGE_VALIDATE_FAIL = 5,
+    NEUL_UPDATE_STAGE_UPGRADE_FAIL = 8,
+    NEUL_UPDATE_STAGE_MAX
+} NEUL_UPDATE_STAGE;
+
+
+
+
+typedef enum U8
+{
+    NEUL_UPDATE_OTA_PACKAGE_OK,
+    NEUL_UPDATE_OTA_PACKAGE_CORRUPT,
+    NEUL_UPDATE_OTA_PACKAGE_NOT_PROCESSED,
+    NEUL_UPDATE_OTA_PACKAGE_VALIDATION_FAILURE,
+    NEUL_UPDATE_OTA_PACKAGE_UNSUPPORTED_OPTIONS,
+    NEUL_UPDATE_OTA_PACKAGE_VERSION_MISMATCHED,
+    NEUL_UPDATE_OTA_PACKAGE_ELEMENT_TOO_LONG,
+    NEUL_UPDATE_OTA_PACKAGE_REGION_LOST,
+    NEUL_UPDATE_OTA_PACKAGE_SIGNATURE_OR_HASH_LACKED,
+    NEUL_UPDATE_OTA_PACKAGE_NOT_DOWNLOADED,
+} NEUL_UPDATE_OTA_PACKAGE_STATUS;
+# 31 "build_scons\\merged\\customer_neul_rdk\\external\\etypes\\application_core.c" 2

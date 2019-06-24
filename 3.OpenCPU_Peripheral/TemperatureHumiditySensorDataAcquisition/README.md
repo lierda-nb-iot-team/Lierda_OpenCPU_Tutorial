@@ -26,7 +26,7 @@
 ![HDC1000传感器连接示意图](../../Picture/HDC1000电气连接2.png)
 ### 5 实验步骤
 5.1 将`ProjectLight`文件夹导入eclipse，导入方法详见[《Lierda NB-IoT模组 OpenCPU DemoCode说明文档》
-](../../Doc/基本资料/Lierda_NB-IoT模组OpenCPU_DEMO说明文档V1.8_190403.pdf)
+](https://github.com/lierda-nb-iot-team/Lierda_OpenCPU_SDK)
 
 5.2 打开`Demo`文件夹下示例代码：  
 ![示例代码](../../Picture/光感示例代码1.png)
@@ -52,7 +52,7 @@ I2C_RET lierdaI2CRead(I2C_HandleTypeDef *hi2c,uint8 i2c_slave_addr,uint8 *data, 
 5.4  编译工程，如没有错误则编译通过：  
 ![编译结果](../../Picture/编译结果.jpg)  
 编译成功后，烧写固件，烧写过程详见[《Lierda NB-IoT模组 OpenCPU DemoCode说明文档》
-](../../Doc/基本资料/Lierda_NB-IoT模组OpenCPU_DEMO说明文档V1.8_190403.pdf)
+](https://github.com/lierda-nb-iot-team/Lierda_OpenCPU_SDK)
 
 5.5 烧写完毕，打开串口助手，选择AT串口，波特率为9600，可看到如下结果：  
 ![结果展示](../../Picture/HDC1000结果.png)

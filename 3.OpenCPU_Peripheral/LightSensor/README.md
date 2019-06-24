@@ -26,7 +26,7 @@
 ![光线传感器连接示意图](../../Picture/光线传感器2.png)
 ### 5 实验步骤
 5.1 将`ProjectLight`文件夹导入eclipse，导入方法详见[《Lierda NB-IoT模组 OpenCPU DemoCode说明文档》
-](../../Doc/基本资料/Lierda_NB-IoT模组OpenCPU_DEMO说明文档V1.8_190403.pdf)  
+](https://github.com/lierda-nb-iot-team/Lierda_OpenCPU_SDK)  
 
 5.2 打开`Demo`文件夹下示例代码：  
 ![示例代码](../../Picture/光感示例代码1.png)
@@ -60,7 +60,7 @@ void lierda_OPT3001_UpdataInfo(uint32 *Lux);//获取更新的传感器数值
 ![编译结果](../../Picture/编译结果.jpg)  
 5.4.2. 编译成功后，烧写固件  
 烧写过程详见[《Lierda NB-IoT模组 OpenCPU DemoCode说明文档》
-](../../Doc/基本资料/Lierda_NB-IoT模组OpenCPU_DEMO说明文档V1.8_190403.pdf)  
+](https://github.com/lierda-nb-iot-team/Lierda_OpenCPU_SDK)  
 
 5.5 调试  
 烧写完毕，打开串口助手，选择AT串口，波特率为9600，可看到如下结果：  

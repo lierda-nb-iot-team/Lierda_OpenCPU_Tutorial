@@ -95,11 +95,10 @@ target_arm_rdk_reference_2115_LiteOS = {
                           'LiteOS',
                           'cmsis',
                           'peripheral_drivers',
-                          'lierda_gps',
+                          #'lierda_gps',
                           'lierdaModuleStatus',
                           'lierdalib',
                           'lierda_sensor',
-                          'lierdaNetworkDealWith',
 
                         ],
     'support_libs':     [ #'panic',

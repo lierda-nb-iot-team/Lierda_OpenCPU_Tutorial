@@ -69,6 +69,6 @@
 
 ### 7 参考资料
 
-| 技术论坛 |
-| :----------- |
-| [物联网开发者社区](http://bbs.lierda.com) |
+| 技术论坛 | OpenCPU资料 | NB86 EVK资料
+| :----------- | :----------- | :----------- |
+| [物联网开发者社区](http://bbs.lierda.com) |  [OpenCPU基本资料集](https://github.com/lierda-nb-iot-team/Lierda_OpenCPU_SDK) |  [NB86 EVK基本资料集](https://github.com/lierda-nb-iot-team/Lierda_NB86_EVK) |

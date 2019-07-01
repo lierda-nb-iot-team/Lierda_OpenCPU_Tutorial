@@ -36,16 +36,21 @@
 - 事件状态相关库函数  
 头文件：  
 `#include "lierda_module_status.h"`  
-库函数：  
-`void lierda_module_status_read(void);	//用于事件状态更新`
+库函数:  
+
+```cpp 
+void lierda_module_status_read(void);	//用于事件状态更新
+```
 
 - 网络连接相关库函数  
 头文件：  
 `#include "lierda_network_dealwith.h"`  
-库函数：  
-`NET_PARA_RET lierda_net_local_config_init(struct NET_Local_Para *p_local_para);//网络连接参数初始化`
-
-`void lierda_network_dealwith_task_enable(void);//网络连接使能`
+库函数：
+  
+```cpp
+NET_PARA_RET lierda_net_local_config_init(struct NET_Local_Para *p_local_para);//网络连接参数初始化  
+void lierda_network_dealwith_task_enable(void);//网络连接使能
+```
 
 5.3.2 网络连接初始化
 

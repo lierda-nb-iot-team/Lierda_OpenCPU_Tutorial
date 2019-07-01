@@ -36,16 +36,20 @@
 - 事件状态相关库函数  
 头文件：  
 `#include "lierda_module_status.h"`  
-库函数：  
-`void lierda_module_status_read(void);	//用于事件状态更新`
+库函数： 
+```cpp 
 
+void lierda_module_status_read(void);	//用于事件状态更新
+```
 - FOTA规避相关库函数  
 头文件：  
 `#include "lierda_module_status.h"`  
-库函数：  
-`lierda_fotaSta lierda_FotaStatus(void);//FOTA状态查询函数`
-
-`lierdaFota lierda_FotaEnableData(void);//FOTA是否可以做业务函数`
+库函数：
+ 
+```cpp 
+lierda_fotaSta lierda_FotaStatus(void);//FOTA状态查询函数  
+lierdaFota lierda_FotaEnableData(void);//FOTA是否可以做业务函数  
+```
 
 5.3.2 FOTA规避相关说明
 

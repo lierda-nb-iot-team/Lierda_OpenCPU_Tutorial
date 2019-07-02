@@ -31,11 +31,11 @@
 
 | 目录 | 内容 |
 | :----------- | :--------------- |
-| OpenCPU Peripheral   | 包含各种传感器和外设的使用例程|
-| Network Communication | 包含网络通信例程|
-| Application Demo| 包含综合应用例程|
-| Doc | 包含所有使用上的详细说明|
-| Tool Chain | 包含固件升级以及UElog查看等工具|
+| 1.Reference   | OpenCPU相关资料说明|
+| 2.Tool_Chain | 工具链的搭建及开发所需的软件|
+| 3.OpenCPU_Peripheral| OpenCPU外设相关例程|
+| 4.Network_Communication | OpenCPU网络连接及FOTA升级相关例程|
+| 5.Application_Demo | 综合应用例程（模拟水表、路灯、温湿度采集器、定位器）|
 
 ## OpenCPU Peripheral目录包含:
 

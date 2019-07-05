@@ -1,1 +1,0 @@
-The SDK build tools are available in a zip file which needs extracting to the correct location.

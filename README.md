@@ -1,4 +1,4 @@
-﻿<h1 align="center">
+<h1 align="center">
   OpenCPU Demo
 </h1>
 
@@ -31,13 +31,21 @@
 
 | 目录 | 内容 |
 | :----------- | :--------------- |
-| OpenCPU Peripheral   | 包含各种传感器和外设的使用例程|
-| Network Communication | 包含网络通信例程|
-| Application Demo| 包含综合应用例程|
-| Doc | 包含所有使用上的详细说明|
-| Tool Chain | 包含固件升级以及UElog查看等工具|
+| 1.Reference   | OpenCPU相关资料说明|
+| 2.Tool_Chain | 工具链的搭建及开发所需的软件|
+| 3.OpenCPU_Peripheral| OpenCPU外设相关例程|
+| 4.Network_Communication | OpenCPU网络连接及FOTA升级相关例程|
+| 5.Application_Demo | 综合应用例程（模拟水表、路灯、温湿度采集器、定位器）|
 
-## OpenCPU Peripheral目录包含:
+## Tool_Chain目录包含:
+
+| 目录              | 内容 |
+| :--------------- | :---------------------------- |
+| 1.开发环境搭建| 开发环境搭建说明|
+|2.工程导入及代码编译|工程导入及代码编译说明|
+|3.固件生成及烧录|固件生成及烧录说明|
+|tool|开发所需软件|
+## OpenCPU_Peripheral目录包含:
 
 | 目录              | 内容 |
 | :--------------- | :---------------------------- |
@@ -68,6 +76,7 @@
 
 | 目录              | 内容 |
 | :--------------- | :---------------------------- |
-| Temperature and humidity collector simulation| 温湿度采集器应用相关使用例程及说明文档|
-| Street light simulation| 路灯应用相关使用例程及说明文档|
-| Tracker simulation| 定位器应用相关使用例程及说明文档|
+| 1.WaterMeterSimulation| 模拟水表应用相关使用例程及说明文档|
+| 2.StreetLightSimulation| 模拟路灯应用相关使用例程及说明文档|
+| 3.TemperatureAndHumidityCollectorSimulation| 温湿度采集器应用相关使用例程及说明文档|  
+| 4.TrackerSimulation| 定位器应用相关使用例程及说明文档|

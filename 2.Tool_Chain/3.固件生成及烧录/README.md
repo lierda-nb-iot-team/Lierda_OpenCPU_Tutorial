@@ -8,11 +8,11 @@
 ![图 固件生成01](../../Picture/固件生成01.png)  
 NOTE: 需要安装与工程所对应的UpdatePackage版本  
 ### 1.2	Package包生成  
-1、工程文件，进入fwpkg文件，找到make_fwpkg.bat文件如图，其中底包SourceFirmware.fwpkg文件根据自己的所使用的的硬件选择，这里提供B500SP1X0A固件底包，若跟换底包需将底包名改为“SourceFirmware.fwpkg”。 
- ![图 固件生成02](../../Picture/固件生成02.png) 
+1、工程文件，进入fwpkg文件，找到make_fwpkg.exe文件如图，其中底包SourceFirmware.fwpkg文件根据自己的所使用的的硬件选择，这里提供B500SP1X0A固件底包，若跟换底包需将底包名改为“SourceFirmware.fwpkg”。 
+ ![图 固件生成02_1](../../Picture/固件生成02_1.png)   
 2、点击运行该批处理文件，若无异常出现则表示固件生成成功，如图 
- ![图 固件生成03](../../Picture/固件生成03.png) 
-3、make_fwpkg.bat批处理文件运行完成后，在fwpkg_new文件夹下就会生成相应的固件如图
+ ![图 固件生成03_1](../../Picture/固件生成03_1.png) 
+3、make_fwpkg.exe文件运行完成后，在fwpkg_new文件夹下就会生成相应的固件如图
  ![图 固件生成04](../../Picture/固件生成04.png) 
 
 

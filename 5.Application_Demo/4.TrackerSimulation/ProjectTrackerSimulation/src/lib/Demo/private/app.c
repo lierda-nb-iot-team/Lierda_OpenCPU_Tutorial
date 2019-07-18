@@ -133,6 +133,7 @@ void Deviceswitch(void)
 {
 	Lierda_SysValue.GpsDataNum=0;
 	Lierda_SysValue.GpsDataNumFullFlag=0;
+	TimerControlFun(TIMEDREPORT,1,1000);//打开定时器
 	if(Lierda_SysValue.SysMode==TrackerMode)
 	{
 		 TimerControlFun(TIMECOOLLECGPS,1,1000);
@@ -284,9 +285,9 @@ void Lierda_SoftTimerCallback(void *param)
 						Lierda_SysValue.GpsDataNum++;
 					    Lierda_SysValue.gpsInfo.SerialNum=Lierda_SysValue.GpsDataNum;
 						Lierda_SysValue.gpsInfo.SignalQuality=0x01;
-						Lierda_SysValue.gpsInfo.longitude=0x4784c880;
+						Lierda_SysValue.gpsInfo.longitude=0x4784c880;//0x4784c880
 						Lierda_SysValue.gpsInfo.longitude=BigtoLittle32(Lierda_SysValue.gpsInfo.longitude);
-						Lierda_SysValue.gpsInfo.latitude=0x120b5c60;
+						Lierda_SysValue.gpsInfo.latitude=0x120c2640;//0x120c2640
 						Lierda_SysValue.gpsInfo.latitude=BigtoLittle32(Lierda_SysValue.gpsInfo.latitude);
 						Lierda_SysValue.gpsInfo.Position=0x02;
 						memcpy(GpsDtaBuff+((Lierda_SysValue.GpsDataNum-1)*GPSDATAPACK_LEN),&Lierda_SysValue.gpsInfo,GPSDATAPACK_LEN);

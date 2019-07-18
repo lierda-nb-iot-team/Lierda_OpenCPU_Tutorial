@@ -180,6 +180,8 @@ void uart3_tick_timeout_callback(void *argument )
 							gps_updata(&Lierda_SysValue.gpsInfo.Position,&Lierda_SysValue.gpsInfo.longitude,&Lierda_SysValue.gpsInfo.latitude);
 							Lierda_SysValue.gpsInfo.SerialNum=Lierda_SysValue.GpsDataNum;
 							Lierda_SysValue.gpsInfo.SignalQuality=0x01;
+//							lierdaLog(" longitude: %#x\r\n",Lierda_SysValue.gpsInfo.longitude);
+//							lierdaLog(" latitude: %#x\r\n",Lierda_SysValue.gpsInfo.latitude);
 							Lierda_SysValue.gpsInfo.longitude=BigtoLittle32(Lierda_SysValue.gpsInfo.longitude);
 							Lierda_SysValue.gpsInfo.latitude=BigtoLittle32(Lierda_SysValue.gpsInfo.latitude);
 							memcpy(GpsDtaBuff+((Lierda_SysValue.GpsDataNum-1)*GPSDATAPACK_LEN),&Lierda_SysValue.gpsInfo,GPSDATAPACK_LEN);

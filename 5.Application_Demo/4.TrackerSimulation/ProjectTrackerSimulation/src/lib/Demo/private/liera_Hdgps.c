@@ -79,8 +79,10 @@ void gps_updata(uint8 *EW_data,uint32 *Longitude_data,uint32 *Latitude_data)
 		  float jf=   atof_gps(HA_GPSData.Longitude)/100;
 		  int32 wd=(int32)wf;
 		  int32 jd=(int32)jf;
-		  wf=(((wf-wd)*100))*10000000/60;
+		  wf=((wf-wd)*100)*10000000/60;
 		  jf=((jf-jd)*100)*10000000/60;
+//		  		  wf=((wf-wd)*100)*100000;
+//		  		  jf=((jf-jd)*100)*100000;
 		  wd*=10000000;
 		  jd*=10000000;
 		  wf+=wd;
@@ -90,7 +92,7 @@ void gps_updata(uint8 *EW_data,uint32 *Longitude_data,uint32 *Latitude_data)
 		else
 			*EW_data = 0x00;
 		if (HA_GPSData.NS_indicator == 'N')
-			*EW_data = 0x10 | *EW_data;
+			*EW_data = 0x02 | *EW_data;
 		else
 			*EW_data = *EW_data & 0xff;
 		*Longitude_data = (uint32) (jf);

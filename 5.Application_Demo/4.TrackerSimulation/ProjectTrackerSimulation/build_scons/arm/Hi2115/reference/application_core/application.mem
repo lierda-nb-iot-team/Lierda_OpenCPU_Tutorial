@@ -4,21 +4,21 @@
   Section             Start Addr        Size      Used
   ------------------  ----------  ----------  --------
   
-  Aliased 0 (Flash)   0x00000000   0x1000000   0x4CD88 = 314760
+  Aliased 0 (Flash)   0x00000000   0x1000000   0x4CD8C = 314764
     startup           0x00000000                  0xA0                  
     .version_str      0x000000C0                   0x0                  
-    .text             0x00000120               0x48E9C                  
-    .init             0x00048FBC                   0x4                  
-    .fini             0x00048FC0                   0x4                  
-    .ARM.exidx        0x00048FC4                0x3730                  
-    .ARM.extab        0x0004C6F4                 0x2C4                  
-    .ramtext          0x0004C9B8                  0xD0                  
-    .data             0x0004CA88                 0x300                  
+    .text             0x00000120               0x48EA8                  
+    .init             0x00048FC8                   0x4                  
+    .fini             0x00048FCC                   0x4                  
+    .ARM.exidx        0x00048FD0                0x3728                  
+    .ARM.extab        0x0004C6F8                 0x2C4                  
+    .ramtext          0x0004C9BC                  0xD0                  
+    .data             0x0004CA8C                 0x300                  
   
   Aliased 1 (RAM)     0x01000000   0x1000000    0xFFA0 = 65440
     .stacks           0x01000000                 0x400                  
-    .ramtext          0x01000400                  0xD0 load address 0x4C9B8
-    .data             0x010004D0                 0x300 load address 0x4CA88
+    .ramtext          0x01000400                  0xD0 load address 0x4C9BC
+    .data             0x010004D0                 0x300 load address 0x4CA8C
     .bss              0x01000800                0x53CC                  
     .preserve         0x01005BD0                  0x72                  
     .heap             0x01005C42                   0x2                  
@@ -527,7 +527,7 @@
 
   Mismatched section sizes...
 
-         .text  .lst file = 298652 (0x48E9C)
+         .text  .lst file = 298664 (0x48EA8)
                  .du file = 233226 (0x38F0A)
 
          .data  .lst file = 768 (0x300)

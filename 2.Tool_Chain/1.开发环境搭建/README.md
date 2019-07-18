@@ -12,7 +12,7 @@ B500 编译调用 的 GCC 编译器 版本与 B300SP2&B300SP5 不一样，若要
 
 ![图 1-2](../../Picture/图1-2.png)  
 
-进入windows 命令行输入 arm-none-eabi-gcc -v 检查 gcc 版本，判断 gccs 是否安装成功，如图 1-3  
+进入windows 命令行输入 arm-none-eabi-gcc -v 检查 gcc 版本，判断 gcc 是否安装成功，如图 1-3  
 
 ![图 1-3](../../Picture/图1-3.png)  
 

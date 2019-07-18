@@ -36,7 +36,7 @@ void lierda_App_task(void *param)
 	    		iRMC_decode((char *)(pRMC), 100);//GPS数据解析
 	    		if(Gps_Data.Valid_status=='A')//判断是否为有效数据
 	    		{
-	    			lierdaLog("时间：%s %s(ddmmyy hhmmss.sss)\r\n东西：%c\r\n维度：%s\r\n经度：%s\r\n南北：%c",Gps_Data.Date,Gps_Data.UTC_Time,Gps_Data.EW_indicator,Gps_Data.Latitude,Gps_Data.Longitude,Gps_Data.NS_indicator);
+	    			lierdaLog("时间：%s %s(ddmmyy hhmmss.sss)\r\n东西：%c\r\n纬度：%s\r\n经度：%s\r\n南北：%c",Gps_Data.Date,Gps_Data.UTC_Time,Gps_Data.EW_indicator,Gps_Data.Latitude,Gps_Data.Longitude,Gps_Data.NS_indicator);
 	    		}
 	    		else
 	    			lierdaLog("GPS未定位成功");

@@ -1,5 +1,8 @@
 # 按键中断例程
-
+#### 写在前面 
+例程的是基于Lierda NB86-G EVK设计，NB86-G EVK资料获取请移步：[NB86 EVK相关资料集](http://bbs.lierda.com/forum.php?mod=viewthread&tid=86&page=1&extra=&_dsign=91f69885)  ,NB86-G EVK获取请移步：[NB86 EVK](https://item.taobao.com/item.htm?spm=a1z10.5-c.w4002-21080581561.13.565878241Htgvt&id=578262725191)              
+ ![NB86EVK](../../Picture/NB86EVK黑色.png)  
+例程的软件部分基于LiteOS设计，LiteOS入门操作指南请移步[LiteOS内核教程](https://liteos.github.io/tutorials/kernel/)
 ### 1 简介
 
 本例程使用Lierda OpenCPU 库函数实现按键中断例程，对应目录如下：
@@ -67,8 +70,8 @@ static void sos_key_callback(PIN pin)
 ](https://github.com/lierda-nb-iot-team/Lierda_OpenCPU_SDK)
 
 5.5 烧写完毕，打开串口助手，选择AT串口，波特率为9600，可看到如下结果：  
-![结果展示](../../Picture/按键中断结果示意.png)
-
+![结果展示](../../Picture/按键中断结果示意.png)  
+按下EVK上K7，LED10、LED11、LED12状态会翻转。  
 ### 6 注意事项
 
 - 在选用GPIO引脚时注意电压域的选择

@@ -1,5 +1,8 @@
 #  固件生成及烧录
-
+#### 写在前面 
+例程的是基于Lierda NB86-G EVK设计，NB86-G EVK资料获取请移步：[NB86 EVK相关资料集](http://bbs.lierda.com/forum.php?mod=viewthread&tid=86&page=1&extra=&_dsign=91f69885)  ,NB86-G EVK获取请移步：[NB86 EVK](https://item.taobao.com/item.htm?spm=a1z10.5-c.w4002-21080581561.13.565878241Htgvt&id=578262725191)              
+ ![NB86EVK](../../Picture/NB86EVK黑色.png)  
+例程的软件部分基于LiteOS设计，LiteOS入门操作指南请移步[LiteOS内核教程](https://liteos.github.io/tutorials/kernel/)
 ## 1 Package包生成
 
 由生成Package包的命令比较复杂，这里只对批处理的方式做说明，命令行方式详见《Lierda NB-IoT模组OpenCPU DEMO说明文档》第4小节。  
@@ -28,7 +31,6 @@ NOTE: 需要安装与工程所对应的UpdatePackage版本
 `NOTE:烧录前需保证生成的固件是和开发的模组硬件相符合（Package包生成时保证底包无误）。若不符合可能会出现异常，若出现异常请参考《Lierda NB-IoT模组OpenCPU DEMO说明文档》5小节进行烧录。`  
 
 ## 3 参考资料  
-
 | 技术论坛 | OpenCPU资料 | NB86 EVK资料
 | :----------- | :----------- | :----------- |
 | [物联网开发者社区](http://bbs.lierda.com) |  [OpenCPU基本资料集](https://github.com/lierda-nb-iot-team/Lierda_OpenCPU_SDK) |  [NB86 EVK基本资料集](https://github.com/lierda-nb-iot-team/Lierda_NB86_EVK) |

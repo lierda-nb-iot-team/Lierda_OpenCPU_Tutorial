@@ -1,5 +1,5 @@
 <h1 align="center">
-  OpenCPU Demo
+  Lierda Nb-IoT OpenCPU Demo
 </h1>
 
 <h4 align="center">
@@ -21,7 +21,7 @@
 </h3> -->
 
 
-# Lierda NB-IoT OpenCPU 例程
+# OpenCPU Tutorial
 ## 1 写在前面
 本OpenCPU例程基于Lierda NB86-G EVK设计，集成NB86-G模组（基于海思Boudica 150 Hi2115芯片方案），EVK集成多种传感器：
 - 温湿度

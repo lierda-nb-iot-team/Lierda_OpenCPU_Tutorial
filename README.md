@@ -1,5 +1,5 @@
 <h1 align="center">
-  Lierda Nb-IoT OpenCPU Demo
+  Lierda NB-IoT OpenCPU Tutorial
 </h1>
 
 <h4 align="center">

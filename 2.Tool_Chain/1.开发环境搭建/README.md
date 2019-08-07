@@ -17,11 +17,11 @@
 > - 模组内的应用可直接通过模组FOTA能力进行差分升级，方便后期维护
 ### 1.1. 相关资料
 NB86-G EVK资料获取请移步：[NB86 EVK相关资料集](http://bbs.lierda.com/forum.php?mod=viewthread&tid=86&page=1&extra=&_dsign=91f69885)  
-NB86-G EVK获取请移步：[NB86 EVK](https://item.taobao.com/item.htm?spm=a1z10.5-c.w4002-21080581561.13.565878241Htgvt&id=578262725191)  
+NB86-G EVK获取请移步：[NB86 EVK](https://item.taobao.com/item.htm?spm=a1z10.5-c.w4002-21080581561.13.565878241Htgvt&id=578262725191)
 
-LiteOS入门操作指南请移步[LiteOS内核教程](https://liteos.github.io/tutorials/kernel/) 
+LiteOS入门操作指南请移步[LiteOS内核教程](https://liteos.github.io/tutorials/kernel/)
 ### Lierda NB86 EVK
- ![NB86EVK](.././Picture/NB86EVK黑色.png)  
+ ![NB86EVK](../../Picture/NB86EVK黑色.png)  
  
 ## 1 编译器 -gcc
 B500 编译调用 的 GCC 编译器 版本与 B300SP2&B300SP5 不一样，若要支持B300SP2&B300SP5 和 B500SP1 则需要安装两个不同版本的 GCC 编译器。具体的安装方法如下：  

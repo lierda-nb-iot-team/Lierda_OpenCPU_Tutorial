@@ -94,7 +94,7 @@ Lierda OpenCPU例程旨在推广基于NB86-G模组的OpenCPU应用开发方案�
 | Search network and Attach| 网络连接相关使用例程及说明文档|
 | UDP send and receive data| UDP数据收发相关使用例程及说明文档|
 | TCP send and receive data| TCP数据收发相关使用例程及说明文档|
-| LwM2M send and receive data| LWM2M数据收发相关使用例程及说明文档|
+| LwM2M send and receive data| LwM2M数据收发相关使用例程及说明文档|
 | FOTA adaptation and testing| FOTA适配相关使用例程及说明文档|
 
 ## 2.4. Application Demo 

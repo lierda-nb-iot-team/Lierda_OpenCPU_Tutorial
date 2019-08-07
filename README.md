@@ -21,7 +21,7 @@
 </h3> -->
 
 
-# Lierda NB-IoT OpenCPU 例程说明
+# Lierda NB-IoT OpenCPU 例程
 ## 1 写在前面
 本OpenCPU例程基于Lierda NB86-G EVK设计，EVK集成多种传感器：
 - 温湿度
@@ -38,15 +38,16 @@
 > - 提高终端安全性
 > - 提高集成度，对小尺寸终端设计有很大帮助
 > - 模组内的应用可直接通过模组FOTA能力进行差分升级，方便后期维护
-### 相关资料
+### 1.1. 相关资料
 NB86-G EVK资料获取请移步：[NB86 EVK相关资料集](http://bbs.lierda.com/forum.php?mod=viewthread&tid=86&page=1&extra=&_dsign=91f69885)  
 NB86-G EVK获取请移步：[NB86 EVK](https://item.taobao.com/item.htm?spm=a1z10.5-c.w4002-21080581561.13.565878241Htgvt&id=578262725191)
  ![NB86EVK](./Picture/NB86EVK黑色.png)  
 LiteOS入门操作指南请移步[LiteOS内核教程](https://liteos.github.io/tutorials/kernel/)
 
 
-## 2 例程分类
+## 2 例程
 
+Lierda OpenCPU例程旨在推广基于NB86-G模组的OpenCPU应用开发方案，降低用户对该开发方案的接受门槛，能够快速开发并集成特定应用，降低成本，为用户大幅节省开发周期。
 *每个工程文件夹内包含`.fwpkg固件包`可直接烧录看现象*
 
 | 目录 | 内容 |

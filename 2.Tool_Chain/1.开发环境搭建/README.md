@@ -21,7 +21,7 @@ NB86-G EVK获取请移步：[NB86 EVK](https://item.taobao.com/item.htm?spm=a1z1
 
 LiteOS入门操作指南请移步[LiteOS内核教程](https://liteos.github.io/tutorials/kernel/) 
 ### Lierda NB86 EVK
- ![NB86EVK](./Picture/NB86EVK黑色.png)  
+ ![NB86EVK](../Picture/NB86EVK黑色.png)  
  
 ## 1 编译器 -gcc
 B500 编译调用 的 GCC 编译器 版本与 B300SP2&B300SP5 不一样，若要支持B300SP2&B300SP5 和 B500SP1 则需要安装两个不同版本的 GCC 编译器。具体的安装方法如下：  

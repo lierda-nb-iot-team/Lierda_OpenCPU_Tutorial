@@ -60,6 +60,7 @@ Lierda OpenCPU例程旨在推广基于NB86-G模组的OpenCPU应用开发方案�
 
 ## 2.1. Tool_Chain
 介绍NB86-G模组的OpenCPU开发环境搭建过程，用户按照例程顺序执行即可快速完成OpenCPU开发环境搭建、示例工程导入，编译烧写等基础开发过程。   
+
 | 目录              | 内容 |
 | :--------------- | :---------------------------- |
 | 1.开发环境搭建| 开发环境搭建说明|
@@ -68,6 +69,7 @@ Lierda OpenCPU例程旨在推广基于NB86-G模组的OpenCPU应用开发方案�
 |tool|开发所需软件|
 ## 2.2. OpenCPU_Peripheral
 罗列了目前NB86-G模组能够支持用户使用的外设资源，并根据外设特点基于NB86 EVK设计直观的实验，用户可以快速熟悉能够结合到自身产品的多种外设。   
+
 | 目录              | 内容 |
 | :--------------- | :---------------------------- |
 | VBAT voltage acquisition| Vbat脚电压相关使用例程及说明文档|
@@ -85,6 +87,7 @@ Lierda OpenCPU例程旨在推广基于NB86-G模组的OpenCPU应用开发方案�
 
 ## 2.3. Network Communication 
 展示如何基于OpenCPU方案进行网络通信，对接OceanConnect平台，适配FOTA需要注意的要点等重要功能。   
+
 | 目录              | 内容 |
 | :--------------- | :---------------------------- |
 | Search network and Attach| 网络连接相关使用例程及说明文档|
@@ -95,6 +98,7 @@ Lierda OpenCPU例程旨在推广基于NB86-G模组的OpenCPU应用开发方案�
 
 ## 2.4. Application Demo 
 基于NB86-G模组的OpenCPU能力，展示了几种典型的应用设计Demo，方便用户更进一步的集成自身应用，评估OpenCPU开发模式的各项特性。   
+
 | 目录              | 内容 |
 | :--------------- | :---------------------------- |
 | 1.WaterMeterSimulation| 模拟水表应用相关使用例程及说明文档|

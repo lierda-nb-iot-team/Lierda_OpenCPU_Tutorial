@@ -44,7 +44,7 @@ NB86-G EVK获取请移步：[NB86 EVK](https://item.taobao.com/item.htm?spm=a1z1
 
 LiteOS入门操作指南请移步[LiteOS内核教程](https://liteos.github.io/tutorials/kernel/)
  ![NB86EVK](./Picture/NB86EVK黑色.png)  
-
+< center>Lierda NB86 EVK< /center>
 
 
 ## 2 例程

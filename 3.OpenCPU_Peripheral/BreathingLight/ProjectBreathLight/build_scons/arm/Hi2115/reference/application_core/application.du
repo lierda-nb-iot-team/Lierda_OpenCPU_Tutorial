@@ -1920,7 +1920,7 @@
 2       ./.text/DefStudio/Project/OpenCPUdemo/3.OpenCPU_Peripheral/BreathingLight/ProjectBreathLight/src/config/vectors/Hi2115/application_core/vectors.c/SVC_Handler
 28      ./.text/DefStudio/Project/OpenCPUdemo/3.OpenCPU_Peripheral/BreathingLight/ProjectBreathLight/src/lib/Demo/private/app.c/delay_us
 84      ./.text/DefStudio/Project/OpenCPUdemo/3.OpenCPU_Peripheral/BreathingLight/ProjectBreathLight/src/lib/Demo/private/app.c/lierda_App_main
-108     ./.text/DefStudio/Project/OpenCPUdemo/3.OpenCPU_Peripheral/BreathingLight/ProjectBreathLight/src/lib/Demo/private/app.c/lierda_App_task
+192     ./.text/DefStudio/Project/OpenCPUdemo/3.OpenCPU_Peripheral/BreathingLight/ProjectBreathLight/src/lib/Demo/private/app.c/lierda_App_task
 16      ./.text/DefStudio/Project/OpenCPUdemo/3.OpenCPU_Peripheral/BreathingLight/ProjectBreathLight/src/lib/Demo/private/app.c/Lierda_SoftTimerCallback
 8       ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio/shared_ap/aio_manager_control.c/aio_manager_get_deferred_mux_select_config
 8       ./.text/RemoteStudio/BoudicaV150R100C20B500_OpenCPU_src/src/drivers/cmsis/aio/shared_ap/aio_manager_control.c/aio_manager_get_status_table

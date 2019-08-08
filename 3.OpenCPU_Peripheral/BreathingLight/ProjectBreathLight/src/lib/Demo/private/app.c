@@ -67,6 +67,24 @@ static void Led_breath(void)
 
 }
 
+/******************************************************************************
+* @函数名 系统信息打印
+* @参数	 *name : 例程名
+* @返回值  无
+******************************************************************************/
+static void TitlePrint( char *name)
+{
+
+ lierdaLog("******************************************************************************");
+ lierdaLog("                       NB86 EVK开发板例程----%s                                    \r\n",name);
+ lierdaLog(" 利尔达科技集团<www.lierda.com>");
+ lierdaLog(" LSD Science&Technology Co.,Ltd");
+ lierdaLog(" 杭州市余杭区文一西路1326号利尔达科技园");
+ lierdaLog(" 物联网开发者社区<http://bbs.lierda.com>");
+ lierdaLog("******************************************************************************\r\n");
+}
+
+
 
 /******************************************************************************
 * @函数名	app任务线程
@@ -76,6 +94,10 @@ static void Led_breath(void)
 void lierda_App_task(void *param)
 {
 	UNUSED(param);
+
+	osDelay(500);
+
+	TitlePrint("呼吸灯例程");
 
 	gpio_claim(PIN_25, GPIO_DIRECTION_OUTPUT);
 	for (;;)

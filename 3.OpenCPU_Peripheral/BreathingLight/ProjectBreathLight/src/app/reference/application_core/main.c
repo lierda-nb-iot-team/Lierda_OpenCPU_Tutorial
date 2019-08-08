@@ -49,7 +49,6 @@ void lierda_app_main(void)
 	lierda_App_main();
 }
 
-
 void hw_init(void);
 void hw_init(void)
 {

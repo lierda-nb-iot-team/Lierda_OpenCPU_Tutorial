@@ -13,9 +13,9 @@ uint32 * App_task_handle = NULL;
 osTimerId_t LierdaTimer_handle=NULL;
 
 
-#define MAX_TIME (0X20000)
+#define MAX_TIME (10000)
 #define MIN_TIME (0)
-#define SPEED    (1000)
+#define SPEED    (100)
 
 int PWMtime = 0;
 
@@ -82,7 +82,6 @@ void lierda_App_task(void *param)
 	{
 		Led_breath();
 		osDelay(1);
-
 	}
 }
 

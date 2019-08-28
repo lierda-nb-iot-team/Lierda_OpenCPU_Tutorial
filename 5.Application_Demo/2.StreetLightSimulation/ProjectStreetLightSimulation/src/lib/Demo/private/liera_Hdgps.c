@@ -98,7 +98,7 @@ void gps_updata(uint8 *EW_data,uint32 *Longitude_data,uint32 *Latitude_data)
 	  {
 		  //lierdaLog("GPS未定位成功，使用模拟数据");
 		  *EW_data=0x10;
-		  *Longitude_data =0x4784c880;
-		  *Latitude_data =0x120b5c60;
+		  *Longitude_data =0x4784c880 ;  //0x4784c880  3016.71670,N,11959.30658,
+		  *Latitude_data =0x120b5c60;  //0x120b5c60
 	  }
 }

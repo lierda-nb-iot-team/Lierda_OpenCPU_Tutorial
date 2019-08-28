@@ -260,10 +260,10 @@ static void NetworkConfigInit(void)
 	char * returaddr=NULL;
 	returaddr = lierdaATCall("AT+NCDP?", 3000);  //≤È—ØNCDP
 	lierdaLog("DBG_INFO:NCDP?:%s",returaddr);
-	if (strstr(returaddr, "+NCDP:180.101.147.115,5683") == NULL)
+	if (strstr(returaddr, "+NCDP:117.60.157.137,5683") == NULL)
 	{
 		lierdaATDemoCall("AT+CFUN=0","OK",3000,5);  //πÿ±’…‰∆µ
-		lierdaATDemoCall("AT+NCDP=180.101.147.115,5683","OK",3000,5);  //≈‰÷√NCDP
+		lierdaATDemoCall("AT+NCDP=117.60.157.137,5683","OK",3000,5);  //≈‰÷√NCDP
 		lierdaATDemoCall("AT+NRB","OK",7000,5);   //∏¥Œª±£¥Ê
 	}
 	Lierda_SysValue.DeviceSta=ConnectNet;

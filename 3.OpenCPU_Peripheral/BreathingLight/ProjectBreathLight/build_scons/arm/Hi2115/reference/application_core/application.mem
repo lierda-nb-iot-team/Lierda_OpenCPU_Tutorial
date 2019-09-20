@@ -19,9 +19,9 @@
     .stacks           0x01000000                 0x400                  
     .ramtext          0x01000400                  0xD0 load address 0x49CAC
     .data             0x010004D0                 0x2B8 load address 0x49D7C
-    .bss              0x01000800                0x3BCC                  
-    .preserve         0x010043D0                  0x72                  
-    .heap             0x01004442                   0x2                  
+    .bss              0x01000800                0x3B9C                  
+    .preserve         0x010043A0                  0x72                  
+    .heap             0x01004412                   0x2                  
     .sys_status       0x0100FEE0                  0x20                  
     .ipc_mailbox      0x0100FF00                  0xA0                  
   
@@ -516,7 +516,7 @@
          .data  .lst file = 696 (0x2B8)
                  .du file = 590 (0x24E)
 
-          .bss  .lst file = 15308 (0x3BCC)
+          .bss  .lst file = 15260 (0x3B9C)
                  .du file = 13020 (0x32DC)
 
      .preserve  .lst file = 114 (0x72)

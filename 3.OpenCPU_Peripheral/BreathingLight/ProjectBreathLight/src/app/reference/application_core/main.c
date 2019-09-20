@@ -29,8 +29,6 @@
 #include "app.h"
 
 
-
-
 /**
  * protocol watchdog timeout RTOS_WDT_TIMEOUT_S is 20s
  * which is difined in NeulFreeRTOS.h

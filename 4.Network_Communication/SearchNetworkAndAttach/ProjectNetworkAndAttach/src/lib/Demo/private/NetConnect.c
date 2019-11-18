@@ -23,7 +23,7 @@ void NetConnect_Init(void)
 	   0,
 	   2,
        2,
-	   {"180.101.147.115,5683"},
+	   {"117.60.157.137,5683"},
   	};
   	cause = lierda_net_local_config_init(&net_local_pa);
   	if (cause != 0)
